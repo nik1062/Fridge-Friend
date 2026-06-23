@@ -125,7 +125,7 @@ class EmptyInventoryScreen extends StatelessWidget {
                   color: Colors.transparent,
                   child: InkWell(
                     borderRadius: BorderRadius.circular(32),
-                    onPressed: () => context.go('/scanner'),
+                    onTap: () => context.go('/scanner'),
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

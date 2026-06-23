@@ -105,7 +105,7 @@ class SmartScannerScreen extends HookWidget {
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: Padding(
-                        padding: const EdgeInsets.bottom(24),
+                        padding: const EdgeInsets.only(bottom: 24),
                         child: Container(
                           padding: const EdgeInsets.symmetric(
                             horizontal: 16,

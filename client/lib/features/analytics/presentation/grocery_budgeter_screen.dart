@@ -108,10 +108,10 @@ class GroceryBudgeterScreen extends StatelessWidget {
               // Smart Insight Card
               Container(
                 padding: const EdgeInsets.all(24),
-                decoration: const BoxDecoration(
-                  color: Color(0xFFF2EEDB),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFF2EEDB),
                   borderRadius: BorderRadius.circular(16),
-                  border: Border(left: BorderSide(color: Color(0xFF49672F), width: 4)),
+                  border: const Border(left: BorderSide(color: Color(0xFF49672F), width: 4)),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -269,7 +269,7 @@ class _MarketCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(color: const Color(0xFFF8F4E1), borderRadius: BorderRadius.circular(16)),
-      overflow: hidden,
+      clipBehavior: Clip.antiAlias,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

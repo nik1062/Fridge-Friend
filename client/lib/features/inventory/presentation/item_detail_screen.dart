@@ -230,7 +230,7 @@ class ItemDetailScreen extends StatelessWidget {
                             Expanded(
                               child: ElevatedButton.icon(
                                 onPressed: () {},
-                                icon: const Icon(Icons.calendar_add_on, size: 16),
+                                icon: const Icon(Icons.calendar_today, size: 16),
                                 label: const Text('MEAL PLAN'),
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: const Color(0xFFE7E3D0),
@@ -372,7 +372,7 @@ class ItemDetailScreen extends StatelessWidget {
                           description: 'Best kept at 2-4°C in the crisper drawer.',
                         ),
                         _StorageTip(
-                          icon: Icons.humidity_mid,
+                          icon: Icons.water_drop,
                           title: "Don't Wash Yet",
                           description: 'Only wash right before eating to avoid mold.',
                         ),

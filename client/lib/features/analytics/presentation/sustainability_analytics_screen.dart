@@ -176,7 +176,7 @@ class SustainabilityAnalyticsScreen extends StatelessWidget {
                 children: const [
                   _ImpactCard(icon: Icons.savings, label: 'MONEY SAVED', value: '\$142.50', color: Color(0xFFCFE3EE)),
                   SizedBox(width: 12),
-                  _ImpactCard(icon: Icons.nest_eco_leaf, label: 'MEALS SHARED', value: '24', color: Color(0xFFCAEEA7)),
+                  _ImpactCard(icon: Icons.eco, label: 'MEALS SHARED', value: '24', color: Color(0xFFCAEEA7)),
                   SizedBox(width: 12),
                   _ImpactCard(icon: Icons.water_drop, label: 'WATER SAVED', value: '1.2k L', color: Color(0xFFFFDAD7)),
                 ],

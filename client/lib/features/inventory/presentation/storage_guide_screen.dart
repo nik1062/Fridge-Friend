@@ -65,7 +65,7 @@ class StorageGuideScreen extends StatelessWidget {
               // Fruit Library (Featured Card)
               _GuideCard(
                 title: 'Fruit Library',
-                icon: Icons.nutrition,
+                icon: Icons.spa,
                 color: const Color(0xFFF8F4E1),
                 isFeatured: true,
                 image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCt1Wc0cmD5sDcc9cBNopuU7Dd26K6Mktj40lbjVF9t2AfFw8awDBvVZ-wYjm_UHBdBqYOJn8btvk4P1ITYKwwG0pbqrgQyJjWQJdGuCqE2q6aBkw0dVusvkwwH4lVXg_-X68arRB901g-JBbxCQd7sxAqhmsUwPsJp5kpDyjogTjQ8Tiz-Ig40qjANJt5V1MX2Nh2pgof2A0f8vViEYy0hE5Vi2bzHeUFCen7oFP9M3z9PsyEcFVkAS1P24oR6VZfOyJTi0tAtI8-5',

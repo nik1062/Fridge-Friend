@@ -88,7 +88,7 @@ class AddItemManuallyScreen extends HookWidget {
               Center(
                 child: TextButton.icon(
                   onPressed: () => context.push('/scanner'),
-                  icon: const Icon(Icons.barcode_scanner, size: 18),
+                  icon: const Icon(Icons.qr_code_scanner, size: 18),
                   label: const Text(
                     'SCAN RECEIPT',
                     style: TextStyle(
@@ -195,7 +195,7 @@ class AddItemManuallyScreen extends HookWidget {
               const SizedBox(height: 24),
               _InputFieldLabel(label: 'EXPIRY DATE'),
               InkWell(
-                onPressed: () async {
+                onTap: () async {
                   final picked = await showDatePicker(
                     context: context,
                     initialDate: DateTime.now().add(const Duration(days: 7)),
@@ -275,7 +275,7 @@ class AddItemManuallyScreen extends HookWidget {
                     Switch(
                       value: autoAddToList.value,
                       onChanged: (val) => autoAddToList.value = val,
-                      activeColor: const Color(0xFF49672F),
+                      activeThumbColor: const Color(0xFF49672F),
                     ),
                   ],
                 ),
