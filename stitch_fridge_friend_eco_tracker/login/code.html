@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#81a263",
+                    "primary": "#49672f",
+                    "surface-container-low": "#f8f4e1",
+                    "surface-container": "#f2eedb",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#9a4341",
+                    "surface-variant": "#e7e3d0",
+                    "secondary-fixed-dim": "#b6c9d5",
+                    "secondary-fixed": "#d2e5f1",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#374953",
+                    "error": "#ba1a1a",
+                    "surface": "#fefae7",
+                    "on-tertiary-fixed-variant": "#7c2c2c",
+                    "on-primary-fixed": "#0d2000",
+                    "on-secondary-fixed": "#0b1e26",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-tertiary-fixed": "#400006",
+                    "on-primary-fixed-variant": "#324e19",
+                    "on-background": "#1d1c11",
+                    "tertiary-fixed-dim": "#ffb3af",
+                    "inverse-primary": "#aed18d",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#323124",
+                    "on-surface-variant": "#44483d",
+                    "secondary": "#4f616b",
+                    "primary-fixed": "#caeea7",
+                    "surface-container-highest": "#e7e3d0",
+                    "on-secondary-container": "#53656f",
+                    "outline-variant": "#c4c8ba",
+                    "outline": "#74796c",
+                    "on-tertiary-container": "#5e1518",
+                    "tertiary-container": "#e27a77",
+                    "primary-fixed-dim": "#aed18d",
+                    "surface-tint": "#49672f",
+                    "surface-container-high": "#ece8d6",
+                    "surface-dim": "#dedac8",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fefae7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#1c3704",
+                    "secondary-container": "#cfe3ee",
+                    "on-surface": "#1d1c11",
+                    "inverse-on-surface": "#f5f1de",
+                    "surface-bright": "#fefae7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fefae7;
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+        h1, h2, h3, .headline-font {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fefae7]/70 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-lg mx-auto">
+<div class="w-10 flex items-center justify-start">
+<button class="p-2 rounded-full hover:bg-stone-200/50 transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-lime-900" data-icon="close">close</span>
+</button>
+</div>
+<h1 class="text-xl font-bold text-lime-900 tracking-tight">Fridge Friend</h1>
+<div class="w-10"></div>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center px-6 pt-24 pb-32">
+<div class="w-full max-w-md space-y-12">
+<!-- Hero Section -->
+<div class="space-y-4">
+<div class="w-24 h-24 bg-surface-container rounded-lg overflow-hidden mb-8 transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+<img alt="Fresh vegetables in a fridge" class="w-full h-full object-cover" data-alt="Close-up of vibrant fresh organic vegetables with soft morning light, minimalist aesthetic with clean white and green tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1DYZyt7HcXQXvpozeOFHKj2zGhNIhDfupBa7rO1WDgFye249azDcpi3GOeAQGVK4t6zn_hvsfUFAd_3Phf3pTu4lO9Z-A0u63prChs_Q8LEAJk4C1vFU20Hoo0sQ4s5LmPkr4uJ59uSoaMv01MrAaeweT5g1WnCFZxFmmxE2KHoOb7hQzH8LiLTz7kUAE7688Y01AWcHxhn8SKoZlaEXtE-QnTw-bSNm1lGrX5tlyBvwCGEcpF2g7BuvyqgrfSLoeOlmvOETMsWHF"/>
+</div>
+<h2 class="text-display-lg text-4xl md:text-5xl font-bold text-on-surface tracking-tight leading-tight">
+                    Welcome <br/><span class="text-primary">back.</span>
+</h2>
+<p class="text-body-md text-on-surface-variant max-w-[280px]">
+                    Your digital larder is waiting. Let's see what's fresh today.
+                </p>
+</div>
+<!-- Login Form -->
+<form class="space-y-6" onsubmit="event.preventDefault(); window.location.href='{{DATA:SCREEN:SCREEN_18}}'">
+<div class="space-y-1">
+<label class="block text-label-md font-semibold text-primary px-1">Email Address</label>
+<input class="w-full bg-surface-container-highest border-none rounded-t-none rounded-b-lg border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all duration-300 placeholder:text-stone-400 py-4 px-4 text-body-md" placeholder="hello@fridgefriend.com" type="email"/>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between items-center px-1">
+<label class="block text-label-md font-semibold text-primary">Password</label>
+<a class="text-label-md font-semibold text-on-surface-variant hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_22}}">Forgot Password?</a>
+</div>
+<input class="w-full bg-surface-container-highest border-none rounded-t-none rounded-b-lg border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all duration-300 placeholder:text-stone-400 py-4 px-4 text-body-md" placeholder="••••••••" type="password"/>
+</div>
+<button class="w-full bg-gradient-to-br from-[#49672f] to-[#81a263] text-white py-4 rounded-full font-semibold text-md shadow-sm active:scale-95 transition-all duration-150 mt-4" type="submit">
+                    Login
+                </button>
+</form>
+<!-- Social Login -->
+<div class="space-y-8">
+<div class="relative flex items-center justify-center">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full h-[1px] bg-outline-variant opacity-20"></div>
+</div>
+<span class="relative px-4 bg-surface text-label-md text-stone-400 font-medium">OR CONTINUE WITH</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-3 bg-surface-container-highest py-4 rounded-full hover:opacity-90 active:scale-95 transition-all" onclick="window.location.href='{{DATA:SCREEN:SCREEN_18}}'">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="google">google</span>
+<span class="text-label-md font-bold text-on-surface">Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 bg-surface-container-highest py-4 rounded-full hover:opacity-90 active:scale-95 transition-all" onclick="window.location.href='{{DATA:SCREEN:SCREEN_18}}'">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="apple">ios</span>
+<span class="text-label-md font-bold text-on-surface">Apple</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-[#fefae7]/70 backdrop-blur-xl flex justify-around items-center px-4 pb-8 pt-4">
+<div class="flex flex-col items-center justify-center bg-gradient-to-br from-[#49672f] to-[#81a263] text-white rounded-full px-8 py-2 active:scale-95 transition-all cursor-pointer" onclick="window.location.reload()">
+<span class="material-symbols-outlined mb-0.5" data-icon="login">login</span>
+<span class="text-[0.75rem] font-bold">Login</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-500 hover:opacity-90 active:scale-95 transition-all px-8 py-2 cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_10}}'">
+<span class="material-symbols-outlined mb-0.5" data-icon="person_add">person_add</span>
+<span class="text-[0.75rem] font-bold">Join</span>
+</div>
+</nav>
+<!-- Decorative Elements for Editorial Feel -->
+<div class="fixed top-20 right-[-5%] w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="fixed bottom-40 left-[-10%] w-80 h-80 bg-tertiary/5 rounded-full blur-3xl -z-10"></div>
+</body></html>

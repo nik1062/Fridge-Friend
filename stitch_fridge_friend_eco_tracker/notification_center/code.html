@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#74796c",
+                        "primary": "#49672f",
+                        "primary-fixed": "#caeea7",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#1c3704",
+                        "on-secondary-container": "#53656f",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#aed18d",
+                        "on-surface-variant": "#44483d",
+                        "primary-container": "#81a263",
+                        "on-primary-fixed-variant": "#324e19",
+                        "inverse-surface": "#323124",
+                        "surface-container": "#f2eedb",
+                        "on-primary-fixed": "#0d2000",
+                        "on-tertiary": "#ffffff",
+                        "background": "#fefae7",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c4c8ba",
+                        "on-tertiary-container": "#5e1518",
+                        "primary-fixed-dim": "#aed18d",
+                        "surface-bright": "#fefae7",
+                        "surface-variant": "#e7e3d0",
+                        "on-surface": "#1d1c11",
+                        "on-secondary-fixed": "#0b1e26",
+                        "surface": "#fefae7",
+                        "on-secondary-fixed-variant": "#374953",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#49672f",
+                        "secondary": "#4f616b",
+                        "secondary-container": "#cfe3ee",
+                        "tertiary-fixed": "#ffdad7",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f8f4e1",
+                        "secondary-fixed-dim": "#b6c9d5",
+                        "tertiary-fixed-dim": "#ffb3af",
+                        "surface-container-highest": "#e7e3d0",
+                        "on-background": "#1d1c11",
+                        "secondary-fixed": "#d2e5f1",
+                        "tertiary-container": "#e27a77",
+                        "surface-container-high": "#ece8d6",
+                        "on-tertiary-fixed-variant": "#7c2c2c",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dedac8",
+                        "tertiary": "#9a4341",
+                        "on-tertiary-fixed": "#400006",
+                        "inverse-on-surface": "#f5f1de"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-no-lines {
+            border: none !important;
+        }
+        body {
+            background-color: #fefae7;
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    .notification-list-item.cleared {
+        max-height: 0;
+        opacity: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        overflow: hidden;
+        transition: all 0.4s ease-out;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-xl shadow-sm shadow-stone-900/5 tonal-shift-no-lines">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<a class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden active:scale-95 transition-transform block" href="{{DATA:SCREEN:SCREEN_49}}">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a young woman with a friendly smile, soft natural lighting, editorial photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdnE_yVz69fh5LY6_-Vd0qpr7zmU3AXnz8kqhXOHBBgqbgKO2MBqj4X3njapNrdWEOk8pIq8ivmYhjiA6TuLKCqApjhFaR_Pr3QC0cReP-nd57ETWFJHGNvdacQ9kwUYzpbFJTVLlSfBPDgk8J9hzY-fTka15y-AqJ1Hsoj7Jj7tLSrJqwTqzR9pmZSfbPEwSeWz4rUO9GwdzCik6-0Q9jZVK6QnmsfTqJuvBR4_mGtTvOtfRJ-qFKd98BunE71jLg2FgWorwn6ppT"/>
+</a>
+<h1 class="text-xl font-bold text-[#49672f] dark:text-[#81a263] font-['Plus_Jakarta_Sans'] tracking-tight">Fridge Friend</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#49672f] dark:text-[#81a263] hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="notifications" style="font-variation-settings: 'FILL' 1;">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-4xl mx-auto">
+<!-- Header & Action Section -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+<div>
+<span class="font-headline text-label font-semibold text-primary uppercase tracking-[0.2em] mb-2 block">Updates &amp; Alerts</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight text-on-surface">Activity Center</h2>
+</div>
+<button class="flex items-center gap-2 px-6 py-3 bg-surface-container-highest text-on-surface-variant rounded-full font-headline font-semibold text-sm hover:opacity-80 transition-all active:scale-95" onclick="document.querySelectorAll('.notification-list-item').forEach(el =&gt; el.classList.add('cleared')); this.innerHTML='&lt;span class=\'material-symbols-outlined text-sm\'&gt;check_circle&lt;/span&gt; All caught up';">
+<span class="material-symbols-outlined text-sm">done_all</span>
+                Mark all as read
+            </button>
+</section>
+<!-- Category Bento Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left Column: Expirations (Priority) -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<!-- Expirations Category Card -->
+<div class="bg-surface-container-low rounded-lg p-8">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined" data-icon="timer">timer</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold">Expirations</h3>
+<p class="font-body text-sm text-on-surface-variant">Don't let these go to waste</p>
+</div>
+</div>
+<span class="bg-tertiary text-on-tertiary px-3 py-1 rounded-full text-[10px] font-bold font-headline">3 URGENT</span>
+</div>
+<div class="space-y-4">
+<!-- Alert Item 1 -->
+<a class="notification-list-item bg-surface-container-lowest rounded-DEFAULT p-5 flex items-start gap-4 transition-all hover:scale-[1.01] block active:bg-surface-container-low" href="{{DATA:SCREEN:SCREEN_49}}">
+<div class="w-14 h-14 rounded-DEFAULT overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="glass bottle of fresh whole milk with condensation, minimalist kitchen background, soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAukmmX2LY2Eixh1BNwRqLLYZzHX0UFDfYESBNnjYuZF79WswAeCMcS8n43pxKixwgN-uOvBneTfDRwOIm7-uvL1GH812OTITcI8EfIl53tZxmogQNCpaeXpTpFTDK6ILZujVqPtT6OJxlWhy2nH45pnIRcikLqRc-jW49X8csMsYtZLfSXh4bpHbI1SGpoCkJApfRlYYwcJdTp2FjW8QEuxBVkrSVXHee9_nBnY1oBKcjwWQPile-9Qz_tuRsRsAs8pPwIPW_gzN8G"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h4 class="font-headline font-bold text-on-surface">Whole Organic Milk</h4>
+<span class="font-body text-xs text-on-surface-variant">2h ago</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant mt-1">Expiring tomorrow. Use it for a smoothie or pancakes!</p>
+<div class="mt-3 inline-flex items-center gap-2 px-3 py-1 bg-tertiary-container/30 text-on-tertiary-container rounded-full text-xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                                    Expires in 24 hours
+                                </div>
+</div>
+</a>
+<!-- Alert Item 2 -->
+<a class="notification-list-item bg-surface-container-lowest rounded-DEFAULT p-5 flex items-start gap-4 opacity-70 block active:opacity-100 transition-all" href="{{DATA:SCREEN:SCREEN_49}}">
+<div class="w-14 h-14 rounded-DEFAULT overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="fresh green baby spinach leaves in a white bowl, clean top-down perspective, airy lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-kjtnifcQgRBE4Nf8BwOpbfOLHkI3Di68_A0iqb70RYL2uLhCr3QcC-E-6Q8PwijsJYJkJrw6POMY0nOV4DdRSLb6wGReZpJrN75SuWRLHhPZodkiP9KR41cMg5-QHDK3qVo60rcwCUtGjCmPfDHaZNzsyj5rGeghuncyilFB3fMBXU5qrDH2PcKSwoyhxP2O2c2L9OVPGkrtI2kbfb4AbNO4mwTzphXs7sYgvWp-Sf3QkxUQrQetHfzLpVoKJDUqSsBQVDlpjBIU"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h4 class="font-headline font-bold text-on-surface">Baby Spinach</h4>
+<span class="font-body text-xs text-on-surface-variant">Yesterday</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant mt-1">Status: Wilted. We recommend composting this item.</p>
+<div class="mt-3 inline-flex items-center gap-2 px-3 py-1 bg-surface-container-highest text-on-surface-variant rounded-full text-xs font-semibold">
+                                    Expired May 12
+                                </div>
+</div>
+</a>
+</div>
+</div>
+<!-- Community Feed (Asymmetric Placement) -->
+<div class="bg-surface-container rounded-lg p-8">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold">Community Feed</h3>
+<p class="font-body text-sm text-on-surface-variant">From the local kitchen network</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden">
+<div class="h-40 w-full relative">
+<img class="w-full h-full object-cover" data-alt="vibrant community kitchen scene with people sharing fresh produce and smiling, warm communal atmosphere, soft golden hour lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM9vmLcQAz7z9ti10MdR4-JF_GN16h176unzZm6OTB-fvd7TdhEuABhKyhWAKC6Ivluoyk5jhy-JVA0Z4668Y_C-xawC_f3_f9l-TH14b26f5zNo2gStd-NODZdMEveI3iIOT-GFLPypRMEdh6b0f6Gwa-XBgyMoX1lAu9t8dVtB35Ggr817qRFoEtWFna9ukQYcs5GV17h6hssWJVMqyOb5JdhFOC_gorMQGj37OQjLx5Boz5WvdEiY44DU-kWPcGB95eg-htu8gb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="bg-primary text-on-primary text-[10px] font-bold px-2 py-1 rounded mb-2 inline-block">LOCAL SWAP</span>
+<h4 class="text-white font-headline font-bold">New surplus available nearby</h4>
+</div>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant">
+<img class="w-full h-full object-cover rounded-full" data-alt="avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW7DSBQFTNJAcgFkmf08zIcyxU5fgi86FkAFrQXA_anJ6WuoEKjDigLTGeR2FmqOiSfW7c0CyiWStBgfyNhqTHwixSY-fE8fxxi-9Fn8wEIyBoy1DTbHwruKUF6ltSq4nWiNj_OvJ443CuVMSlUPfWFMieavOLQNdqrerKNbvRKl15Df_-gdHbWfuciDhD7g8Oiz3tKWnscQMxT8Qk40nSxxfb30cs2dexgp3D0JGv5bBaV4tvawKc1rR6-_XNculyRLwrXx6wYsZd"/>
+</div>
+<span class="font-headline text-sm font-semibold">Sarah M. shared "Free Heirloom Tomatoes"</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant mb-4">"I have a surplus from my garden! Pick up from 2nd Ave before 6 PM."</p>
+<button class="w-full py-3 bg-surface-container-high rounded-full font-headline font-bold text-xs text-primary hover:bg-surface-variant transition-colors">VIEW DETAILS</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Recipe Tips -->
+<div class="lg:col-span-5">
+<div class="bg-[#e7e3d0] rounded-lg p-8 h-full">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold">Recipe Tips</h3>
+<p class="font-body text-sm text-on-surface-variant">Based on your inventory</p>
+</div>
+</div>
+<div class="space-y-6">
+<!-- Tip 1 -->
+<a class="relative group block" href="#">
+<div class="bg-surface-container-lowest/80 backdrop-blur-md rounded-lg p-6 transition-all hover:bg-surface-container-lowest active:scale-[0.98]">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-headline text-[10px] font-bold text-primary uppercase tracking-widest">SMART MATCH</span>
+</div>
+<h4 class="font-headline text-lg font-bold text-on-surface leading-tight">Last of the Kale?</h4>
+<p class="font-body text-sm text-on-surface-variant mt-2">Massage it with olive oil and lemon for a 5-minute detox salad. Perfect for lunch!</p>
+<div class="mt-4 flex items-center gap-2">
+<div class="w-6 h-6 rounded-full border-2 border-primary-container bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-primary">play_arrow</span>
+</div>
+<span class="font-headline text-[11px] font-bold text-primary">VIEW RECIPE</span>
+</div>
+</div>
+</a>
+<!-- Tip 2 -->
+<div class="relative group">
+<div class="bg-surface-container-lowest/80 backdrop-blur-md rounded-lg p-6 transition-all hover:bg-surface-container-lowest">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="lightbulb" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<span class="font-headline text-[10px] font-bold text-secondary uppercase tracking-widest">KITCHEN HACK</span>
+</div>
+<h4 class="font-headline text-lg font-bold text-on-surface leading-tight">Revive Carrots</h4>
+<p class="font-body text-sm text-on-surface-variant mt-2">Soak limp carrots in ice water for 30 minutes to bring back that crunch.</p>
+<span class="font-body text-[10px] text-on-surface-variant/60 block mt-4">12:30 PM • 3 min read</span>
+</div>
+</div>
+<!-- Tip 3 -->
+<div class="bg-primary/5 rounded-lg p-6 border border-primary/10">
+<h4 class="font-headline font-bold text-primary mb-2">Weekend Prep</h4>
+<p class="font-body text-sm text-on-surface-variant">You have 12 items expiring this weekend. Schedule a prep session?</p>
+<button class="mt-4 px-5 py-2 bg-primary text-on-primary rounded-full font-headline font-bold text-xs active:scale-95 transition-transform">ADD TO CALENDAR</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-xl shadow-[0_-4px_32px_rgba(29,28,17,0.05)] tonal-shift-no-lines z-50 md:hidden">
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-500 px-4 py-2 hover:bg-[#f8f4e1] dark:hover:bg-stone-800/50 rounded-full transition-colors active:scale-90 transition-transform duration-200" href="{{DATA:SCREEN:SCREEN_49}}">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-500 px-4 py-2 hover:bg-[#f8f4e1] dark:hover:bg-stone-800/50 rounded-full transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Inventory</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#f2eedb] dark:bg-stone-800 text-[#49672f] dark:text-[#81a263] rounded-full px-4 py-2 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="notifications" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Alerts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-500 px-4 py-2 hover:bg-[#f8f4e1] dark:hover:bg-stone-800/50 rounded-full transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Recipes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-500 px-4 py-2 hover:bg-[#f8f4e1] dark:hover:bg-stone-800/50 rounded-full transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Analytics</span>
+</a>
+</nav>
+</body></html>

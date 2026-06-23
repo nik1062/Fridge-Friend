@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fridge Friend - Welcome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#fefae7",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#aed18d",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb3af",
+                      "surface-dim": "#dedac8",
+                      "on-tertiary-container": "#5e1518",
+                      "surface-bright": "#fefae7",
+                      "on-tertiary-fixed-variant": "#7c2c2c",
+                      "on-surface": "#1d1c11",
+                      "on-secondary-fixed-variant": "#374953",
+                      "on-primary-container": "#1c3704",
+                      "background": "#fefae7",
+                      "outline": "#74796c",
+                      "on-error-container": "#93000a",
+                      "surface-container-low": "#f8f4e1",
+                      "on-tertiary-fixed": "#400006",
+                      "secondary-fixed-dim": "#b6c9d5",
+                      "on-primary": "#ffffff",
+                      "on-background": "#1d1c11",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#0d2000",
+                      "surface-container-highest": "#e7e3d0",
+                      "on-primary-fixed-variant": "#324e19",
+                      "error-container": "#ffdad6",
+                      "tertiary": "#9a4341",
+                      "on-surface-variant": "#44483d",
+                      "on-secondary-fixed": "#0b1e26",
+                      "inverse-on-surface": "#f5f1de",
+                      "secondary-container": "#cfe3ee",
+                      "secondary-fixed": "#d2e5f1",
+                      "primary-container": "#81a263",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-surface": "#323124",
+                      "outline-variant": "#c4c8ba",
+                      "surface-container-high": "#ece8d6",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed": "#ffdad7",
+                      "primary": "#49672f",
+                      "surface-variant": "#e7e3d0",
+                      "secondary": "#4f616b",
+                      "on-secondary-container": "#53656f",
+                      "tertiary-container": "#e27a77",
+                      "surface-tint": "#49672f",
+                      "primary-fixed-dim": "#aed18d",
+                      "surface-container": "#f2eedb",
+                      "primary-fixed": "#caeea7"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-md">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 hover:bg-[#f2eedb] dark:hover:bg-stone-800 transition-colors active:scale-95 duration-200" onclick="window.location.href='{{DATA:SCREEN:SCREEN_24}}'">
+<span class="material-symbols-outlined text-[#49672f] dark:text-[#81a263]">menu</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-[#49672f] dark:text-[#81a263] tracking-tight text-lg">Fridge Friend</h1>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden active:scale-95 duration-200 focus:outline-none" onclick="window.location.href='{{DATA:SCREEN:SCREEN_23}}'">
+<img alt="User profile" data-alt="professional headshot of a smiling person with warm lighting and a soft neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5R3TGWX3ftclGmK-G628wq_O-k6_BnOz0zJtrnAO3D00rvfQNZXAgyxghNomfg0XvEu-nR7vKVnUY1fi_7HT8c_c5Kh8025XFrnNK4wS3-cUgKbJlXePECMxTAdSaJrzuF6Zr7vGJC75BPSkHmO-jjjp6LJWikcV_TL1Y-pppUTU004g_OHLGI2N-GDf5oxAjlEHBXMNhKzJChQFd8D6sdxx6wjghHhk3oh3OA80LMXXcdiDhofidNGRBuouoDHppptw0gEkzpI1L"/>
+</button>
+</div>
+</header>
+<main class="min-h-screen pt-16 pb-24 flex flex-col items-center justify-center px-6">
+<!-- Content Canvas -->
+<div class="max-w-md w-full text-center flex flex-col items-center gap-10">
+<!-- Hero Illustration (Asymmetrical & Organic) -->
+<div class="relative w-full max-w-sm">
+<!-- Background Blob/Tonal Shift -->
+<div class="absolute inset-0 bg-surface-container-low rounded-[3rem] -rotate-3 scale-105"></div>
+<!-- Main Image -->
+<div class="relative z-10 p-4">
+<img alt="Empty minimalist fridge" class="rounded-lg shadow-xl shadow-on-surface/5" data-alt="Minimalist modern white refrigerator with open doors showing clean glass shelves in a bright airy kitchen with soft natural morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALgLy9lqZpbt-CjjpFjhelQn6DXe899CxRK-H2TuOdkZ92OkIGi_2lXf_YygXZKy9CMPUxEenoRE_bj3I0O6g81FgpHn9070xbojiYMzDcmNO-aQqASWqIUkt9gn4z85nVAnTka2j_XNDYa41bdUvSr9En8uEw4mfYFWh_NNyrKjCnFAGdGS8Q_3ePs8DSNGw6qbmekEnFHpO8uToy_LfG6gEdyVad7-gp1M7uEEKL2hZ3MlevkRmEI8YrxRRKm9ADlTZu1nowYLuK"/>
+</div>
+<!-- Floating Decorative Element (Glassmorphism) -->
+<div class="absolute -bottom-4 -right-4 z-20 bg-surface-container-lowest/70 backdrop-blur-md p-4 rounded-lg shadow-2xl border border-white/20 hidden md:block">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">eco</span>
+</div>
+<div class="text-left">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant font-headline">Status</p>
+<p class="text-sm font-semibold text-primary">Ready to organize</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Typography Cluster -->
+<div class="space-y-4">
+<h2 class="text-3xl font-bold font-headline text-on-surface leading-tight px-4">
+                    Your larder is empty. Let's fill it with fresh finds!
+                </h2>
+<p class="text-on-surface-variant max-w-[280px] mx-auto text-sm leading-relaxed">
+                    Start tracking your inventory to reduce waste and plan your meals effortlessly.
+                </p>
+</div>
+<!-- CTA Cluster -->
+<div class="w-full flex flex-col gap-4">
+<!-- Primary Action -->
+<button class="w-full h-16 rounded-full bg-gradient-to-br from-[#49672f] to-[#81a263] text-white flex items-center justify-center gap-3 shadow-lg shadow-primary/20 active:scale-[0.98] transition-all duration-300" onclick="window.location.href='{{DATA:SCREEN:SCREEN_27}}'">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="font-headline font-bold text-base">Scan your first receipt</span>
+</button>
+<!-- Secondary Action -->
+<button class="w-full h-14 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center gap-2 hover:bg-surface-container transition-colors active:scale-95 duration-200" onclick="window.location.href='{{DATA:SCREEN:SCREEN_14}}'">
+<span class="material-symbols-outlined text-xl">add_circle</span>
+<span class="font-semibold text-sm">Add item manually</span>
+</button>
+</div>
+<!-- Editorial Tip Section -->
+<div class="mt-8 p-6 rounded-lg bg-surface-container-low w-full flex items-start gap-4 text-left">
+<div class="text-tertiary mt-0.5">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-1 font-headline">Editorial Tip</p>
+<p class="text-sm text-on-surface-variant italic leading-snug">"A well-organized fridge is the first step toward a more sustainable kitchen lifestyle."</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-md z-50 rounded-t-[24dp] shadow-[0_-8px_32px_rgba(29,28,17,0.05)]">
+<!-- Inventory (Active by default for dashboard/main empty state) -->
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#49672f] to-[#81a263] text-white rounded-full p-3 active:scale-90 duration-300 ease-out" href="{{DATA:SCREEN:SCREEN_30}}">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-wider mt-1">Inventory</span>
+</a>
+<!-- Leaderboard -->
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-400 p-3 hover:bg-[#f2eedb] dark:hover:bg-stone-800 rounded-full active:scale-90 duration-300 ease-out" href="{{DATA:SCREEN:SCREEN_25}}">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-wider mt-1">Leaderboard</span>
+</a>
+<!-- Settings -->
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-400 p-3 hover:bg-[#f2eedb] dark:hover:bg-stone-800 rounded-full active:scale-90 duration-300 ease-out" href="{{DATA:SCREEN:SCREEN_24}}">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-wider mt-1">Settings</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-400 p-3 hover:bg-[#f2eedb] dark:hover:bg-stone-800 rounded-full active:scale-90 duration-300 ease-out" href="{{DATA:SCREEN:SCREEN_23}}">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-wider mt-1">Profile</span>
+</a>
+</nav>
+<!-- FAB for quick action (Suppressed as per rules on detail/empty states, but can be useful if it aligns perfectly) -->
+<!-- Suppressed to prioritize the main "Scan" button in the canvas -->
+</body></html>

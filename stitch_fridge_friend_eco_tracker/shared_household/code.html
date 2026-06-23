@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Larder - Shared Household</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#9a4341",
+                    "surface-container-high": "#ece8d6",
+                    "primary-container": "#81a263",
+                    "outline": "#74796c",
+                    "on-primary-container": "#1c3704",
+                    "on-surface": "#1d1c11",
+                    "secondary-fixed": "#d2e5f1",
+                    "on-tertiary-fixed-variant": "#7c2c2c",
+                    "surface-dim": "#dedac8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#374953",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#f2eedb",
+                    "surface": "#fefae7",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f5f1de",
+                    "on-primary-fixed": "#0d2000",
+                    "secondary": "#4f616b",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#400006",
+                    "surface-container-low": "#f8f4e1",
+                    "surface-variant": "#e7e3d0",
+                    "surface-container-highest": "#e7e3d0",
+                    "primary-fixed": "#caeea7",
+                    "on-background": "#1d1c11",
+                    "secondary-fixed-dim": "#b6c9d5",
+                    "inverse-primary": "#aed18d",
+                    "on-secondary-container": "#53656f",
+                    "surface-tint": "#49672f",
+                    "tertiary-fixed-dim": "#ffb3af",
+                    "secondary-container": "#cfe3ee",
+                    "outline-variant": "#c4c8ba",
+                    "primary-fixed-dim": "#aed18d",
+                    "primary": "#49672f",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-surface-variant": "#44483d",
+                    "on-secondary-fixed": "#0b1e26",
+                    "tertiary-container": "#e27a77",
+                    "on-tertiary-container": "#5e1518",
+                    "surface-bright": "#fefae7",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#323124",
+                    "on-primary-fixed-variant": "#324e19",
+                    "background": "#fefae7",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Be Vietnam Pro', sans-serif;
+        background-color: #fefae7;
+      }
+      .editorial-shadow {
+        box-shadow: 0 8px 32px rgba(29, 28, 17, 0.05);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface bg-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fefae7]/70 dark:bg-[#1d1c11]/70 backdrop-blur-xl shadow-[0_8px_32px_rgba(29,28,17,0.05)]">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#49672f] dark:text-[#81a263] active:scale-95 transition-transform cursor-pointer">menu</span>
+<h1 class="text-xl font-bold text-[#49672f] dark:text-[#81a263] tracking-tighter font-['Plus_Jakarta_Sans']">Digital Larder</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container active:scale-95 transition-transform cursor-pointer">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="portrait of a woman with a warm smile in soft natural lighting, editorial style photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhtm4QugGUv94mQZjt49IwaOGSVhVmpFxI03_fQWYvt6nHDLMH70A55mhNUxkj9GdcEsZ9XUKi9Bp1wrwqYLGU0BPoqHCAituUc007zHJs14B7x6fQJiRWSb-7ZEU-SFa3Te0d2gx51-r7mkn44XfHo9BKQo2SE_MIJmDkt_NH6mXLKJ2b72lmDsmW0vy_iTaJRgIVkCIGIS_M6PNPs0EK-ssjqOhWBQDQCRd7Niqz4AzkZRzD873o0loE2wqbrdotsHq5c3-Dm4EP"/>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-screen-xl mx-auto">
+<!-- Hero Section: Household Identity -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="font-headline text-label-md font-semibold text-primary tracking-widest uppercase mb-2 block">Our Space</span>
+<h2 class="font-headline text-display-lg leading-none tracking-tight text-on-surface">The Sycamore House</h2>
+<p class="font-body text-on-surface-variant mt-4 max-w-md">Managing 142 items across 3 storage zones. Collaborative larder tracking since October 2023.</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-full font-headline font-bold text-sm tracking-wide flex items-center gap-2 editorial-shadow active:scale-95 transition-all">
+<span class="material-symbols-outlined text-xl">person_add</span>
+                    Invite Member
+                </button>
+</div>
+</section>
+<!-- Members Grid (Asymmetric) -->
+<section class="mb-12">
+<h3 class="font-headline text-headline-md mb-6 flex items-center gap-2">
+                Household Members
+                <span class="text-sm font-normal text-outline-variant">(4)</span>
+</h3>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Member Card 1 (Main) -->
+<div class="md:col-span-2 bg-surface-container rounded-lg p-6 flex items-center gap-6 group hover:bg-surface-container-high transition-colors">
+<div class="w-20 h-20 rounded-full overflow-hidden border-4 border-primary-container/20">
+<img alt="Household Member" class="w-full h-full object-cover" data-alt="close up headshot of a smiling man with short hair in a bright airy kitchen background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCOkY-VyT6dadSzw9oXG-6qR1q_lWy8mZmCTMMp-uB-8NpesAgC_MhsOJQRmrxJyletshfWjX-2E5G9wxR1Emi695-8a0rZfCD8UI3g_YP4H1YF3SLgG9-bs-EGjIMikrZHfzqS7iJ2YXqSCIz5X8EOcAkOg-fX6onjyKVJuQ8Fx7M3gZb4axPTO9WhFnJjtWiy5CKYZJ5_qz9c5CiYnE5XV2Yu4XRFQzSbNd_r3Qsp7Zcpo9MEY4alQ1dL4A1Qrcw7cJPG-63VgKR"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-headline text-title-md font-semibold">Julian Mars</h4>
+<span class="bg-primary text-on-primary text-[10px] px-2 py-0.5 rounded-full uppercase font-bold tracking-tighter">Admin</span>
+</div>
+<p class="text-body-md text-on-surface-variant">Last active: 2 mins ago</p>
+<div class="flex gap-1 mt-2">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+</div>
+</div>
+</div>
+<!-- Member Card 2 -->
+<div class="bg-surface-container-low rounded-lg p-6 flex flex-col items-center justify-center text-center group hover:bg-surface-container transition-colors">
+<div class="w-16 h-16 rounded-full overflow-hidden mb-3 grayscale group-hover:grayscale-0 transition-all">
+<img alt="Household Member" class="w-full h-full object-cover" data-alt="portrait of a young woman with a neutral expression in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJBXQJnTYPFuHJcdO8aiP_podXVbldTSsLPCgku26MNv7N3V4yhry9CM_LoS9-UDJwF7aXq8RganJsVyBF1iBUzwZleQLd0IAsYcsAhKrLDUS4XHwtqo9wwUFybGezv3pu-LsUEIXZ6ekHnj_6gvmZWJN-eGpggu_RRG7cLM3d_IvEg05U0YIbhSmV5qGBGTSBdva3n6OUCluu710om5WGy-zh6YOQz2rGgcgYlBBsmY0a6gYdPlcjMCkNCDxGabrrE2BGSFRGiuu1"/>
+</div>
+<h4 class="font-headline text-title-md">Elena Rossi</h4>
+<p class="text-[12px] text-outline">Member</p>
+</div>
+<!-- Member Card 3 -->
+<div class="bg-surface-container-low rounded-lg p-6 flex flex-col items-center justify-center text-center group hover:bg-surface-container transition-colors">
+<div class="w-16 h-16 rounded-full overflow-hidden mb-3 grayscale group-hover:grayscale-0 transition-all">
+<img alt="Household Member" class="w-full h-full object-cover" data-alt="portrait of a man with a beard looking thoughtfully away from the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5et2BIBtVzCrWSlRUxmS0hRD2kMGCL6SdVGw3fI0Ftx9JpWOc2e5CoeCaxHd0Z9ZJ911ir7ALTDnW42PcoJzU-AVj8JzjU8jAzr9iUdw__j_lLOj9XSui_O_ZeCF6OMhFgMm2CUPA1Cu2t3By2LAmvMTWK4FoFGCmmBDc8oltk03kugHU0bF6yAIX5hhNPobgi7pVRBTEEMzeFnXiqxCFAnUoLBWkC5twbJrCGJowFt6Tky21QGwYNxzJxcB-iy5qzN9NFYJZpn-7"/>
+</div>
+<h4 class="font-headline text-title-md">Marcus Thorne</h4>
+<p class="text-[12px] text-outline">Member</p>
+</div>
+</div>
+</section>
+<!-- Bento Layout: Activity & Settings -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Activity Feed (Large Bento) -->
+<section class="md:col-span-2">
+<div class="bg-surface-container-low rounded-lg p-8 h-full">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline text-headline-md">Larder Activity</h3>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">history</span>
+</div>
+<div class="space-y-8">
+<!-- Activity Item 1 -->
+<div class="flex gap-4 relative">
+<div class="absolute left-[11px] top-8 bottom-[-32px] w-[1px] bg-outline-variant/30"></div>
+<div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center z-10 shrink-0">
+<span class="material-symbols-outlined text-white text-xs" style="font-variation-settings: 'FILL' 1;">add</span>
+</div>
+<div class="pb-2">
+<p class="text-body-md text-on-surface">
+<span class="font-bold">Julian Mars</span> added 
+                                    <span class="bg-surface-container-highest px-2 py-0.5 rounded font-medium">Organic Kale</span> 
+                                    to <span class="italic">The Fridge</span>
+</p>
+<span class="text-[12px] text-on-surface-variant font-medium">14 mins ago</span>
+</div>
+</div>
+<!-- Activity Item 2 -->
+<div class="flex gap-4 relative">
+<div class="absolute left-[11px] top-8 bottom-[-32px] w-[1px] bg-outline-variant/30"></div>
+<div class="w-6 h-6 rounded-full bg-tertiary-container flex items-center justify-center z-10 shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-container text-xs" style="font-variation-settings: 'FILL' 1;">remove_shopping_cart</span>
+</div>
+<div class="pb-2">
+<p class="text-body-md text-on-surface">
+<span class="font-bold">Elena Rossi</span> marked 
+                                    <span class="bg-surface-container-highest px-2 py-0.5 rounded font-medium">Oat Milk</span> 
+                                    as <span class="text-tertiary font-bold">Finished</span>
+</p>
+<span class="text-[12px] text-on-surface-variant font-medium">2 hours ago</span>
+</div>
+</div>
+<!-- Activity Item 3 -->
+<div class="flex gap-4 relative">
+<div class="w-6 h-6 rounded-full bg-secondary-container flex items-center justify-center z-10 shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container text-xs" style="font-variation-settings: 'FILL' 1;">sync</span>
+</div>
+<div class="pb-2">
+<p class="text-body-md text-on-surface">
+<span class="font-bold">Marcus Thorne</span> updated quantities for 
+                                    <span class="bg-surface-container-highest px-2 py-0.5 rounded font-medium">Greek Yogurt</span>
+</p>
+<span class="text-[12px] text-on-surface-variant font-medium">Yesterday at 6:45 PM</span>
+</div>
+</div>
+</div>
+<button class="mt-12 text-primary font-headline font-bold text-sm tracking-widest flex items-center gap-2 hover:translate-x-1 transition-transform uppercase">
+                        View Full History <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Group Settings (Small Bento) -->
+<section class="space-y-6">
+<!-- Zones Card -->
+<div class="bg-surface-container rounded-lg p-6">
+<h4 class="font-headline text-title-md mb-4">Storage Zones</h4>
+<div class="space-y-3">
+<div class="flex justify-between items-center bg-surface/50 p-3 rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">kitchen</span>
+<span class="font-medium text-sm">Main Fridge</span>
+</div>
+<span class="text-xs bg-primary-container/20 text-primary px-2 py-1 rounded">82 items</span>
+</div>
+<div class="flex justify-between items-center bg-surface/50 p-3 rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">shelves</span>
+<span class="font-medium text-sm">Dry Pantry</span>
+</div>
+<span class="text-xs bg-primary-container/20 text-primary px-2 py-1 rounded">45 items</span>
+</div>
+<div class="flex justify-between items-center bg-surface/50 p-3 rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">ac_unit</span>
+<span class="font-medium text-sm">Deep Freezer</span>
+</div>
+<span class="text-xs bg-primary-container/20 text-primary px-2 py-1 rounded">15 items</span>
+</div>
+</div>
+</div>
+<!-- Settings Shortcuts -->
+<div class="bg-surface-container-highest rounded-lg p-6">
+<h4 class="font-headline text-title-md mb-4">Quick Settings</h4>
+<ul class="space-y-4">
+<li class="flex items-center justify-between text-on-surface-variant cursor-pointer hover:text-on-surface transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-sm">Group Notifications</span>
+</div>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</li>
+<li class="flex items-center justify-between text-on-surface-variant cursor-pointer hover:text-on-surface transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">share</span>
+<span class="text-sm">Export Inventory CSV</span>
+</div>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</li>
+<li class="flex items-center justify-between text-error cursor-pointer hover:opacity-80 transition-colors pt-2">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-semibold">Leave Household</span>
+</div>
+</li>
+</ul>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#fefae7]/70 dark:bg-[#1d1c11]/70 backdrop-blur-xl rounded-t-[24px] shadow-[0_-8px_32px_rgba(29,28,17,0.05)]">
+<div class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2">
+<!-- Inventory -->
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] opacity-60 hover:scale-110 transition-transform active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Inventory</span>
+</a>
+<!-- Budget -->
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] opacity-60 hover:scale-110 transition-transform active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Budget</span>
+</a>
+<!-- Earn -->
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] opacity-60 hover:scale-110 transition-transform active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="savings">savings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Earn</span>
+</a>
+<!-- Goals -->
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] opacity-60 hover:scale-110 transition-transform active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Goals</span>
+</a>
+<!-- House (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#f2eedb] dark:bg-[#44483d] text-[#49672f] dark:text-[#f8f4e1] rounded-full px-4 py-2 hover:scale-110 transition-transform active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="cottage" style="font-variation-settings: 'FILL' 1;">cottage</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">House</span>
+</a>
+</div>
+</nav>
+</body></html>

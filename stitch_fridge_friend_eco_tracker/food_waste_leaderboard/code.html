@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fefae7",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#aed18d",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3af",
+                        "surface-dim": "#dedac8",
+                        "on-tertiary-container": "#5e1518",
+                        "surface-bright": "#fefae7",
+                        "on-tertiary-fixed-variant": "#7c2c2c",
+                        "on-surface": "#1d1c11",
+                        "on-secondary-fixed-variant": "#374953",
+                        "on-primary-container": "#1c3704",
+                        "background": "#fefae7",
+                        "outline": "#74796c",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f8f4e1",
+                        "on-tertiary-fixed": "#400006",
+                        "secondary-fixed-dim": "#b6c9d5",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1d1c11",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#0d2000",
+                        "surface-container-highest": "#e7e3d0",
+                        "on-primary-fixed-variant": "#324e19",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#9a4341",
+                        "on-surface-variant": "#44483d",
+                        "on-secondary-fixed": "#0b1e26",
+                        "inverse-on-surface": "#f5f1de",
+                        "secondary-container": "#cfe3ee",
+                        "secondary-fixed": "#d2e5f1",
+                        "primary-container": "#81a263",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#323124",
+                        "outline-variant": "#c4c8ba",
+                        "surface-container-high": "#ece8d6",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffdad7",
+                        "primary": "#49672f",
+                        "surface-variant": "#e7e3d0",
+                        "secondary": "#4f616b",
+                        "on-secondary-container": "#53656f",
+                        "tertiary-container": "#e27a77",
+                        "surface-tint": "#49672f",
+                        "primary-fixed-dim": "#aed18d",
+                        "surface-container": "#f2eedb",
+                        "primary-fixed": "#caeea7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fefae7]/70 backdrop-blur-md flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<a class="cursor-pointer" href="{{DATA:SCREEN:SCREEN_18}}">
+<span class="material-symbols-outlined text-[#49672f]" data-icon="menu">menu</span>
+</a>
+</div>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-[#49672f] tracking-tight text-lg">Fridge Friend</h1>
+<a class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container block" href="{{DATA:SCREEN:SCREEN_23}}">
+<img alt="User profile" data-alt="Close up portrait of a smiling woman with a natural look in soft daylight with a blurred garden background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxVbmIjao3lgwPeAJ1bMNqSFSlL9yy6ostwRHo-z9jLvS_XufBstbq4N1b71Zcd_C5QWky0EJ_vJxfIqAVuZxtgx-BSBmJBjglj5kzpMMnaClVfu0GFjJFERlCm4SICjurc9yluB3Q2c5-PrfgK03k8OxSd8Ua0ZHW2Z-C_MsZkdXtkkLJfUNOIEzj1SoCD4kKtFsQHkg2DoDceqUTomOv1hIuO1Fvgsbm9vYcCfVa0EFAYoauFuczf_aTWVTce8oBh2g-vY1zujtl"/>
+</a>
+</nav>
+<!-- Content Canvas -->
+<main class="pt-24 px-6 max-w-2xl mx-auto space-y-12">
+<!-- Hero: User Stats Asymmetrical Section -->
+<section class="relative space-y-6">
+<div class="flex items-end justify-between pr-8">
+<div class="space-y-1">
+<span class="text-label-md font-['Plus_Jakarta_Sans'] font-semibold text-primary uppercase tracking-[0.2em]">Current Standing</span>
+<h2 class="text-6xl font-headline font-bold text-on-surface leading-none">#14</h2>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-display-lg font-bold text-primary-container leading-none">82%</span>
+<span class="text-body-md text-on-surface-variant font-medium">Efficiency Score</span>
+</div>
+</div>
+<!-- Carbon Stats Card -->
+<div class="bg-surface-container rounded-lg p-8 relative overflow-hidden flex items-center justify-between">
+<div class="relative z-10 space-y-2">
+<p class="text-body-md text-on-surface-variant">Your climate impact this month</p>
+<h3 class="text-3xl font-headline font-bold text-primary">12.4kg CO₂ <span class="text-lg font-normal opacity-70">Saved</span></h3>
+</div>
+<div class="absolute -right-4 top-1/2 -translate-y-1/2 opacity-20">
+<span class="material-symbols-outlined text-[120px]" data-icon="eco">eco</span>
+</div>
+</div>
+</section>
+<!-- Leaderboard: Tonal Stacking List -->
+<section class="space-y-8">
+<div class="flex items-center justify-between">
+<h3 class="text-2xl font-headline font-semibold text-on-surface">Community Leaders</h3>
+<button class="bg-surface-container-highest px-4 py-2 rounded-full text-label-md font-semibold text-on-surface-variant transition-colors hover:bg-surface-container">This Week</button>
+</div>
+<div class="space-y-3">
+<!-- User 1 -->
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-lg transition-transform active:scale-[0.98]">
+<div class="w-8 flex justify-center font-headline font-bold text-primary">1</div>
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="Elena" data-alt="Professional headshot of a man with spectacles and a kind smile in studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl8TvKwvKzLnTytOgnmM3Zm1M4TlR82OOk5h6Rmfg-AKt_wyd060PrM74GscuN5ylgTRX4NkpVXR933fKKkYgRHK0Iv7m9Zw5tZYbnYnKyGiu3fcLOaS2x1fLGdvyshfZ0BF8gvrkaYXzxiUb2co4qPzn-YQM6gDGtnrneUTxua9mRrduXfziQKCM3NPzokatA2CHMCWkd1ch5TRmOwsSZdP11WzcccHrG0A4hndwUSjD_NgXjOOgLHS4XBqEb9_eCJMbcXJwu30v9"/>
+</div>
+<div class="flex-1">
+<p class="font-headline font-semibold text-on-surface">Elena Green</p>
+<p class="text-xs text-on-surface-variant">24 Items Shared</p>
+</div>
+<div class="text-right">
+<div class="bg-primary-container text-on-primary-container text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tighter mb-1">Eco-Master</div>
+<p class="font-headline font-bold text-primary">2,450 pts</p>
+</div>
+</div>
+<!-- User 2 -->
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-lg transition-transform active:scale-[0.98]">
+<div class="w-8 flex justify-center font-headline font-bold text-primary-container">2</div>
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="Marcus" data-alt="Candid portrait of a young woman with curly hair looking thoughtful in a soft light library setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGjyZKdwqSQTnXG-6wAs-FoY0vtHDSooUtCa0GhauW3xZUn0LvBIV88lfjG1v0RziSOrYElUC_L7Z081XbvP3vSQPvPYBS1c5sfx6mm3OYEJa70Z0-6iTLbUm5X9l1qDQSbetRSkz0Eo-QCh1V_4a6-MA2jSqyGQ8Ezi7iBkWt00fOu1TSJK2wjCPiwjNIMrcpMrfhE9X0Ebd4TUEJUS5JOMAA-GiA-L4S_A13lplItzVd0pJkvnZFQ02VeBvC2ZBkSwWN49KV9BfH"/>
+</div>
+<div class="flex-1">
+<p class="font-headline font-semibold text-on-surface">Marcus Chen</p>
+<p class="text-xs text-on-surface-variant">19 Items Shared</p>
+</div>
+<div class="text-right">
+<p class="font-headline font-bold text-on-surface">2,120 pts</p>
+</div>
+</div>
+<!-- User Current Position (Highlighted) -->
+<div class="flex items-center gap-4 p-5 bg-primary rounded-lg shadow-lg transform -mx-2 transition-transform active:scale-[0.98]">
+<div class="w-8 flex justify-center font-headline font-bold text-white">14</div>
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary-fixed-dim">
+<img alt="You" data-alt="User profile portrait in soft daylight with a natural garden background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdmPVcVTD9yAqiNcbDHvq2uWkpYsbvlkQdWa_iuyzq9U3j4lW-yLUvsYYnhW_oTBRV13nZVvpkRf8ANIoF-B8HF3Ku4-5SixiN1NITkjgtTyB_bcuacfaW_GTjgSnO0HPPXvWgrhLOsh1IogLSfFfZpDlIYbtph0vH-IeT_u_2T7tEdiwXXK49jo12kA94jTHlIhRy8KLi6tTXAZ3grGa889JLDLg_5J8MGpq-5JgLVj9eBu6_d7DmxnwJSgo0XtgOv-qX-Qjuvdvw"/>
+</div>
+<div class="flex-1">
+<p class="font-headline font-semibold text-white">You (Sami)</p>
+<p class="text-xs text-primary-fixed-dim">6 Items Shared</p>
+</div>
+<div class="text-right">
+<p class="font-headline font-bold text-white">840 pts</p>
+</div>
+</div>
+<!-- User 15 -->
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-lg transition-transform active:scale-[0.98]">
+<div class="w-8 flex justify-center font-headline font-bold text-outline-variant">15</div>
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="Jordan" data-alt="Portrait of a young man with short dark hair in a casual beige sweater against a neutral wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwHUHt5u6SvXtOMWtiF5kCoRqLvZtH5TcCbP7__m75Wom75_-EbrZJSvPC4ixDVv1mNDgSMChAVnnoXOpheAk9GAom1XSG4NYWdNaN1GlhhBkeKWJcab-BNLN1hWEdUGUK20MVBuAjsEKj9SVEWrWMWGwL1xqjhcJs_URbojQXGTL0tWuvwCY1Q2ztcoOCC3JAo3Pz4d_i89ggnkFWMQ8V3BB5AxPgKtOVHQ_vaRlifNOhiXud7StZI9RG4Y1a6nHIsKteSWA8aZzU"/>
+</div>
+<div class="flex-1">
+<p class="font-headline font-semibold text-on-surface">Jordan Smith</p>
+<p class="text-xs text-on-surface-variant">4 Items Shared</p>
+</div>
+<div class="text-right">
+<p class="font-headline font-bold text-on-surface">815 pts</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Climbing the Rank: Tips (Bento Layout) -->
+<section class="space-y-6 pb-12">
+<h3 class="text-2xl font-headline font-semibold text-on-surface">Climb the Ranks</h3>
+<div class="grid grid-cols-2 gap-4">
+<!-- Tip 1 -->
+<a class="col-span-2 bg-secondary-container p-6 rounded-lg flex items-center justify-between transition-transform active:scale-[0.98] cursor-pointer" href="{{DATA:SCREEN:SCREEN_30}}">
+<div class="space-y-2">
+<h4 class="font-headline font-bold text-on-secondary-container">The Pantry Purge</h4>
+<p class="text-sm text-on-secondary-container opacity-80">List 3 items before they expire this week for +500 bonus pts.</p>
+</div>
+<span class="material-symbols-outlined text-4xl text-on-secondary-container opacity-40" data-icon="inventory_2">inventory_2</span>
+</a>
+<!-- Tip 2 -->
+<div class="bg-tertiary-container p-5 rounded-lg flex flex-col justify-between h-40">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="bolt">bolt</span>
+<div>
+<h4 class="font-headline font-bold text-on-tertiary-container">Quick Gift</h4>
+<p class="text-[10px] text-on-tertiary-container mt-1 uppercase tracking-wider">Fast Response</p>
+</div>
+</div>
+<!-- Tip 3 -->
+<div class="bg-surface-container-highest p-5 rounded-lg flex flex-col justify-between h-40">
+<span class="material-symbols-outlined text-primary" data-icon="group">group</span>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Refer Friend</h4>
+<p class="text-[10px] text-on-surface-variant mt-1 uppercase tracking-wider">+1000 Pts Each</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 bg-[#fefae7]/70 backdrop-blur-md z-50 rounded-t-[24dp] shadow-[0_-8px_32px_rgba(29,28,17,0.05)]">
+<a class="flex flex-col items-center justify-center text-[#44483d] p-3 hover:bg-[#f2eedb] rounded-full transition-colors active:scale-90 duration-300" href="{{DATA:SCREEN:SCREEN_30}}">
+<span class="material-symbols-outlined mb-1" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-wider">Inventory</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#49672f] to-[#81a263] text-white rounded-full p-3 shadow-md active:scale-90 duration-300" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="leaderboard" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-wider">Leaderboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] p-3 hover:bg-[#f2eedb] rounded-full transition-colors active:scale-90 duration-300" href="{{DATA:SCREEN:SCREEN_24}}">
+<span class="material-symbols-outlined mb-1" data-icon="settings">settings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-wider">Settings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] p-3 hover:bg-[#f2eedb] rounded-full transition-colors active:scale-90 duration-300" href="{{DATA:SCREEN:SCREEN_23}}">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</body></html>

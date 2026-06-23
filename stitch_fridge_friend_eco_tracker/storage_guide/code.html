@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#74796c",
+                    "primary": "#49672f",
+                    "primary-fixed": "#caeea7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#1c3704",
+                    "on-secondary-container": "#53656f",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#aed18d",
+                    "on-surface-variant": "#44483d",
+                    "primary-container": "#81a263",
+                    "on-primary-fixed-variant": "#324e19",
+                    "inverse-surface": "#323124",
+                    "surface-container": "#f2eedb",
+                    "on-primary-fixed": "#0d2000",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fefae7",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#c4c8ba",
+                    "on-tertiary-container": "#5e1518",
+                    "primary-fixed-dim": "#aed18d",
+                    "surface-bright": "#fefae7",
+                    "surface-variant": "#e7e3d0",
+                    "on-surface": "#1d1c11",
+                    "on-secondary-fixed": "#0b1e26",
+                    "surface": "#fefae7",
+                    "on-secondary-fixed-variant": "#374953",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#49672f",
+                    "secondary": "#4f616b",
+                    "secondary-container": "#cfe3ee",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f8f4e1",
+                    "secondary-fixed-dim": "#b6c9d5",
+                    "tertiary-fixed-dim": "#ffb3af",
+                    "surface-container-highest": "#e7e3d0",
+                    "on-background": "#1d1c11",
+                    "secondary-fixed": "#d2e5f1",
+                    "tertiary-container": "#e27a77",
+                    "surface-container-high": "#ece8d6",
+                    "on-tertiary-fixed-variant": "#7c2c2c",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dedac8",
+                    "tertiary": "#9a4341",
+                    "on-tertiary-fixed": "#400006",
+                    "inverse-on-surface": "#f5f1de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-no-lines {
+            border: none !important;
+        }
+    </style>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-xl shadow-sm shadow-stone-900/5 tonal-shift-no-lines flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-3">
+<!-- Back Button -> Sustainability Analytics {{DATA:SCREEN:SCREEN_53}} -->
+<a class="text-[#44483d] dark:text-stone-400 hover:opacity-80 transition-opacity active:scale-95 transition-transform flex items-center" href="{{DATA:SCREEN:SCREEN_53}}">
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+<h1 class="text-xl font-bold text-[#49672f] dark:text-[#81a263] font-headline tracking-tight">Fridge Friend</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#44483d] dark:text-stone-400 hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto">
+<!-- Hero Section: Editorial Header -->
+<section class="mb-12">
+<span class="text-primary font-headline font-semibold tracking-widest text-[10px] uppercase mb-2 block">Curation Guide</span>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface leading-tight mb-4 max-w-xl">The Art of Freshness</h2>
+<p class="text-on-surface-variant text-lg max-w-md">Optimize your larder with expert storage insights designed to prolong life and preserve flavor.</p>
+</section>
+<!-- Bento Grid: Storage Categories -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Category: Fruit (Featured Asymmetric Card) -->
+<!-- Tip cards -> Inventory Hub {{DATA:SCREEN:SCREEN_55}} -->
+<a class="md:col-span-8 bg-surface-container-low rounded-lg p-8 relative overflow-hidden group block" href="{{DATA:SCREEN:SCREEN_55}}">
+<div class="relative z-10 text-left">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">nutrition</span>
+<h3 class="text-2xl font-headline font-semibold">Fruit Library</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-4">
+<div class="space-y-4">
+<div>
+<label class="text-[10px] font-headline font-bold uppercase tracking-wider text-primary">Best Temperature</label>
+<p class="text-xl font-semibold">4°C to 10°C</p>
+</div>
+<div>
+<label class="text-[10px] font-headline font-bold uppercase tracking-wider text-primary">Shelf Placement</label>
+<p class="text-lg">Crisper Drawer (Low Humidity)</p>
+</div>
+</div>
+<div class="space-y-4">
+<div>
+<label class="text-[10px] font-headline font-bold uppercase tracking-wider text-primary">Ethylene Sensitivity</label>
+<span class="inline-flex items-center px-3 py-1 bg-tertiary-container text-on-tertiary-container rounded-full text-xs font-bold mt-1">High Producer</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Keep apples and bananas away from greens to prevent premature wilting.</p>
+</div>
+</div>
+</div>
+<img class="absolute -bottom-10 -right-10 w-64 h-64 object-cover rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-700" data-alt="vibrant assortment of fresh citrus fruits and berries arranged artistically on a light linen surface with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt1Wc0cmD5sDcc9cBNopuU7Dd26K6Mktj40lbjVF9t2AfFw8awDBvVZ-wYjm_UHBdBqYOJn8btvk4P1ITYKwwG0pbqrgQyJjWQJdGuCqE2q6aBkw0dVusvkwwH4lVXg_-X68arRB901g-JBbxCQd7sxAqhmsUwPsJp5kpDyjogTjQ8Tiz-Ig40qjANJt5V1MX2Nh2pgof2A0f8vViEYy0hE5Vi2bzHeUFCen7oFP9M3z9PsyEcFVkAS1P24oR6VZfOyJTi0tAtI8-5"/>
+</a>
+<!-- Category: Meat (Tall Card) -->
+<a class="md:col-span-4 bg-surface-container rounded-lg p-8 flex flex-col justify-between block text-left" href="{{DATA:SCREEN:SCREEN_55}}">
+<div>
+<span class="material-symbols-outlined text-primary mb-4">restaurant</span>
+<h3 class="text-2xl font-headline font-semibold mb-6">Proteins</h3>
+<div class="space-y-6">
+<div>
+<label class="text-[10px] font-headline font-bold uppercase tracking-wider text-primary">Best Temperature</label>
+<p class="text-lg font-semibold">0°C to 2°C</p>
+</div>
+<div>
+<label class="text-[10px] font-headline font-bold uppercase tracking-wider text-primary">Shelf Placement</label>
+<p class="text-md">Bottom Shelf (Coldest Zone)</p>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/15">
+<p class="text-xs italic text-on-surface-variant">Always store in original leak-proof packaging to avoid cross-contamination.</p>
+</div>
+</a>
+<!-- Category: Vegetables -->
+<a class="md:col-span-6 bg-surface-container-highest rounded-lg p-8 relative overflow-hidden block text-left" href="{{DATA:SCREEN:SCREEN_55}}">
+<div class="relative z-10">
+<h3 class="text-2xl font-headline font-semibold mb-6">Garden Vegetables</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface/50 backdrop-blur-sm p-4 rounded-md">
+<span class="material-symbols-outlined text-primary mb-1">thermostat</span>
+<label class="block text-[10px] font-headline font-bold uppercase tracking-tight text-on-surface-variant">Temp</label>
+<p class="font-bold">4°C</p>
+</div>
+<div class="bg-surface/50 backdrop-blur-sm p-4 rounded-md">
+<span class="material-symbols-outlined text-primary mb-1">layers</span>
+<label class="block text-[10px] font-headline font-bold uppercase tracking-tight text-on-surface-variant">Placement</label>
+<p class="font-bold">Crisper (High Hum.)</p>
+</div>
+</div>
+<div class="mt-6">
+<label class="text-[10px] font-headline font-bold uppercase tracking-wider text-primary block mb-2">Ethylene Sensitivity</label>
+<span class="inline-flex items-center px-3 py-1 bg-primary-container text-on-primary-container rounded-full text-xs font-bold">Low Sensitivity</span>
+</div>
+</div>
+<div class="absolute top-0 right-0 p-6">
+<span class="material-symbols-outlined text-primary/20 text-8xl">eco</span>
+</div>
+</a>
+<!-- Category: Dairy -->
+<a class="md:col-span-6 bg-surface-container-low rounded-lg p-8 flex flex-col justify-center block text-left" href="{{DATA:SCREEN:SCREEN_55}}">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-2xl font-headline font-semibold">Dairy &amp; Eggs</h3>
+<span class="material-symbols-outlined text-primary">egg</span>
+</div>
+<div class="flex gap-8">
+<div class="flex-1">
+<label class="text-[10px] font-headline font-bold uppercase tracking-wider text-primary">Temp</label>
+<p class="text-lg font-semibold">2°C - 4°C</p>
+</div>
+<div class="flex-1">
+<label class="text-[10px] font-headline font-bold uppercase tracking-wider text-primary">Placement</label>
+<p class="text-lg font-semibold">Back of Middle Shelf</p>
+</div>
+</div>
+<div class="mt-6 p-4 bg-tertiary-container/20 rounded-md">
+<p class="text-sm text-on-surface-variant"><strong class="text-on-surface">Pro Tip:</strong> Avoid the door. Temperature fluctuations here are too high for milk and eggs.</p>
+</div>
+</a>
+<!-- Recipe Integration (Editorial Layer) -->
+<!-- "Related Guides" -> Community Feed {{DATA:SCREEN:SCREEN_63}} -->
+<div class="md:col-span-12 mt-4">
+<div class="relative rounded-lg overflow-hidden h-48 group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="overhead shot of a minimalist wooden table with fresh kale, radishes, and artisanal vinegar bottle in soft natural window light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwQPdw0oWrMcYQK3NOeFLxEly3C8IW9MoOasY3wEF_G53YCkeZnyTpv453coPIhK7Cshkuf3KyySwiEL3CJwoZ38MiNJZXpYSZG425eRBfvarGrHQIxstlsLPRzPqgq5BG3FbCgGBD9E2jhWAUdAvvDiU2so4lXg9ir2Cr3yI_82UHwW_TL1F6l1TXbxBdJC1tSudAF82zOtJbnpjV0p1nLeSArLv7yjFfzGADBoCMKLZuzXxJpp_ZCOC16rPRh9xhKtEllxU1w6Gp"/>
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface/80 to-transparent flex flex-col justify-center px-12">
+<h4 class="text-background text-2xl font-headline font-bold mb-2">Preservation Recipes</h4>
+<p class="text-background/80 text-sm max-w-xs mb-4">Learn how to pickle and ferment your surplus stock to extend shelf life by months.</p>
+<a class="w-fit px-6 py-2 bg-primary text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-primary-container transition-colors" href="{{DATA:SCREEN:SCREEN_63}}">Explore Guide</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-xl shadow-[0_-4px_32px_rgba(29,28,17,0.05)] tonal-shift-no-lines z-50">
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-500 px-4 py-2 hover:bg-[#f8f4e1] dark:hover:bg-stone-800/50 rounded-full transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#f2eedb] dark:bg-stone-800 text-[#49672f] dark:text-[#81a263] rounded-full px-4 py-2 active:scale-90 transition-transform duration-200" href="{{DATA:SCREEN:SCREEN_55}}">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Inventory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-500 px-4 py-2 hover:bg-[#f8f4e1] dark:hover:bg-stone-800/50 rounded-full transition-colors active:scale-90 duration-200" href="#">
+<div class="bg-primary p-2 rounded-full -mt-8 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-white">add_a_photo</span>
+</div>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Scan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-500 px-4 py-2 hover:bg-[#f8f4e1] dark:hover:bg-stone-800/50 rounded-full transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Recipes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-500 px-4 py-2 hover:bg-[#f8f4e1] dark:hover:bg-stone-800/50 rounded-full transition-colors active:scale-90 duration-200" href="{{DATA:SCREEN:SCREEN_53}}">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Analytics</span>
+</a>
+</nav>
+</body></html>

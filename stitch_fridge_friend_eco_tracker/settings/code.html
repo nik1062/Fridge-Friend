@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings - Fridge Friend</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#fefae7",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#aed18d",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb3af",
+                    "surface-dim": "#dedac8",
+                    "on-tertiary-container": "#5e1518",
+                    "surface-bright": "#fefae7",
+                    "on-tertiary-fixed-variant": "#7c2c2c",
+                    "on-surface": "#1d1c11",
+                    "on-secondary-fixed-variant": "#374953",
+                    "on-primary-container": "#1c3704",
+                    "background": "#fefae7",
+                    "outline": "#74796c",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f8f4e1",
+                    "on-tertiary-fixed": "#400006",
+                    "secondary-fixed-dim": "#b6c9d5",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1d1c11",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#0d2000",
+                    "surface-container-highest": "#e7e3d0",
+                    "on-primary-fixed-variant": "#324e19",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#9a4341",
+                    "on-surface-variant": "#44483d",
+                    "on-secondary-fixed": "#0b1e26",
+                    "inverse-on-surface": "#f5f1de",
+                    "secondary-container": "#cfe3ee",
+                    "secondary-fixed": "#d2e5f1",
+                    "primary-container": "#81a263",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#323124",
+                    "outline-variant": "#c4c8ba",
+                    "surface-container-high": "#ece8d6",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#ffdad7",
+                    "primary": "#49672f",
+                    "surface-variant": "#e7e3d0",
+                    "secondary": "#4f616b",
+                    "on-secondary-container": "#53656f",
+                    "tertiary-container": "#e27a77",
+                    "surface-tint": "#49672f",
+                    "primary-fixed-dim": "#aed18d",
+                    "surface-container": "#f2eedb",
+                    "primary-fixed": "#caeea7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #fefae7;
+        }
+        .editorial-shadow {
+            box-shadow: 0 8px 32px rgba(29, 28, 17, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-md flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<a class="material-symbols-outlined text-[#49672f] dark:text-[#81a263] cursor-pointer" data-icon="menu" href="{{DATA:SCREEN:SCREEN_18}}">menu</a>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-[#49672f] dark:text-[#81a263] tracking-tight text-lg">Fridge Friend</h1>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Close up portrait of a friendly man with a warm smile, professional lighting, soft background blur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC513IP1FmGaByu9l47ZckY1rWyk1GCaahYNtr8yED110EWlEM01a5T7KplKgn3lFEhclncwCNeYZcVRCqnW4WDhdV5WOjShf1GBzXJ5JxjZuA7nqWbCj8GQYzkRWCwYU_Ilw_NTMK-2rTpb_EqO8i72KRO-RHxInVGhwWGzDyAa0-QmvVzVJtLD1fBz5ZIMyKzhQHy6qkBLMgCEzZ6aujaq8MlkQd0X1Tce1g1kMRqLVgVX5SxP089SJVezh7eyAxB-PrtO-acxVJY"/>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Editorial Header Section -->
+<section class="mb-10">
+<h2 class="font-headline text-display-lg text-primary leading-tight mb-2" style="font-size: 3rem;">Settings</h2>
+<p class="text-on-surface-variant font-body text-body-md opacity-80">Refine your experience in the Digital Larder.</p>
+</section>
+<!-- Profile Quick Action Card -->
+<section class="mb-8 p-6 bg-surface-container rounded-lg editorial-shadow flex items-center justify-between">
+<a class="flex items-center gap-4 cursor-pointer" href="{{DATA:SCREEN:SCREEN_23}}">
+<div class="w-16 h-16 rounded-full bg-primary-container p-0.5">
+<img alt="Avatar" class="w-full h-full object-cover rounded-full" data-alt="Detailed professional headshot of a person with soft cinematic lighting and natural skin tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCymkCzpsW-J6M5s1MKrEFb7GSutoOgIxTbwfPRrIihNR9xeWS8w8_VMzFYCcv5_6edxNuE0a4iT756kf-iF7i5QmXx36EZ-L-BCOp6bTImYASZgSIG32RilKRw7l1fwiIyMb63fmmcpcutD6iivvfR9ugKR5zIvpW5EplVc2mPmZi6Sh4L5ebrkIyQVb34osQif1nQyxJP01yMgSEwG0J_G1vLc-wlqpjMG_-n7AWpy1aQBeJxHcGWXrVC1SlfHl9S8qCo1BgksMYb"/>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-title-md">Alex Henderson</h3>
+<p class="font-body text-body-md text-on-surface-variant">Premium Member</p>
+</div>
+</a>
+<button class="material-symbols-outlined text-primary bg-surface-container-lowest p-3 rounded-full hover:bg-white transition-colors" data-icon="edit">edit</button>
+</section>
+<!-- Settings Groups -->
+<div class="space-y-12">
+<!-- Appearance Group -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="palette">palette</span>
+<h4 class="font-headline font-semibold text-headline-md tracking-tight">Appearance</h4>
+</div>
+<div class="bg-surface-container-low rounded-lg overflow-hidden">
+<!-- Dark Mode Toggle -->
+<div class="flex items-center justify-between p-5 hover:bg-surface-container transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="dark_mode">dark_mode</span>
+<div>
+<p class="font-headline font-medium text-title-md">Dark Mode</p>
+<p class="font-body text-body-md text-on-surface-variant opacity-70">Switch to a darker interface</p>
+</div>
+</div>
+<div class="w-12 h-6 bg-outline-variant/30 rounded-full relative flex items-center px-1">
+<div class="w-4 h-4 bg-white rounded-full shadow-sm"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Notifications Group -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="notifications">notifications</span>
+<h4 class="font-headline font-semibold text-headline-md tracking-tight">Notifications</h4>
+</div>
+<div class="bg-surface-container-low rounded-lg overflow-hidden">
+<!-- Expiry Alerts -->
+<a class="flex items-center justify-between p-5 hover:bg-surface-container transition-colors border-b border-surface-container" href="{{DATA:SCREEN:SCREEN_22}}">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="timer">timer</span>
+<div>
+<p class="font-headline font-medium text-title-md">Expiry Alerts</p>
+<p class="font-body text-body-md text-on-surface-variant opacity-70">Reminders before food goes bad</p>
+</div>
+</div>
+<div class="w-12 h-6 bg-primary-container rounded-full relative flex items-center justify-end px-1">
+<div class="w-4 h-4 bg-white rounded-full shadow-sm"></div>
+</div>
+</a>
+<!-- Community Updates -->
+<div class="flex items-center justify-between p-5 hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="group">group</span>
+<div>
+<p class="font-headline font-medium text-title-md">Community Updates</p>
+<p class="font-body text-body-md text-on-surface-variant opacity-70">New recipes and leaderboard stats</p>
+</div>
+</div>
+<div class="w-12 h-6 bg-outline-variant/30 rounded-full relative flex items-center px-1">
+<div class="w-4 h-4 bg-white rounded-full shadow-sm"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Privacy Group -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="lock">lock</span>
+<h4 class="font-headline font-semibold text-headline-md tracking-tight">Privacy</h4>
+</div>
+<div class="bg-surface-container-low rounded-lg overflow-hidden">
+<div class="flex items-center justify-between p-5 hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="visibility_off">visibility_off</span>
+<div>
+<p class="font-headline font-medium text-title-md">Private Inventory</p>
+<p class="font-body text-body-md text-on-surface-variant opacity-70">Hide your list from the community</p>
+</div>
+</div>
+<div class="w-12 h-6 bg-primary-container rounded-full relative flex items-center justify-end px-1">
+<div class="w-4 h-4 bg-white rounded-full shadow-sm"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Account Management -->
+<section class="pb-8">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="manage_accounts">manage_accounts</span>
+<h4 class="font-headline font-semibold text-headline-md tracking-tight">Account</h4>
+</div>
+<div class="bg-surface-container-low rounded-lg overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 hover:bg-surface-container transition-colors text-left">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="mail">mail</span>
+<div>
+<p class="font-headline font-medium text-title-md">Change Email</p>
+<p class="font-body text-body-md text-on-surface-variant opacity-70">alex.h@domain.com</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="chevron_right">chevron_right</span>
+</button>
+<a class="w-full flex items-center justify-between p-5 hover:bg-surface-container transition-colors text-left border-t border-white/10" href="{{DATA:SCREEN:SCREEN_4}}">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary" data-icon="logout">logout</span>
+<div>
+<p class="font-headline font-medium text-title-md text-tertiary">Sign Out</p>
+<p class="font-body text-body-md text-on-surface-variant opacity-70">End your session safely</p>
+</div>
+</div>
+</a>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-md z-50 rounded-t-[24dp] shadow-[0_-8px_32px_rgba(29,28,17,0.05)]">
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-400 p-3 hover:bg-[#f2eedb] dark:hover:bg-stone-800 rounded-full transition-colors active:scale-90 duration-300 ease-out" href="{{DATA:SCREEN:SCREEN_30}}">
+<span class="material-symbols-outlined mb-1" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-wider">Inventory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-400 p-3 hover:bg-[#f2eedb] dark:hover:bg-stone-800 rounded-full transition-colors active:scale-90 duration-300 ease-out" href="{{DATA:SCREEN:SCREEN_25}}">
+<span class="material-symbols-outlined mb-1" data-icon="leaderboard">leaderboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-wider">Leaderboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#49672f] to-[#81a263] text-white rounded-full p-3 shadow-lg active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-wider">Settings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-400 p-3 hover:bg-[#f2eedb] dark:hover:bg-stone-800 rounded-full transition-colors active:scale-90 duration-300 ease-out" href="{{DATA:SCREEN:SCREEN_23}}">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#374953",
+                    "primary-container": "#81a263",
+                    "inverse-surface": "#323124",
+                    "inverse-on-surface": "#f5f1de",
+                    "surface-bright": "#fefae7",
+                    "surface-container-low": "#f8f4e1",
+                    "secondary-fixed": "#d2e5f1",
+                    "primary": "#49672f",
+                    "on-primary-fixed": "#0d2000",
+                    "on-surface": "#1d1c11",
+                    "surface-container-highest": "#e7e3d0",
+                    "on-secondary-fixed": "#0b1e26",
+                    "tertiary-container": "#e27a77",
+                    "surface": "#fefae7",
+                    "secondary": "#4f616b",
+                    "tertiary-fixed": "#ffdad7",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb3af",
+                    "surface-container": "#f2eedb",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#caeea7",
+                    "on-primary-container": "#1c3704",
+                    "secondary-fixed-dim": "#b6c9d5",
+                    "tertiary": "#9a4341",
+                    "surface-dim": "#dedac8",
+                    "background": "#fefae7",
+                    "secondary-container": "#cfe3ee",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#aed18d",
+                    "on-surface-variant": "#44483d",
+                    "inverse-primary": "#aed18d",
+                    "on-tertiary-container": "#5e1518",
+                    "outline": "#74796c",
+                    "on-primary-fixed-variant": "#324e19",
+                    "on-tertiary-fixed-variant": "#7c2c2c",
+                    "surface-container-high": "#ece8d6",
+                    "on-tertiary-fixed": "#400006",
+                    "surface-tint": "#49672f",
+                    "surface-variant": "#e7e3d0",
+                    "on-background": "#1d1c11",
+                    "on-secondary-container": "#53656f",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c4c8ba",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .backdrop-blur-xl {
+            backdrop-filter: blur(24px);
+        }
+        .tonal-shift-no-border {
+            border: none !important;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container/30">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 bg-[#fefae7]/70 dark:bg-[#1d1c11]/70 backdrop-blur-xl shadow-[0_8px_32px_rgba(29,28,17,0.05)] flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#49672f]" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<h1 class="font-headline font-semibold text-[1.75rem] tracking-tight text-[#49672f]">Rewards</h1>
+</div>
+<a class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container/20 block" href="#" onclick="event.preventDefault(); window.parent.postMessage({type: 'navigation', screenId: '{{DATA:SCREEN:SCREEN_23}}'}, '*');">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="Professional profile portrait of a woman with a kind expression, soft natural daylight, minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB44GTokPp3jaDMyujwc_41Lv_hbqjurrlXkDahNGvkcE7EdcgQxFdRL_sUuNOn8Cgy33bK3GIxdi_t1-0tbbBuj7t_PnBga4r7OtHbqkCdUhipp3xp6Rjeeefpa11xRUhyulQaPp1hmPnmVUOUNatAkUR0-OFH3qwdoMbmM0dfoGBdbpxk8L2lwdAdRz1RAhMaZlENKaL4hqlUcg7JreGaWS-pAPgGeodeTyqINyJQE2ewv0ptnRHn91oWNpmdqbC7RdluhCL7cZ5H"/>
+</a>
+</header>
+<main class="pt-28 pb-32 px-6 max-w-5xl mx-auto">
+<!-- Hero Stats Section -->
+<section class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="font-label text-label-md text-primary font-semibold uppercase tracking-widest mb-2 block">Your Balance</span>
+<div class="flex items-baseline gap-2">
+<h2 class="font-headline text-[3.5rem] font-bold leading-none text-on-surface">2,450</h2>
+<span class="font-headline text-headline-md text-primary-container">Eco-Credits</span>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-lg flex items-center gap-4 max-w-sm">
+<div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<p class="text-body-md text-on-surface-variant">You've saved <span class="font-semibold text-primary">12kg</span> of food waste this month. Keep it up!</p>
+</div>
+</section>
+<!-- Bento Grid Rewards Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Featured Reward: Premium Subscription (Large Card) -->
+<div class="md:col-span-8 bg-surface-container rounded-lg overflow-hidden group relative">
+<div class="absolute top-6 left-6 z-10">
+<span class="bg-tertiary-container text-on-tertiary-container font-label text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</span>
+</div>
+<div class="h-64 md:h-full relative overflow-hidden">
+<img alt="Premium Subscription" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Minimalist top-down view of fresh organic vegetables in a wooden crate on a clean cream background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATN4znsTqvwrAHG4tS1euyJzi-CMf65Y6w_cI-rdoae4piX_l3ayxyf3rlkFvWA3gLwfb5R8asagl50myqec3yQnhjd8mM2FQ0G4d5hINF0b12UWcMvY37XAHusEaGYYauUbD9cRphaXXTnBIhc_c36ljAcg2pCrCsM1zEFy16Zzep9b_ewvCC2i07lLSDLh8xr_KOD8ESfc6HtKbzIZ5La2pixOjxNtoIvjLEu-gPD5mCfk-1SiOs9r-kDy0nGCLmbjF1kZw9lqwQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/20 to-transparent"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 text-surface">
+<h3 class="font-headline text-headline-md font-semibold mb-2">Premium Subscription</h3>
+<p class="font-body text-body-md text-surface/80 max-w-md mb-6">Unlock exclusive recipes, advanced tracking metrics, and priority local pickup notifications.</p>
+<div class="flex items-center gap-4">
+<button class="bg-gradient-to-br from-primary to-primary-container px-6 py-3 rounded-full font-label font-semibold text-on-primary shadow-lg hover:opacity-90 active:scale-95 transition-all" onclick="window.parent.postMessage({type: 'navigation', screenId: '{{DATA:SCREEN:SCREEN_22}}'}, '*');">
+                            Redeem for 1,200
+                        </button>
+</div>
+</div>
+</div>
+<!-- Small Reward: Sustainable Silicone Bags -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="bg-surface-container-high rounded-lg p-6 flex flex-col justify-between h-full group">
+<div>
+<div class="aspect-square rounded-md overflow-hidden mb-4">
+<img alt="Sustainable Silicone Bags" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Aesthetic eco-friendly silicone reusable food storage bags in soft pastel colors, clean studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb8p6Jl97qS5SqHmq87z6nYUR8SLxvhOpDs7YTvbuHmEDYQb3PXBC42pgAPPlC6RTIk3uuvCYtDpwfAUtv1cJP4L7g9A9cN4BWEL4Lur6mlmz-SJ7qXDQxqQZVRZXTBR55nu92OT_AFfGoL-Xwy25VqxAk1QKMGbCS0bKtz7jUSW9P-_P6jP2SaINvelLyqtETyo5l_-eAigZNAVaYLvW_3PCdqLj-O1Jj-dB2X3YGp0Xta74HDiPRCZqjlXPpU6Lfr5s1w9jXE_8Z"/>
+</div>
+<h3 class="font-headline text-title-md font-semibold text-on-surface">Sustainable Silicone Bags</h3>
+<p class="font-body text-body-md text-on-surface-variant mt-2">Set of 3 leak-proof bags.</p>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<span class="font-headline font-bold text-primary">450 Credits</span>
+<button class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" onclick="window.parent.postMessage({type: 'navigation', screenId: '{{DATA:SCREEN:SCREEN_22}}'}, '*');">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Row 2: Local Farmer's Market Coupon & Other -->
+<div class="md:col-span-6 bg-surface-container-low rounded-lg p-8 flex flex-col md:flex-row gap-6 items-center">
+<div class="w-32 h-32 flex-shrink-0 bg-primary-fixed-dim rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[4rem] text-on-primary-fixed-variant" style="font-variation-settings: 'FILL' 1;">local_mall</span>
+</div>
+<div class="flex-grow text-center md:text-left">
+<h3 class="font-headline text-headline-md font-semibold text-on-surface">Local Farmer's Market Coupon</h3>
+<p class="font-body text-body-md text-on-surface-variant mt-2 mb-4">$15 discount on any purchase at participating community markets.</p>
+<div class="flex items-center justify-center md:justify-start gap-4">
+<span class="font-headline font-bold text-primary text-xl">800 Credits</span>
+<button class="bg-on-surface text-surface px-5 py-2 rounded-full font-label text-sm font-semibold hover:bg-on-surface-variant transition-colors" onclick="window.parent.postMessage({type: 'navigation', screenId: '{{DATA:SCREEN:SCREEN_22}}'}, '*');">Redeem</button>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 bg-surface-container-highest rounded-lg p-8 flex flex-col md:flex-row gap-6 items-center border border-outline-variant/15">
+<div class="w-32 h-32 flex-shrink-0 overflow-hidden rounded-lg">
+<img alt="Artisan Pantry Gift" class="w-full h-full object-cover" data-alt="Artisanal glass honey jar with wooden dipper, warm organic tones, high-end editorial food photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQQOviZUs3jKFvQP8wEJrrPmqilAsvL1rZ7hz5oGtp6GR75I7UNa7qxLVPpBqn9ko61RAXzYIuOPaiA37_Fs16Iar3P03CeBBBlA9cefhtKRkO3TJyEOzhtnjOykQ39_RYy8sDXTR-j2ppNcpF_J47DJD9Z-GCM2_DeY0gzpjEfZCShfC-7Jta7BGySycIvIQzmVGdPH4-bQLDDjOiQJSqIELnVIH40vkgrq_PmeFxUFSCcpwLawpJzmqUQygV9v5K8M7dh9qdpQ9M"/>
+</div>
+<div class="flex-grow text-center md:text-left">
+<div class="flex flex-col">
+<span class="font-label text-[0.65rem] font-bold text-tertiary uppercase tracking-widest mb-1">New Arrival</span>
+<h3 class="font-headline text-headline-md font-semibold text-on-surface">Artisan Pantry Gift</h3>
+</div>
+<p class="font-body text-body-md text-on-surface-variant mt-2 mb-4">A curated jar of organic wild honey from local apiaries.</p>
+<div class="flex items-center justify-center md:justify-start gap-4">
+<span class="font-headline font-bold text-primary text-xl">600 Credits</span>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full font-label text-sm font-semibold hover:opacity-90 transition-opacity" onclick="window.parent.postMessage({type: 'navigation', screenId: '{{DATA:SCREEN:SCREEN_22}}'}, '*');">Redeem</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Recipe Teaser Overlay (Design System Contextual Component) -->
+<div class="mt-16 p-8 bg-surface-container/40 backdrop-blur-md rounded-lg relative overflow-hidden border border-outline-variant/10">
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="max-w-md">
+<h4 class="font-headline text-headline-md font-bold mb-3">Earn more credits?</h4>
+<p class="text-on-surface-variant">Log your daily meals and prevent food waste to earn extra Eco-Credits every week.</p>
+</div>
+<button class="flex items-center gap-2 font-label font-bold text-primary group">
+                    LEARN HOW TO EARN
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Decorative circle -->
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#fefae7]/70 dark:bg-[#1d1c11]/70 backdrop-blur-xl shadow-[0_-8px_32px_rgba(29,28,17,0.05)] z-50">
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200" href="#" onclick="event.preventDefault(); window.parent.postMessage({type: 'navigation', screenId: '{{DATA:SCREEN:SCREEN_30}}'}, '*');">
+<span class="material-symbols-outlined mb-1">kitchen</span>
+<span class="font-headline text-[0.75rem] font-semibold">Inventory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200" href="#" onclick="event.preventDefault(); window.parent.postMessage({type: 'navigation', screenId: '{{DATA:SCREEN:SCREEN_29}}'}, '*');">
+<span class="material-symbols-outlined mb-1">payments</span>
+<span class="font-headline text-[0.75rem] font-semibold">Earnings</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#49672f] to-[#81a263] text-[#fefae7] rounded-full px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">redeem</span>
+<span class="font-headline text-[0.75rem] font-semibold">Rewards</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200" href="#" onclick="event.preventDefault(); window.parent.postMessage({type: 'navigation', screenId: '{{DATA:SCREEN:SCREEN_23}}'}, '*');">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-headline text-[0.75rem] font-semibold">Account</span>
+</a>
+</nav>
+</body></html>

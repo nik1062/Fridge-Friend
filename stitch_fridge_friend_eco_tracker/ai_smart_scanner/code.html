@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Smart Scanner - Fridge Friend</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#5e1518",
+                    "outline": "#74796c",
+                    "tertiary-container": "#e27a77",
+                    "on-secondary-container": "#53656f",
+                    "surface-container-highest": "#e7e3d0",
+                    "outline-variant": "#c4c8ba",
+                    "on-primary-container": "#1c3704",
+                    "secondary-container": "#cfe3ee",
+                    "on-surface": "#1d1c11",
+                    "surface-bright": "#fefae7",
+                    "inverse-on-surface": "#f5f1de",
+                    "primary-fixed-dim": "#aed18d",
+                    "surface-container-high": "#ece8d6",
+                    "surface-tint": "#49672f",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fefae7",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#dedac8",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#d2e5f1",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "surface": "#fefae7",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#374953",
+                    "primary-container": "#81a263",
+                    "primary": "#49672f",
+                    "surface-container": "#f2eedb",
+                    "surface-container-low": "#f8f4e1",
+                    "tertiary": "#9a4341",
+                    "secondary-fixed-dim": "#b6c9d5",
+                    "surface-variant": "#e7e3d0",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#323124",
+                    "secondary": "#4f616b",
+                    "primary-fixed": "#caeea7",
+                    "on-surface-variant": "#44483d",
+                    "on-primary-fixed": "#0d2000",
+                    "on-tertiary-fixed-variant": "#7c2c2c",
+                    "on-primary-fixed-variant": "#324e19",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-tertiary-fixed": "#400006",
+                    "on-background": "#1d1c11",
+                    "on-secondary-fixed": "#0b1e26",
+                    "inverse-primary": "#aed18d",
+                    "tertiary-fixed-dim": "#ffb3af"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scanner-frame-gradient {
+            background: linear-gradient(to right, #81a263 2px, transparent 2px) 0 0,
+                        linear-gradient(to right, #81a263 2px, transparent 2px) 0 100%,
+                        linear-gradient(to left, #81a263 2px, transparent 2px) 100% 0,
+                        linear-gradient(to left, #81a263 2px, transparent 2px) 100% 100%,
+                        linear-gradient(to bottom, #81a263 2px, transparent 2px) 0 0,
+                        linear-gradient(to bottom, #81a263 2px, transparent 2px) 100% 0,
+                        linear-gradient(to top, #81a263 2px, transparent 2px) 0 100%,
+                        linear-gradient(to top, #81a263 2px, transparent 2px) 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 40px 40px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body select-none overflow-hidden h-screen w-full">
+<!-- Top Navigation Bar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container active:scale-95 transition-transform" onclick="window.location.href='{{DATA:SCREEN:SCREEN_23}}'">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="professional male portrait with warm lighting and minimalist office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZbjpMJqT07vVufDMDFQmTqge7MDFg5zx5DNOrLez65jRPY2REWrwkZnbU36VHkcM4k-sa03Jy1ykx77lOgkTeyBCSiXczEKLEuSUQ5JrDhya0i_LaBYXmh3-u7vN7_Y3lJKpoyI8S-XdyiF4v3vli-_XB8ijA8_R57-NBngYuIC3nUU1EtWOapzuPiqEZRbvnBMHFMy9gEpepjk7z5HRlAQkMnPy19ivK67qWvJg0aFtG0GVwPnd08mFxtNUwvij5spAWVILIXjDf"/>
+</button>
+<span class="text-xl font-bold text-[#49672f] dark:text-[#81a263] font-['Plus_Jakarta_Sans'] tracking-tight">Fridge Friend</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#44483d] hover:opacity-80 transition-opacity active:scale-95 duration-200" onclick="window.location.href='{{DATA:SCREEN:SCREEN_18}}'">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<button class="text-[#44483d] hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<!-- Full-Screen Camera Canvas -->
+<main class="relative h-screen w-full pt-20 pb-24 overflow-hidden flex items-center justify-center bg-black">
+<!-- Simulated Camera View Background -->
+<div class="absolute inset-0 z-0">
+<img alt="Camera Feed" class="w-full h-full object-cover opacity-80" data-alt="top down view of a grocery store receipt on a wooden kitchen counter next to organic tomatoes and greens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLxubiq30qTvAfPzMr_vfeYXWfP1QuHkUyJGgnaFyeDoBejbfqF1dJkfxH4CoL2UKcTp0xw-E6kZh6l6icAzFjEfx4j_wWmcJZpmT885HF9VNKldamrfS1IA6KS72jib0QMTLuNphznYaDIihulQ7z9d2pFmaIWV8b04cQnymj0r5FeiPa0hIu_mgJ7ik28nxiuu2-N5armzudum1V7YzyzudfZyxaL6B-BtA11RYt_M2TeW6EtUmBOYHZ9c58ELVH7gwNZeCSRTa1"/>
+<div class="absolute inset-0 bg-black/20"></div>
+</div>
+<!-- Scanning UI Overlay -->
+<div class="relative z-10 w-[85%] h-[60%] flex items-center justify-center">
+<!-- Glowing Frame -->
+<div class="absolute inset-0 scanner-frame-gradient opacity-80"></div>
+<div class="absolute inset-0 border border-primary-container/20 bg-primary/5 rounded-lg"></div>
+<!-- Scanning Line -->
+<div class="absolute top-0 left-0 w-full h-[2px] bg-primary-container shadow-[0_0_15px_rgba(129,162,99,0.8)] animate-pulse" style="top: 35%"></div>
+<!-- Detected Text Bubbles (Asymmetric Real-time placement) -->
+<button class="absolute top-[20%] left-[10%] bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg flex items-center gap-2 transform -rotate-2 active:scale-95 transition-transform cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_21}}'">
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-label text-[12px] font-bold text-on-surface-variant">Milk - $4.50</span>
+</button>
+<button class="absolute top-[45%] right-[15%] bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg flex items-center gap-2 transform rotate-1 active:scale-95 transition-transform cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_21}}'">
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-label text-[12px] font-bold text-on-surface-variant">Eggs - $3.00</span>
+</button>
+<button class="absolute bottom-[25%] left-[20%] bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg flex items-center gap-2 transform -rotate-1 active:scale-95 transition-transform cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_21}}'">
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-label text-[12px] font-bold text-on-surface-variant">Spinach - $2.25</span>
+</button>
+<!-- Processing Indicator -->
+<div class="absolute bottom-8 flex flex-col items-center gap-2">
+<div class="px-4 py-2 rounded-full bg-primary/20 backdrop-blur-xl border border-primary-container/30">
+<span class="font-label text-white text-[12px] tracking-widest uppercase">Analyzing Items...</span>
+</div>
+</div>
+</div>
+<!-- Camera Controls -->
+<div class="absolute bottom-32 w-full px-12 flex justify-between items-center z-20">
+<button class="w-14 h-14 rounded-full bg-surface-container-lowest/20 backdrop-blur-xl border border-white/30 flex items-center justify-center text-white hover:bg-surface-container-lowest/40 transition-colors active:scale-90" onclick="alert('Flash enabled')">
+<span class="material-symbols-outlined" data-icon="flash_on">flash_on</span>
+</button>
+<div class="w-20 h-20 rounded-full border-4 border-white/50 flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-white active:scale-90 transition-transform cursor-pointer"></div>
+</div>
+<button class="w-14 h-14 rounded-full bg-surface-container-lowest/20 backdrop-blur-xl border border-white/30 flex items-center justify-center text-white hover:bg-surface-container-lowest/40 transition-colors active:scale-90" onclick="alert('Opening Gallery')">
+<span class="material-symbols-outlined" data-icon="image">image</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Shared Component) -->
+<nav class="fixed bottom-0 w-full z-50 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-xl flex justify-around items-end pb-6 pt-2 px-4 w-full shadow-[0_-8px_32px_rgba(29,28,17,0.05)]">
+<button class="flex flex-col items-center justify-center text-[#44483d] p-2 hover:text-[#49672f] transition-colors active:scale-90 duration-200" onclick="window.location.href='{{DATA:SCREEN:SCREEN_18}}'">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold mt-1">Dashboard</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#44483d] p-2 hover:text-[#49672f] transition-colors active:scale-90 duration-200" onclick="window.location.href='{{DATA:SCREEN:SCREEN_30}}'">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold mt-1">Inventory</span>
+</button>
+<!-- Active Scan Tab (FAB integrated) -->
+<div class="flex flex-col items-center justify-center bg-gradient-to-br from-[#49672f] to-[#81a263] text-white rounded-full p-3 mb-2 scale-110 shadow-lg active:scale-90 transition-transform duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="center_focus_strong" style="font-variation-settings: 'FILL' 1;">center_focus_strong</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold hidden md:block">Scan</span>
+</div>
+<button class="flex flex-col items-center justify-center text-[#44483d] p-2 hover:text-[#49672f] transition-colors active:scale-90 duration-200" onclick="window.location.href='{{DATA:SCREEN:SCREEN_20}}'">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold mt-1">Recipes</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#44483d] p-2 hover:text-[#49672f] transition-colors active:scale-90 duration-200" onclick="window.location.href='{{DATA:SCREEN:SCREEN_31}}'">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold mt-1">Analytics</span>
+</button>
+</nav>
+<!-- Contextual FAB label (Visible because it's the primary action screen) -->
+<div class="fixed bottom-28 left-1/2 -translate-x-1/2 z-50">
+<div class="bg-primary px-4 py-2 rounded-full shadow-2xl flex items-center gap-2">
+<span class="font-label text-white text-[12px] font-bold">Scanning Receipt...</span>
+</div>
+</div>
+</body></html>

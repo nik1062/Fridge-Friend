@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#74796c",
+                    "primary": "#49672f",
+                    "primary-fixed": "#caeea7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#1c3704",
+                    "on-secondary-container": "#53656f",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#aed18d",
+                    "on-surface-variant": "#44483d",
+                    "primary-container": "#81a263",
+                    "on-primary-fixed-variant": "#324e19",
+                    "inverse-surface": "#323124",
+                    "surface-container": "#f2eedb",
+                    "on-primary-fixed": "#0d2000",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fefae7",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#c4c8ba",
+                    "on-tertiary-container": "#5e1518",
+                    "primary-fixed-dim": "#aed18d",
+                    "surface-bright": "#fefae7",
+                    "surface-variant": "#e7e3d0",
+                    "on-surface": "#1d1c11",
+                    "on-secondary-fixed": "#0b1e26",
+                    "surface": "#fefae7",
+                    "on-secondary-fixed-variant": "#374953",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#49672f",
+                    "secondary": "#4f616b",
+                    "secondary-container": "#cfe3ee",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f8f4e1",
+                    "secondary-fixed-dim": "#b6c9d5",
+                    "tertiary-fixed-dim": "#ffb3af",
+                    "surface-container-highest": "#e7e3d0",
+                    "on-background": "#1d1c11",
+                    "secondary-fixed": "#d2e5f1",
+                    "tertiary-container": "#e27a77",
+                    "surface-container-high": "#ece8d6",
+                    "on-tertiary-fixed-variant": "#7c2c2c",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dedac8",
+                    "tertiary": "#9a4341",
+                    "on-tertiary-fixed": "#400006",
+                    "inverse-on-surface": "#f5f1de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-no-lines {
+            border: none !important;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-xl shadow-sm shadow-stone-900/5 flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<a class="flex items-center gap-3 cursor-pointer" href="{{DATA:SCREEN:SCREEN_49}}">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Close up portrait of a smiling young woman with warm lighting and a soft natural greenery background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeiSUFPsAA6dPM5Tz7sfIN-DRUihoovBT9nNNFthIzrWTSGqbV8AQjo__3aUBW6Vs-yOU_6ahn6jjGNKIEaKs3V9qyqL1QtcRAyULZCFVUE9VUkaIVZkEqtw4sBmLy0jqhrtub7MDNkVzrmYpxMXuJoX-orx-59uZhIfM7hhtEpPBc7clGYgVu9CaG_u6ENxxVhSqX6LtBuGpNKC4A2zgKL5iLg7smEURLqx5-g52x3kUhnO_9qQRRa0E1i1uFBatiHXCnuo-fnu5A"/>
+<span class="text-xl font-bold text-[#49672f] dark:text-[#81a263] font-headline tracking-tight">Fridge Friend</span>
+</a>
+</div>
+<button class="text-[#49672f] dark:text-[#81a263] hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto space-y-10">
+<!-- Profile Hero Section -->
+<section class="flex flex-col items-center text-center space-y-4">
+<div class="relative">
+<div class="w-32 h-32 rounded-xl overflow-hidden shadow-xl shadow-primary/10">
+<img class="w-full h-full object-cover" data-alt="Professional lifestyle headshot of a person in a sunlit kitchen with organic textures and soft bokeh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcRUa53MYw1zfWDE2D6a_oyv88SqnWY15ZuuDwv7BQUUX4cjG2gAEQMPtoXCwlYMe9NlQulYmJLWXLx9JgYrfUpvqLZEG7YA4cTfIND0cUmgEQAmtmexBdQ12dy0nrv69_Y8HZGO16pDLt-_8JzOFTuo5aezbx85WgV9bKzjHBZNEu5b7H9bbouUA9SEqR-ijt1w82kHG-7X1scaFsPa4IlF0nJZyhycJKOU_pp8ov0nTosKOCF5nd-FmNP1QQxMMf-tMz5CP17rNR"/>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-[10px] font-bold font-headline uppercase tracking-wider flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">eco</span>
+                    Eco-Impact
+                </div>
+</div>
+<div>
+<h1 class="text-3xl font-bold font-headline text-on-surface tracking-tight">Elena Moretti</h1>
+<p class="text-on-surface-variant font-medium">Sustainable Chef &amp; Home Guardian</p>
+<a class="mt-4 inline-flex items-center gap-2 px-6 py-2 bg-primary text-on-primary rounded-full font-headline font-bold text-sm hover:opacity-90 active:scale-95 transition-all" href="{{DATA:SCREEN:SCREEN_41}}">
+<span class="material-symbols-outlined text-sm">settings</span>
+                    Edit Profile
+                </a>
+</div>
+</section>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-6 rounded-lg flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-primary text-3xl">compost</span>
+<div>
+<p class="text-3xl font-bold font-headline text-primary">84%</p>
+<p class="text-xs font-bold font-headline uppercase tracking-widest text-on-surface-variant">Waste Saved</p>
+</div>
+</div>
+<div class="bg-primary text-on-primary p-6 rounded-lg flex flex-col justify-between aspect-square shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-3xl">savings</span>
+<div>
+<p class="text-3xl font-bold font-headline">$1,240</p>
+<p class="text-xs font-bold font-headline uppercase tracking-widest opacity-80">Saved Yearly</p>
+</div>
+</div>
+</section>
+<!-- Preferences Form -->
+<section class="space-y-8">
+<!-- Dietary Restrictions -->
+<div class="space-y-4">
+<h2 class="text-xl font-semibold font-headline text-primary">Dietary Restrictions</h2>
+<div class="grid grid-cols-1 gap-3">
+<label class="flex items-center justify-between p-4 bg-surface-container rounded-lg cursor-pointer hover:bg-surface-variant transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">restaurant</span>
+<span class="font-medium">Vegan Lifestyle</span>
+</div>
+<input checked="" class="w-6 h-6 rounded-full border-none bg-outline-variant text-primary focus:ring-primary/20" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-4 bg-surface-container rounded-lg cursor-pointer hover:bg-surface-variant transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">no_food</span>
+<span class="font-medium">Gluten-Free Only</span>
+</div>
+<input class="w-6 h-6 rounded-full border-none bg-outline-variant text-primary focus:ring-primary/20" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Household Size -->
+<div class="space-y-4">
+<h2 class="text-xl font-semibold font-headline text-primary">Household Details</h2>
+<div class="bg-surface-container-highest/30 p-6 rounded-lg space-y-6">
+<div class="space-y-2">
+<label class="text-xs font-bold font-headline uppercase tracking-widest text-on-surface-variant">Members in Household</label>
+<div class="flex items-center gap-4">
+<button class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<span class="text-4xl font-bold font-headline w-12 text-center">4</span>
+<button class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold font-headline uppercase tracking-widest text-on-surface-variant">Primary Shop Location</label>
+<input class="w-full bg-surface-container-highest border-none rounded-sm px-4 py-3 focus:ring-2 focus:ring-primary/30 transition-all font-medium text-on-surface" type="text" value="Green Valley Organics"/>
+</div>
+</div>
+</div>
+<!-- Notification Toggles -->
+<div class="space-y-4">
+<h2 class="text-xl font-semibold font-headline text-primary">Smart Alerts</h2>
+<div class="space-y-2">
+<div class="flex items-center justify-between py-2">
+<div>
+<p class="font-medium">Expiry Warnings</p>
+<p class="text-xs text-on-surface-variant">Get notified 2 days before items expire</p>
+</div>
+<button class="w-12 h-6 bg-primary rounded-full relative flex items-center px-1">
+<div class="w-4 h-4 bg-on-primary rounded-full translate-x-6"></div>
+</button>
+</div>
+<div class="flex items-center justify-between py-2">
+<div>
+<p class="font-medium">Recipe Inspiration</p>
+<p class="text-xs text-on-surface-variant">Weekly suggestions based on your fridge</p>
+</div>
+<button class="w-12 h-6 bg-surface-container-highest rounded-full relative flex items-center px-1">
+<div class="w-4 h-4 bg-on-surface-variant rounded-full"></div>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Activity - Wired to Inventory Hub -->
+<section class="space-y-4">
+<h2 class="text-xl font-semibold font-headline text-primary">Recent Activity</h2>
+<div class="space-y-2">
+<a class="flex items-center justify-between p-4 bg-surface-container-low rounded-lg hover:bg-surface-variant transition-colors" href="{{DATA:SCREEN:SCREEN_55}}">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">shopping_basket</span>
+<div>
+<p class="font-medium text-sm">Updated Inventory</p>
+<p class="text-xs text-on-surface-variant">15 minutes ago</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</a>
+</div>
+</section>
+<!-- Danger Zone -->
+<button class="w-full py-4 text-error font-semibold text-sm font-headline uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-error-container/20 rounded-lg transition-colors">
+<span class="material-symbols-outlined">logout</span>
+            Sign Out
+        </button>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-xl shadow-[0_-4px_32px_rgba(29,28,17,0.05)] z-50">
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-500 px-4 py-2 hover:bg-[#f8f4e1] dark:hover:bg-stone-800/50 rounded-full transition-all active:scale-90" href="{{DATA:SCREEN:SCREEN_49}}">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-500 px-4 py-2 hover:bg-[#f8f4e1] dark:hover:bg-stone-800/50 rounded-full transition-all active:scale-90" href="{{DATA:SCREEN:SCREEN_55}}">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Inventory</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#f2eedb] dark:bg-stone-800 text-[#49672f] dark:text-[#81a263] rounded-full px-4 py-2 shadow-sm scale-110" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-500 px-4 py-2 hover:bg-[#f8f4e1] dark:hover:bg-stone-800/50 rounded-full transition-all active:scale-90" href="{{DATA:SCREEN:SCREEN_43}}">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Leaderboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-stone-500 px-4 py-2 hover:bg-[#f8f4e1] dark:hover:bg-stone-800/50 rounded-full transition-all active:scale-90" href="{{DATA:SCREEN:SCREEN_41}}">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Settings</span>
+</a>
+</nav>
+</body></html>

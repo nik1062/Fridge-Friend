@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#74796c",
+                    "primary": "#49672f",
+                    "primary-fixed": "#caeea7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#1c3704",
+                    "on-secondary-container": "#53656f",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#aed18d",
+                    "on-surface-variant": "#44483d",
+                    "primary-container": "#81a263",
+                    "on-primary-fixed-variant": "#324e19",
+                    "inverse-surface": "#323124",
+                    "surface-container": "#f2eedb",
+                    "on-primary-fixed": "#0d2000",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fefae7",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#c4c8ba",
+                    "on-tertiary-container": "#5e1518",
+                    "primary-fixed-dim": "#aed18d",
+                    "surface-bright": "#fefae7",
+                    "surface-variant": "#e7e3d0",
+                    "on-surface": "#1d1c11",
+                    "on-secondary-fixed": "#0b1e26",
+                    "surface": "#fefae7",
+                    "on-secondary-fixed-variant": "#374953",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#49672f",
+                    "secondary": "#4f616b",
+                    "secondary-container": "#cfe3ee",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f8f4e1",
+                    "secondary-fixed-dim": "#b6c9d5",
+                    "tertiary-fixed-dim": "#ffb3af",
+                    "surface-container-highest": "#e7e3d0",
+                    "on-background": "#1d1c11",
+                    "secondary-fixed": "#d2e5f1",
+                    "tertiary-container": "#e27a77",
+                    "surface-container-high": "#ece8d6",
+                    "on-tertiary-fixed-variant": "#7c2c2c",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dedac8",
+                    "tertiary": "#9a4341",
+                    "on-tertiary-fixed": "#400006",
+                    "inverse-on-surface": "#f5f1de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-no-lines {
+            border: none !important;
+        }
+        .glass-nav {
+            background: rgba(254, 250, 231, 0.7);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen pb-24">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-[#fefae7]/70 backdrop-blur-xl shadow-sm shadow-stone-900/5 flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 rounded-full overflow-hidden active:scale-95 transition-transform" onclick="window.location.href='{{DATA:SCREEN:SCREEN_18}}'">
+<img alt="User" data-alt="close-up portrait of a smiling woman with warm lighting and natural outdoor greenery in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEhAZMFbIMxswSD4xFQZvAoBXIPQgdl6aOxacZ5FDjv2qmnKSCANr1dgkk4IoiQ2WsKE_6JDQlwzZ_QeYcHqmPOVcEDUy_I_Hp17y2ypQHWNkvlCBrqWY3YjBJjoONgANP1JqWy2xTH0I4ZJROqc_ubbztwmp91R0vP1fkH2f4XSK4KP8u5-0-D6QAGjG0Wd1ZxTfrJy9YYKPGg_ntyxrh7w3_TW7HNRnDXye5iXhVQ6THWYFc-rVbhjA7QdY56uBPPMuifo7BbteQ"/>
+</button>
+<h1 class="text-xl font-bold text-[#49672f] font-headline tracking-tight">Fridge Friend</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#49672f] hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-5xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<p class="font-label text-primary font-semibold uppercase tracking-widest text-xs mb-2">Neighborhood Feed</p>
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface-variant max-w-lg leading-tight">
+                        Share more, <span class="text-primary-container italic">waste less.</span>
+</h2>
+</div>
+<div class="hidden md:block">
+<button class="bg-surface-container-low px-6 py-4 rounded-lg flex items-center gap-4 hover:bg-surface-container transition-colors text-left" onclick="window.location.href='{{DATA:SCREEN:SCREEN_2}}'">
+<div class="text-right">
+<span class="block font-headline text-2xl font-bold text-primary">12.4kg</span>
+<span class="text-xs font-label text-on-surface-variant uppercase">CO2 Saved Today</span>
+</div>
+<div class="w-px h-10 bg-outline-variant/30"></div>
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Bento Grid Feed -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Featured Shared Item (Asymmetric Large Card) -->
+<div class="md:col-span-8 bg-surface-container rounded-lg overflow-hidden group cursor-pointer active:scale-[0.99] transition-transform" onclick="window.location.href='{{DATA:SCREEN:SCREEN_11}}'">
+<div class="relative h-64 md:h-80 w-full">
+<img alt="Fresh Organic Lemons" class="w-full h-full object-cover" data-alt="a rustic wooden bowl overflowing with vibrant, sun-ripened organic lemons on a weathered stone table with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbQQjkhaSqDPPP7YwUjycSYqCftxXI5NyFhiwXrMpa5f3tPpum-HTZ4XfjuKLsgdSHTjkgfVPm7q5292Blz46mc_rLvqMF9Y9OnrHGCL1yCh8qUQ9wQqgVpSyOecyn1jw5ZDUWqgcuREWZ-cEpk7txFUGz5rktBtAyquL2NFj70WrVj-gOhSyf89DwYQ_4IeeTZGbFXbnsAZfpRiyUiu6ztb4SzJPFBr6JjOAmodjkMY_8pkJ0lph1DNgpo0fIpCKSL3Fx5MZfPR6t"/>
+<div class="absolute top-4 left-4 bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full font-label text-xs font-bold shadow-lg">
+                        FRESH PICKED
+                    </div>
+</div>
+<div class="p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<h3 class="font-headline text-2xl font-semibold text-on-surface mb-1">Organic Backyard Lemons</h3>
+<div class="flex items-center gap-4 text-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">location_on</span> 0.4 miles away</span>
+<span class="flex items-center gap-1 font-semibold text-primary"><span class="material-symbols-outlined text-xs">person</span> Sarah Miller</span>
+</div>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-8 py-3 rounded-full font-label font-bold text-sm hover:opacity-90 active:scale-95 transition-all shadow-md shadow-primary/20">
+                        Request
+                    </button>
+</div>
+</div>
+<!-- Community Stats Card -->
+<button class="md:col-span-4 bg-primary text-white p-8 rounded-lg flex flex-col justify-between text-left active:scale-[0.98] transition-transform" onclick="window.location.href='{{DATA:SCREEN:SCREEN_2}}'">
+<div>
+<span class="material-symbols-outlined text-4xl mb-6">handshake</span>
+<h4 class="font-headline text-2xl font-bold leading-tight mb-4">You've helped 4 neighbors this month.</h4>
+</div>
+<p class="text-white/80 text-sm leading-relaxed">Your shared sourdough starter and basil plants saved an estimated $45 in grocery trips for the community.</p>
+</button>
+<!-- Regular Feed Items -->
+<!-- Card 1 -->
+<div class="md:col-span-4 bg-surface-container-low rounded-lg p-4 flex flex-col gap-4 cursor-pointer active:scale-[0.98] transition-transform" onclick="window.location.href='{{DATA:SCREEN:SCREEN_12}}'">
+<div class="aspect-square rounded-md overflow-hidden">
+<img alt="Sourdough Bread" class="w-full h-full object-cover" data-alt="close-up of a crusty artisanal sourdough loaf with intricate scoring patterns on a linen cloth in warm studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOEZ8n-I-bjaOZ8Gq4JDjDTzWcIGHEpE1xJewFPzFrDSuooU-Fjm4P7lml2k0mSquTi6QFgG98joysxSehkrK2w31VlmtHSsbq7ahIOmyx7ipRWGgbjf3KQLsFj9XK_Z6U3Uma035KkLtMCh32RWNaD59xl5ESoc2uNeKw0TQo8K_nyjku8P37U_luKnIordrutzM5E9ZZ4ro1r2EGW0XcW8bamnRnPz4uCKxk9NjtG4POFQF0lBlZPZ8fa1_cS8WzDw98R5_RpAXS"/>
+</div>
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-on-surface">Artisan Sourdough</h3>
+<span class="bg-surface-container-highest text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold">1.2 KM</span>
+</div>
+<p class="text-body-md text-on-surface-variant text-sm mb-4">Half a loaf left from this morning's bake. Fresh and crusty!</p>
+<button class="w-full bg-surface-container-highest text-primary font-label font-bold py-3 rounded-full hover:bg-surface-variant transition-colors active:scale-[0.98]">
+                        Request
+                    </button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="md:col-span-4 bg-surface-container-low rounded-lg p-4 flex flex-col gap-4 cursor-pointer active:scale-[0.98] transition-transform" onclick="window.location.href='{{DATA:SCREEN:SCREEN_11}}'">
+<div class="aspect-square rounded-md overflow-hidden">
+<img alt="Garden Salad" class="w-full h-full object-cover" data-alt="vibrant bowl of assorted fresh garden greens, cherry tomatoes, and cucumber slices with a light citrus vinaigrette dressing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3GzWfVBJjobtVxBvKUJCSLjo0zj1wg5NZutp0uCsY7bWqrduW6_XeAvw5lOy90HJL7IY6IwIfBTOg9V2LnsJ4TexJle4Wf3c1kiz7mytfTHXPVn-VlOyYxCvzrbFDN8WoPx5ffLAfpsjslNCewN1DprbEW3TVaG5PD2ksk78EwwbVAI8jLti9L_vM6_I9_DPyLeUDOduT26HHO6R7FshkJBTcEBpdiBR7-s_Z8sgVVZnvmmPx4-Fn8AUaMM6hNfp6QdqRi5yCKtpH"/>
+</div>
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-on-surface">Fresh Kale &amp; Chard</h3>
+<span class="bg-surface-container-highest text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold">0.8 KM</span>
+</div>
+<p class="text-body-md text-on-surface-variant text-sm mb-4">Huge harvest today, more than I can eat. Pesticide free.</p>
+<button class="w-full bg-surface-container-highest text-primary font-label font-bold py-3 rounded-full hover:bg-surface-variant transition-colors active:scale-[0.98]">
+                        Request
+                    </button>
+</div>
+</div>
+<!-- Recipe Highlight Card -->
+<div class="md:col-span-4 bg-[#e27a77]/10 rounded-lg p-6 flex flex-col border border-[#e27a77]/20 cursor-pointer active:scale-[0.98] transition-transform" onclick="window.location.href='{{DATA:SCREEN:SCREEN_12}}'">
+<div class="flex items-center justify-between mb-4">
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Top Recipe</span>
+<span class="material-symbols-outlined text-tertiary">favorite</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-tertiary-container mb-2">Zero-Waste Pesto</h3>
+<p class="text-sm text-on-surface-variant mb-6 italic">"Made this using the carrot tops I got from Dave last week. Incredible!"</p>
+<div class="mt-auto flex items-center gap-3">
+<img alt="James" class="w-8 h-8 rounded-full" data-alt="headshot of a man with a friendly expression in a casual setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqVmGd8_g3_MjtzyxeZxk31BlukrHPQusRD7na7Oduux3D763hL0EqX7sE4B5Uy1v1G8hygOP3lQHfSN9XlIFNA6cL4SyL1vmUOTyKNYheIgUbq6j7U6FJURx6zY5PESllJmPAmcjaj2nRq3hGclEHGb5CSZWKLnzjghKT7ynF7Q7UOmnqgze-FHyKtr4exsK1oc23OltmPoIjMvivNPJysKSNIoqE0X9N5PNsMNZsPmzoNHWROuAHFpn08Sm_0Glv_k74CFxbyexH"/>
+<span class="text-xs font-semibold">Shared by James L.</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="md:col-span-4 bg-surface-container-low rounded-lg p-4 flex flex-col gap-4 cursor-pointer active:scale-[0.98] transition-transform" onclick="window.location.href='{{DATA:SCREEN:SCREEN_11}}'">
+<div class="aspect-square rounded-md overflow-hidden">
+<img alt="Fresh Strawberries" class="w-full h-full object-cover" data-alt="a pile of shiny deep red strawberries in a ceramic bowl sitting on a light wooden surface with soft side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCy8EWcIKcPnurIjqdCg4ilOQ5IXxgMYHdD2b3ZtWUElEPkFUxIRpnOmEFrsP9BaxoxSLnqeG4uGpTly5VrP-QywKsE8vkc6LeaWCQvvqduV5WbNrNx0VRQdT-nkTTfUmBxCo0QfcuRUd8EeqdRX5egKRHTDtqegL542SoMkMzMhjyXaJ1s_QDiYlGZQ0fqVP7PCqqNkGr1ZEEmqS1KbfJXZhJRKE-iHZA4i5gN7aPD9iS9lHsqA6yXylfetwuSJpfrNO6TFwWDPFb"/>
+</div>
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-on-surface">Sweet Strawberries</h3>
+<span class="bg-surface-container-highest text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold">2.1 KM</span>
+</div>
+<p class="text-body-md text-on-surface-variant text-sm mb-4">Overbought for a cake, have 2 cartons to share.</p>
+<button class="w-full bg-surface-container-highest text-primary font-label font-bold py-3 rounded-full hover:bg-surface-variant transition-colors active:scale-[0.98]">
+                        Request
+                    </button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="md:col-span-8 bg-surface-container rounded-lg p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center">
+<div class="w-full md:w-1/2 h-48 rounded-lg overflow-hidden relative">
+<img alt="Neighborhood Event" class="w-full h-full object-cover" data-alt="a long table set up outdoors for a community meal with people talking and laughing in the blurred background under warm string lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANW5C2eVPdZ3fL2HSDcYyv-ztdf2Ymcc06oMRqquMy0pMyU2DprhFHmEDJ3GP9C3fI8uAax9DwpLPGZEcDaMzJmONYmRSYtZGp5VsIUOxn56oMxu_sbRIgddM16PiNNSiRPJDQqyJbaQh7CwuWY92mw5JPIT4l-oOpjfDeMDAiHnj_OjmxdtDQWb498rH5knaDKj2Gb2G_l-8i_8Dqk7p30Y3DMOIMGrQVU6umbaKKYAiZ1TOMQRFKdE8N-xGzLzLBFQVeOZqJIq_J"/>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+<div class="w-full md:w-1/2">
+<h3 class="font-headline text-2xl font-bold mb-3">Weekend Swap Meet</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Join us this Sunday at the Community Garden for a seed and surplus exchange. Bring your extras!</p>
+<button class="text-primary font-headline font-bold flex items-center gap-2 group">
+                        Event Details 
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#fefae7]/70 backdrop-blur-xl shadow-[0_-4px_32px_rgba(29,28,17,0.05)] z-50">
+<a class="flex flex-col items-center justify-center text-[#44483d] hover:bg-[#f8f4e1] rounded-full px-4 py-2 transition-colors active:scale-90 duration-200" href="{{DATA:SCREEN:SCREEN_18}}">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] hover:bg-[#f8f4e1] rounded-full px-4 py-2 transition-colors active:scale-90 duration-200" href="{{DATA:SCREEN:SCREEN_27}}">
+<span class="material-symbols-outlined" data-icon="inventory_2">search</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#f2eedb] text-[#49672f] rounded-full px-4 py-2 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="diversity_3" style="font-variation-settings: 'FILL' 1;">diversity_3</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] hover:bg-[#f8f4e1] rounded-full px-4 py-2 transition-colors active:scale-90 duration-200" href="{{DATA:SCREEN:SCREEN_28}}">
+<span class="material-symbols-outlined" data-icon="shopping_basket">shopping_basket</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Basket</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] hover:bg-[#f8f4e1] rounded-full px-4 py-2 transition-colors active:scale-90 duration-200" href="{{DATA:SCREEN:SCREEN_23}}">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-container text-white shadow-xl shadow-primary/30 flex items-center justify-center z-40 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</body></html>

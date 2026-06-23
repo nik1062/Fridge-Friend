@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#74796c",
+                    "primary": "#49672f",
+                    "primary-fixed": "#caeea7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#1c3704",
+                    "on-secondary-container": "#53656f",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#aed18d",
+                    "on-surface-variant": "#44483d",
+                    "primary-container": "#81a263",
+                    "on-primary-fixed-variant": "#324e19",
+                    "inverse-surface": "#323124",
+                    "surface-container": "#f2eedb",
+                    "on-primary-fixed": "#0d2000",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fefae7",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#c4c8ba",
+                    "on-tertiary-container": "#5e1518",
+                    "primary-fixed-dim": "#aed18d",
+                    "surface-bright": "#fefae7",
+                    "surface-variant": "#e7e3d0",
+                    "on-surface": "#1d1c11",
+                    "on-secondary-fixed": "#0b1e26",
+                    "surface": "#fefae7",
+                    "on-secondary-fixed-variant": "#374953",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#49672f",
+                    "secondary": "#4f616b",
+                    "secondary-container": "#cfe3ee",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f8f4e1",
+                    "secondary-fixed-dim": "#b6c9d5",
+                    "tertiary-fixed-dim": "#ffb3af",
+                    "surface-container-highest": "#e7e3d0",
+                    "on-background": "#1d1c11",
+                    "secondary-fixed": "#d2e5f1",
+                    "tertiary-container": "#e27a77",
+                    "surface-container-high": "#ece8d6",
+                    "on-tertiary-fixed-variant": "#7c2c2c",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dedac8",
+                    "tertiary": "#9a4341",
+                    "on-tertiary-fixed": "#400006",
+                    "inverse-on-surface": "#f5f1de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            background: rgba(254, 250, 231, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background font-body text-on-surface min-h-screen pb-32">
+<!-- Top AppBar (Back Action - Suppresses Shell Navigation per instructions for sub-pages) -->
+<header class="fixed top-0 w-full z-50 bg-[#fefae7]/70 backdrop-blur-xl flex items-center justify-between px-6 py-4 shadow-sm shadow-stone-900/5">
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container active:scale-95 transition-transform" onclick="window.location.href='{{DATA:SCREEN:SCREEN_49}}'">
+<span class="material-symbols-outlined text-primary">arrow_back_ios_new</span>
+</button>
+<h1 class="text-xl font-headline font-bold text-primary tracking-tight">Fridge Friend</h1>
+</div>
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-primary">edit</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-error">delete</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-5xl mx-auto">
+<!-- Hero Section: Organic Asymmetry -->
+<section class="relative grid grid-cols-1 md:grid-cols-12 gap-8 items-end mb-12">
+<div class="md:col-span-7 relative group">
+<div class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close-up of fresh organic strawberries in a ceramic bowl with soft natural window lighting and garden background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv2juVjYJ6yLtq3HRixymb1u9mVnpTXCWndIhvUEuj4SeWba30IDxcvfDVGaABiPnJvke2gMaNK7vObpz2JMsyBOJTNnU1zcpWpjp19XVHSLhVuxE6DXuts69dIXiLsIoOEaUrkqET6CrBXxTjo__zw2uUy7WyiYwMPQWl0ApszssGy56fSWkLqnwybBAFGUcdVbZ88LkNF6b9qBG8FDdmnhQ337CeiAEZNo_sNxZpxXIyxgAOejia-mIPys1MKNLnMdRg-BjH7K2i"/>
+</div>
+<!-- Expiry Floating Badge -->
+<div class="absolute -bottom-4 -right-4 bg-tertiary-container text-on-tertiary-container px-6 py-4 rounded-lg shadow-xl flex flex-col items-center">
+<span class="font-headline font-bold text-2xl">02</span>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold">Days Left</span>
+</div>
+</div>
+<div class="md:col-span-5 flex flex-col gap-6 md:pb-8">
+<div>
+<span class="font-label text-primary font-bold text-xs uppercase tracking-[0.2em] mb-2 block">Fresh Produce</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface leading-tight">Organic Strawberries</h2>
+</div>
+<!-- Quantity Controller: Soft Box Style -->
+<div class="bg-surface-container rounded-lg p-6 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label text-on-surface-variant text-[10px] uppercase font-bold mb-1">Stock Level</span>
+<div class="flex items-baseline gap-1">
+<span class="text-3xl font-headline font-bold text-primary">450</span>
+<span class="text-sm font-body text-on-surface-variant">grams</span>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-highest rounded-full p-1 shadow-inner">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-lowest text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 600">remove</span>
+</button>
+<span class="font-headline font-bold w-4 text-center">3</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 600">add</span>
+</button>
+</div>
+</div>
+<!-- Primary Actions Integration -->
+<div class="grid grid-cols-2 gap-3 mt-2">
+<button class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-surface-container-highest text-primary font-label text-xs font-bold uppercase tracking-wider active:scale-95 transition-transform" onclick="window.location.href='{{DATA:SCREEN:SCREEN_13}}'">
+<span class="material-symbols-outlined text-sm">calendar_add_on</span>
+Meal Plan
+</button>
+<button class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-primary/10 text-primary font-label text-xs font-bold uppercase tracking-wider active:scale-95 transition-transform" onclick="window.location.href='{{DATA:SCREEN:SCREEN_55}}'">
+<span class="material-symbols-outlined text-sm">history</span>
+Log Usage
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Layout for Details -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+<!-- Nutrition Card: Tonal Depth -->
+<div class="md:col-span-2 bg-surface-container-low rounded-lg p-8">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-headline text-xl font-semibold">Nutritional Facts</h3>
+<span class="font-label text-[10px] font-bold text-on-surface-variant uppercase bg-surface-container px-3 py-1 rounded-full">Per 100g</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+<div class="flex flex-col">
+<span class="text-primary font-headline text-2xl font-bold">32</span>
+<span class="text-on-surface-variant text-xs font-medium">Calories</span>
+</div>
+<div class="flex flex-col">
+<span class="text-primary font-headline text-2xl font-bold">7.7g</span>
+<span class="text-on-surface-variant text-xs font-medium">Carbs</span>
+</div>
+<div class="flex flex-col">
+<span class="text-primary font-headline text-2xl font-bold">2.0g</span>
+<span class="text-on-surface-variant text-xs font-medium">Fiber</span>
+</div>
+<div class="flex flex-col">
+<span class="text-primary font-headline text-2xl font-bold">0.7g</span>
+<span class="text-on-surface-variant text-xs font-medium">Protein</span>
+</div>
+</div>
+<!-- Freshness Progress Indicator -->
+<div class="mt-10 pt-8 border-t border-outline-variant/10">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label text-xs font-bold text-on-surface uppercase tracking-wider">Quality Decay</span>
+<span class="text-xs font-body text-tertiary">Critical State</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full w-[85%] bg-gradient-to-r from-primary via-primary-container to-tertiary-container rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Best Storage Tips: Glassmorphism Card -->
+<div class="bg-surface-container text-on-surface rounded-lg p-8 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-8xl">ac_unit</span>
+</div>
+<h3 class="font-headline text-xl font-semibold mb-6">Storage Tips</h3>
+<ul class="space-y-6 relative z-10">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container shrink-0">thermostat</span>
+<div>
+<p class="font-headline font-bold text-sm leading-tight">Keep Chilled</p>
+<p class="font-body text-xs text-on-surface-variant mt-1">Best kept at 2-4°C in the crisper drawer.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container shrink-0">humidity_mid</span>
+<div>
+<p class="font-headline font-bold text-sm leading-tight">Don't Wash Yet</p>
+<p class="font-body text-xs text-on-surface-variant mt-1">Only wash right before eating to avoid mold.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container shrink-0">layers</span>
+<div>
+<p class="font-headline font-bold text-sm leading-tight">Breathable Paper</p>
+<p class="font-body text-xs text-on-surface-variant mt-1">Line your container with paper towels.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Recipe Suggestions Overlay/Section -->
+<section class="mb-12">
+<div class="flex items-baseline justify-between mb-8">
+<h3 class="font-headline text-2xl font-bold">Use them up</h3>
+<a class="text-primary font-label text-xs font-bold uppercase tracking-widest hover:opacity-70 transition-opacity" href="#">View all recipes</a>
+</div>
+<div class="flex gap-6 overflow-x-auto no-scrollbar pb-4 -mx-6 px-6">
+<!-- Recipe Card 1 -->
+<div class="min-w-[280px] bg-surface-container rounded-lg p-4 group cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_12}}'">
+<div class="aspect-video rounded-md overflow-hidden mb-4">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Gourmet strawberry spinach salad with balsamic glaze and feta cheese on a rustic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWOnDvnEk0Ekq6tNRAEdSFF-3BvkSfQEqg4QGITJZHmXPHe3754l53rwTEpAPPl7BkybY8oLNJ6woungUnqkIgiTQdvmYFObtvciaDEGDP_x2ZlgHIHia8u2Y-oRcKaQ3lRwCoLbLVXwjDCGSoG_iDs4NntMsLXJ_w8K293nlUR9cFqbKuJjBy2EMm-LBOCJDSqar6jfxKRwFTcSIZZYTshT7xfzp2IzimUDvGIW43I-gPKsosWZLAcPz7wUISPs_yARVUaVWnTbyN"/>
+</div>
+<span class="font-label text-[10px] font-bold text-primary-container uppercase mb-1 block">Lunch</span>
+<h4 class="font-headline font-bold text-on-surface">Summer Berry Salad</h4>
+<div class="flex items-center gap-3 mt-3 text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="text-[10px] font-medium">12 min</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">bolt</span>
+<span class="text-[10px] font-medium">Easy</span>
+</div>
+</div>
+</div>
+<!-- Recipe Card 2 -->
+<div class="min-w-[280px] bg-surface-container rounded-lg p-4 group cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_12}}'">
+<div class="aspect-video rounded-md overflow-hidden mb-4">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Creamy strawberry smoothie in a tall glass topped with a fresh berry and mint leaf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjyrmI5pspnFZi5ZK309WTy-SqxOyBkLRJIIqeEWoffIzKLlAg2Dvt-RdBQY7HHY6RncUJ12MaJ6Wu2ofq9umJ61llueA2XMBvogqUf9GinA17g9JkMPNHvOZmlE6HjFP4idMtXNWXJTCbXqvaGgAGtiKse-D7rE6wWSomks7UwuaYjLISBFINPoj_X4ZBlFRkSVzV2EG4u_gNC2zzJXLGyO35gU0_k-jE_WRQJP4p1krXRNY5dpw5YLrc5g1VwfCIaM1C3Z-3TSv3"/>
+</div>
+<span class="font-label text-[10px] font-bold text-primary-container uppercase mb-1 block">Breakfast</span>
+<h4 class="font-headline font-bold text-on-surface">Protein Berry Bliss</h4>
+<div class="flex items-center gap-3 mt-3 text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="text-[10px] font-medium">5 min</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">bolt</span>
+<span class="text-[10px] font-medium">Quick</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Action Bar (Contextual) -->
+<div class="fixed bottom-0 left-0 w-full p-6 z-50">
+<div class="max-w-md mx-auto bg-surface-container-lowest/80 backdrop-blur-xl rounded-full p-2 shadow-[0_-4px_32px_rgba(29,28,17,0.1)] flex items-center justify-between">
+<div class="flex items-center gap-3 pl-4">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label text-xs font-bold text-on-surface tracking-tight">Active Inventory</span>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold px-8 py-3 rounded-full text-sm active:scale-95 transition-transform shadow-lg shadow-primary/20">
+                Move to Freezer
+            </button>
+</div>
+</div>
+</body></html>

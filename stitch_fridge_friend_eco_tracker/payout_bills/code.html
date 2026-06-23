@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Earnings &amp; Bills</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#374953",
+                    "primary-container": "#81a263",
+                    "inverse-surface": "#323124",
+                    "inverse-on-surface": "#f5f1de",
+                    "surface-bright": "#fefae7",
+                    "surface-container-low": "#f8f4e1",
+                    "secondary-fixed": "#d2e5f1",
+                    "primary": "#49672f",
+                    "on-primary-fixed": "#0d2000",
+                    "on-surface": "#1d1c11",
+                    "surface-container-highest": "#e7e3d0",
+                    "on-secondary-fixed": "#0b1e26",
+                    "tertiary-container": "#e27a77",
+                    "surface": "#fefae7",
+                    "secondary": "#4f616b",
+                    "tertiary-fixed": "#ffdad7",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb3af",
+                    "surface-container": "#f2eedb",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#caeea7",
+                    "on-primary-container": "#1c3704",
+                    "secondary-fixed-dim": "#b6c9d5",
+                    "tertiary": "#9a4341",
+                    "surface-dim": "#dedac8",
+                    "background": "#fefae7",
+                    "secondary-container": "#cfe3ee",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#aed18d",
+                    "on-surface-variant": "#44483d",
+                    "inverse-primary": "#aed18d",
+                    "on-tertiary-container": "#5e1518",
+                    "outline": "#74796c",
+                    "on-primary-fixed-variant": "#324e19",
+                    "on-tertiary-fixed-variant": "#7c2c2c",
+                    "surface-container-high": "#ece8d6",
+                    "on-tertiary-fixed": "#400006",
+                    "surface-tint": "#49672f",
+                    "surface-variant": "#e7e3d0",
+                    "on-background": "#1d1c11",
+                    "on-secondary-container": "#53656f",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c4c8ba",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-[#fefae7]/70 dark:bg-[#1d1c11]/70 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0_8px_32px_rgba(29,28,17,0.05)]">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-full hover:bg-[#f2eedb]/50 transition-colors active:scale-95 duration-200" onclick="window.location.href='{{DATA:SCREEN:SCREEN_29}}'">
+<span class="material-symbols-outlined text-[#49672f]" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-semibold text-[1.75rem] tracking-tight text-[#49672f]">Earnings</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="Professional portrait of a user with a clean, minimalist background, natural lighting, soft facial features" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUS7JM_ZSCBi8x-IlcLBB_J2Yl_SYHTFVKcmHmfXDrrp8wuzAkcOBaUtpfsJb_UUTs38UVctEiZitiK8dOwGM8KkR4ZxlHsWyhl8MkDkyhS---wtOEVVDHB6RhdZhtuEwj2kXQJz9TeTDv_AqHcgoaMianiMFdkscB7MpTforJjaT6rno6j88bKbXDZnf6m4N2dLXmb_r3EMCoU8GV6NZ1o2GocCXpJccPjgnPDCVSfLUZJ0Ulxq9zro8R4juC5nHmOpWHfhm1P-ur"/>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-5xl mx-auto space-y-10">
+<!-- Hero Section: Earnings Overview -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-surface-container rounded-lg p-8 relative overflow-hidden group">
+<div class="relative z-10">
+<p class="font-label text-label-md text-on-surface-variant mb-2">Available Balance</p>
+<h2 class="font-headline text-[3.5rem] leading-none font-bold text-primary tracking-tighter">$1,248.50</h2>
+<div class="mt-8 flex gap-4">
+<button class="bg-gradient-to-br from-[#49672f] to-[#81a263] text-surface font-label font-semibold px-8 py-3 rounded-full active:scale-95 duration-200 shadow-lg shadow-primary/20" onclick="alert('Withdrawal successful! Your funds are on the way.')">
+                            Withdraw Now
+                        </button>
+</div>
+</div>
+<div class="absolute -right-8 -bottom-8 opacity-10 group-hover:rotate-12 transition-transform duration-700">
+<span class="material-symbols-outlined text-[12rem]" data-icon="payments">payments</span>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-lg p-8 flex flex-col justify-between">
+<div>
+<p class="font-label text-label-md text-on-surface-variant mb-1">Monthly Goal</p>
+<p class="font-headline text-2xl font-bold text-on-surface">$2,000.00</p>
+</div>
+<div class="mt-4">
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[62%] rounded-full"></div>
+</div>
+<p class="mt-2 text-sm text-on-surface-variant font-medium">62% of target reached</p>
+</div>
+<div class="flex items-center gap-2 mt-4 text-primary font-semibold">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+<span class="text-xs uppercase tracking-wider">+12.4% from last month</span>
+</div>
+</div>
+</section>
+<!-- Payout Methods & Linking -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline text-xl font-semibold text-on-surface">Payout Channels</h3>
+<button class="text-primary text-sm font-medium hover:underline cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_24}}'">Manage all</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Link Bank Account -->
+<div class="bg-surface-container-low border border-outline-variant/15 p-6 rounded-lg flex items-center gap-6 hover:bg-surface-container transition-colors cursor-pointer group" onclick="window.location.href='{{DATA:SCREEN:SCREEN_24}}'">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="account_balance">account_balance</span>
+</div>
+<div>
+<h4 class="font-headline font-semibold text-on-surface">Link Bank Account</h4>
+<p class="text-sm text-on-surface-variant">Direct deposit via ACH or Wire</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Link PayPal -->
+<div class="bg-surface-container-low border border-outline-variant/15 p-6 rounded-lg flex items-center gap-6 hover:bg-surface-container transition-colors cursor-pointer group" onclick="window.location.href='{{DATA:SCREEN:SCREEN_24}}'">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<div>
+<h4 class="font-headline font-semibold text-on-surface">Connect PayPal</h4>
+<p class="text-sm text-on-surface-variant">Fast, secure digital payments</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Asymmetric Section: Community Bills vs Payout History -->
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+<!-- Left: Community Bills (Participated Shared Grocery Pool) -->
+<section class="lg:col-span-2 space-y-6">
+<div class="flex items-center gap-2 cursor-pointer group" onclick="window.location.href='{{DATA:SCREEN:SCREEN_8}}'">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform" data-icon="groups">groups</span>
+<h3 class="font-headline text-xl font-semibold text-on-surface group-hover:text-primary transition-colors">Community Bills</h3>
+</div>
+<div class="space-y-4">
+<!-- Bill Card 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg border-l-4 border-primary-container shadow-sm cursor-pointer hover:bg-surface transition-colors" onclick="window.location.href='{{DATA:SCREEN:SCREEN_8}}'">
+<div class="flex justify-between items-start mb-3">
+<span class="text-xs font-label bg-primary-container/20 text-on-primary-container px-2 py-1 rounded">Active Pool</span>
+<p class="text-lg font-bold text-primary">$42.80</p>
+</div>
+<h4 class="font-semibold text-on-surface mb-1">Organic Grain Co-op</h4>
+<p class="text-xs text-on-surface-variant mb-4">5 members • Ends in 2 days</p>
+<div class="flex -space-x-2 overflow-hidden">
+<img alt="" class="inline-block h-6 w-6 rounded-full ring-2 ring-surface" data-alt="Avatar of community member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJgvDFCdswFcos3jHrCv14I6brDnukmL3yQLq-IODmwlCE3qyAmec_4uAoiTx6mrX2IG8-fV_IScJzChILyBj33K4GA4ehIWakVGoB0Pt1Qzj5s9DP_UQnNXEQ2iAcy6zkeEcRAVa30fo6ec4KpnJdu_RMrKZbDZSm8fvSzn-GilUmvTC88UoYt_uu2qq78GVO7NhWgn0VvMSsaRQ9ZX9lo-3JYrwbh2ZZEA7DOTdBzsM2gOdjOvd0ois31rbediTVP57TzxPCkQgn"/>
+<img alt="" class="inline-block h-6 w-6 rounded-full ring-2 ring-surface" data-alt="Avatar of community member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoZ5-Q-WUAYaTTrvbp205h4IL-lHtK-HIBE7VWen7iSY8upm6max8ZJ7tpBSBR5Riz2wRmmnGTxd3FEwLwSr-8ugXUZkfjLDQK2LalzYu4PkS_ySEv3YqYpwr2ocn7zZPz37q6zaIeVBgopdnHG7hX4tjnAG68mcbt_xkhipcSo1R_FFxJOscFbljMq7mNLyiY5onx_Kt6tTt0atI8T98nVVLD6oFHn146Lx0BlA5WGzak0Idg0Q26J25_cE18dhWpFVseJhoo4om5"/>
+<div class="h-6 w-6 rounded-full bg-surface-container-highest ring-2 ring-surface flex items-center justify-center text-[10px] font-bold">+3</div>
+</div>
+</div>
+<!-- Bill Card 2 (Settled) -->
+<div class="bg-surface-container-low/50 p-5 rounded-lg border border-outline-variant/15 opacity-80">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-label bg-outline-variant/30 text-on-surface-variant px-2 py-1 rounded">Settled</span>
+<p class="text-base font-semibold text-on-surface-variant">$12.50</p>
+</div>
+<h4 class="font-semibold text-on-surface-variant mb-1">Fresh Herb Share</h4>
+<p class="text-xs text-on-surface-variant">Last Week • Paid via Balance</p>
+</div>
+</div>
+</section>
+<!-- Right: Payout Transactions List -->
+<section class="lg:col-span-3 space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="font-headline text-xl font-semibold text-on-surface">Recent Activity</h3>
+<div class="flex gap-2">
+<button class="p-2 rounded-full bg-surface-container hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg overflow-hidden">
+<!-- Transaction Header -->
+<div class="grid grid-cols-4 px-6 py-4 text-xs font-label uppercase tracking-widest text-on-surface-variant border-b border-outline-variant/10">
+<div class="col-span-2">Description</div>
+<div class="text-right">Status</div>
+<div class="text-right">Amount</div>
+</div>
+<!-- List Items -->
+<div class="divide-y divide-outline-variant/5">
+<div class="grid grid-cols-4 px-6 py-5 items-center hover:bg-surface-container transition-colors group">
+<div class="col-span-2 flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="arrow_downward">arrow_downward</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Inventory Payout</p>
+<p class="text-xs text-on-surface-variant">Oct 24, 2023</p>
+</div>
+</div>
+<div class="text-right">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold bg-primary-container text-on-primary-container">COMPLETED</span>
+</div>
+<div class="text-right font-headline font-bold text-primary">+$450.00</div>
+</div>
+<div class="grid grid-cols-4 px-6 py-5 items-center hover:bg-surface-container transition-colors group">
+<div class="col-span-2 flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Monthly Earnings</p>
+<p class="text-xs text-on-surface-variant">Oct 26, 2023</p>
+</div>
+</div>
+<div class="text-right">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold bg-surface-container-highest text-on-surface-variant">PENDING</span>
+</div>
+<div class="text-right font-headline font-bold text-on-surface-variant">+$824.50</div>
+</div>
+<div class="grid grid-cols-4 px-6 py-5 items-center hover:bg-surface-container transition-colors group">
+<div class="col-span-2 flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="arrow_downward">arrow_downward</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Referral Bonus</p>
+<p class="text-xs text-on-surface-variant">Oct 22, 2023</p>
+</div>
+</div>
+<div class="text-right">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold bg-primary-container text-on-primary-container">COMPLETED</span>
+</div>
+<div class="text-right font-headline font-bold text-primary">+$25.00</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Visual Anchor: Sustainability Impact -->
+<section class="bg-[#1d1c11] text-surface-bright rounded-lg p-8 flex flex-col md:flex-row items-center gap-8 overflow-hidden relative">
+<div class="flex-1 space-y-4 relative z-10">
+<h3 class="font-headline text-3xl font-bold leading-tight">Your surplus feeding <br/>8 local families.</h3>
+<p class="text-surface-variant opacity-80 max-w-md">By sharing your inventory pool, you've diverted 120kg of food waste this month. Your earnings are a byproduct of a healthier ecosystem.</p>
+<div class="pt-4">
+<button class="bg-primary-container text-on-primary-container font-label font-bold px-6 py-2 rounded-full text-sm">View Impact Report</button>
+</div>
+</div>
+<div class="w-full md:w-64 h-64 rounded-xl overflow-hidden relative shrink-0">
+<img alt="Ecology impact" class="w-full h-full object-cover" data-alt="Lush green garden landscape with fresh vegetables, cinematic soft lighting, eco-friendly lifestyle concept" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7cK6a8kdBKx6J9B5S_NK4IlvnC1ifhJLaAW1R_iZzY0DvmooidDjDjVHQSuKiJFnVKV_rx8X2wS4olz1C82JYq6_39pPDtswv_CP_3Wuu4_GroslZZWdzNd1BvfC4LZWYqSb8n8A2atNlYlfv25J_IMDSKqgVc3q-UEH2spwb96xnuupfCp6DyKKPcUi8HZraVRGc9twADZzokikzVlyDfDgTLTGA_mief3jF-5MiYbuGl86W3AcVmrMwAjbqbDtBhlRAmrCM-cKq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#1d1c11] to-transparent"></div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-[#fefae7]/70 dark:bg-[#1d1c11]/70 backdrop-blur-xl fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 z-50 shadow-[0_-8px_32px_rgba(29,28,17,0.05)]">
+<div class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200 cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_30}}'">
+<span class="material-symbols-outlined" data-icon="kitchen">kitchen</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[0.75rem] font-semibold">Inventory</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-gradient-to-br from-[#49672f] to-[#81a263] text-[#fefae7] rounded-full px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200 cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_29}}'">
+<span class="material-symbols-outlined" data-icon="payments" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[0.75rem] font-semibold">Earnings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200 cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_17}}'">
+<span class="material-symbols-outlined" data-icon="redeem">redeem</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[0.75rem] font-semibold">Rewards</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200 cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_23}}'">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[0.75rem] font-semibold">Account</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fridge Friend Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#5e1518",
+                        "outline": "#74796c",
+                        "tertiary-container": "#e27a77",
+                        "on-secondary-container": "#53656f",
+                        "surface-container-highest": "#e7e3d0",
+                        "outline-variant": "#c4c8ba",
+                        "on-primary-container": "#1c3704",
+                        "secondary-container": "#cfe3ee",
+                        "on-surface": "#1d1c11",
+                        "surface-bright": "#fefae7",
+                        "inverse-on-surface": "#f5f1de",
+                        "primary-fixed-dim": "#aed18d",
+                        "surface-container-high": "#ece8d6",
+                        "surface-tint": "#49672f",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fefae7",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dedac8",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#d2e5f1",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface": "#fefae7",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#374953",
+                        "primary-container": "#81a263",
+                        "primary": "#49672f",
+                        "surface-container": "#f2eedb",
+                        "surface-container-low": "#f8f4e1",
+                        "tertiary": "#9a4341",
+                        "secondary-fixed-dim": "#b6c9d5",
+                        "surface-variant": "#e7e3d0",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#323124",
+                        "secondary": "#4f616b",
+                        "primary-fixed": "#caeea7",
+                        "on-surface-variant": "#44483d",
+                        "on-primary-fixed": "#0d2000",
+                        "on-tertiary-fixed-variant": "#7c2c2c",
+                        "on-primary-fixed-variant": "#324e19",
+                        "tertiary-fixed": "#ffdad7",
+                        "on-tertiary-fixed": "#400006",
+                        "on-background": "#1d1c11",
+                        "on-secondary-fixed": "#0b1e26",
+                        "inverse-primary": "#aed18d",
+                        "tertiary-fixed-dim": "#ffb3af"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #49672f 0%, #81a263 100%);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<a class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest active:scale-95 transition-transform" href="{{DATA:SCREEN:SCREEN_23}}">
+<img alt="User" class="w-full h-full object-cover" data-alt="Close up portrait of a smiling young man in soft natural morning light against a blurred minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbrnsAyKm9sEo9dZpsKJxO1nXfY17KwsRsSWX5MqV0N2VJjfZzNz0qQKm7TmULePaF4uDu7X8eMj6UYIbIC71lRO_QfI1KaMcThHuRJ1K1bGe4XhCSEcsi49aT-IHiJ3Ri0NiuQk2d7gst6hNsU6wItPqbGesnRQxwHf0h-UhfR4V2zArwtz_2KJRGO-LBHWVA2apPEatPVFF8WgufPCerF7ig5lFc1LAHIlvBUuoBPzQD_0orlvQI_BVJEHcfIDpwvfZ87kotxnmh"/>
+</a>
+<h1 class="text-xl font-bold text-[#49672f] dark:text-[#81a263] font-headline tracking-tight">Fridge Friend</h1>
+</div>
+<a class="material-symbols-outlined text-[#49672f] dark:text-[#81a263] hover:opacity-80 transition-opacity active:scale-95 duration-200" data-icon="notifications" href="{{DATA:SCREEN:SCREEN_22}}">notifications</a>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto">
+<!-- Hero Summary Section -->
+<section class="mb-10">
+<div class="bg-surface-container-low p-8 rounded-lg flex items-center justify-between gap-6 overflow-hidden relative">
+<div class="flex-1 z-10">
+<span class="font-label text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Weekly Health</span>
+<h2 class="font-headline text-3xl font-bold text-on-surface-variant leading-tight">Freshness<br/>Score</h2>
+<div class="mt-6 inline-flex items-center gap-2 bg-primary-container/20 text-on-primary-container px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-lg" data-icon="savings">savings</span>
+<span class="font-label text-sm font-semibold text-primary">Saved $42.50 this week</span>
+</div>
+</div>
+<div class="relative flex-shrink-0 z-10">
+<svg class="w-32 h-32 transform -rotate-90">
+<circle class="text-surface-container-highest" cx="64" cy="64" fill="transparent" r="56" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-primary rounded-full" cx="64" cy="64" fill="transparent" r="56" stroke="currentColor" stroke-dasharray="351.85" stroke-dashoffset="52.77" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="font-headline text-2xl font-bold text-primary">85%</span>
+</div>
+</div>
+<!-- Abstract Decorative Element -->
+<div class="absolute -right-12 -bottom-12 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+</section>
+<!-- Use It Now Section -->
+<section class="mb-10">
+<div class="flex items-baseline justify-between mb-6 pr-2">
+<h3 class="font-headline text-xl font-bold text-on-surface">Use it Now</h3>
+<span class="font-label text-xs font-semibold text-primary uppercase tracking-widest">Expiring Soon</span>
+</div>
+<div class="flex overflow-x-auto gap-4 pb-4 hide-scrollbar snap-x -mx-6 px-6">
+<!-- Card 1 -->
+<a class="snap-start flex-shrink-0 w-44 bg-surface-container p-4 rounded-lg flex flex-col gap-4 active:scale-[0.98] transition-transform" href="{{DATA:SCREEN:SCREEN_21}}">
+<div class="h-32 rounded-md overflow-hidden">
+<img alt="Milk" class="w-full h-full object-cover" data-alt="Bottle of fresh organic milk standing on a rustic wooden table with soft morning sunlight casting shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8WcKUxxqelvJ-al4Zc0lPRcsdGhE-CzUy9KmJsQvKM_sZPugOAdnmBTwMtrRKJfLLI6hCb-qpUWR7GG4Ap_Ru8ibQoX6_fFp99FhRxKzcQ77dVf7j4c4YHHR3KDFapicxvXx4kUAnHfiP1acOqqqin_LZ1MSoEBA7BnowQcttOUm3N9AiXPtNsd_jBMjBmmlKYlmnCX1n4t3PHLkbl24XtzBwYDUYJGXIf9vgbEIdZusXbuAZnxqSH-dZElo2aVZBNyqfgAwndtZa"/>
+</div>
+<div>
+<h4 class="font-headline font-semibold text-on-surface">Whole Milk</h4>
+<div class="mt-1 flex items-center gap-1.5 bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded-full w-fit">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+<span class="font-label text-[10px] font-bold uppercase">12 Hours</span>
+</div>
+</div>
+</a>
+<!-- Card 2 -->
+<a class="snap-start flex-shrink-0 w-44 bg-surface-container p-4 rounded-lg flex flex-col gap-4 active:scale-[0.98] transition-transform" href="{{DATA:SCREEN:SCREEN_21}}">
+<div class="h-32 rounded-md overflow-hidden">
+<img alt="Spinach" class="w-full h-full object-cover" data-alt="Close-up of vibrant green baby spinach leaves with tiny water droplets in a ceramic bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1Aeb22RCDf25ENkygWd9Fdwh6C4DZs4g6iKVg9M3qHvT_XKdL02sWitCiGLAtY0GzFBp3HF4KwrGkPj1DCSQe6-rqqegcpianE8I0qv_xFt4IBiiobd-DBJrGI-ifd4RmQBreQCWMpYjT1xS-BOVd8neWwl9NczxiH0A8B9JDkAMIRBX5CkgbYlY40UDpI9CVUHsvKlupjsVVewLDkEe2RYg3sLyozLONdNx7gz2yHsM-9fhp_1rwd6IYsyVy503dkeLwmuAKAatC"/>
+</div>
+<div>
+<h4 class="font-headline font-semibold text-on-surface">Baby Spinach</h4>
+<div class="mt-1 flex items-center gap-1.5 bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded-full w-fit">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+<span class="font-label text-[10px] font-bold uppercase">24 Hours</span>
+</div>
+</div>
+</a>
+<!-- Card 3 -->
+<a class="snap-start flex-shrink-0 w-44 bg-surface-container p-4 rounded-lg flex flex-col gap-4 active:scale-[0.98] transition-transform" href="{{DATA:SCREEN:SCREEN_21}}">
+<div class="h-32 rounded-md overflow-hidden">
+<img alt="Berries" class="w-full h-full object-cover" data-alt="Collection of fresh raspberries and blueberries in a small artisanal basket on a linen cloth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwLoCxltDWl6qLxVEBhlOPwr9pv1boV75X65ae7rciPv8lpxYuhtpQ30FCNN1bn7IUZGEff4J7-sPpY-PApSGr_pbdCIV4UNaJydoOy83phR64N3nHtXovaeD7Un6E_yPaX5KxO3Mgdp3sFX8zV-YVJjX6h8u-y8u48gkwzOX396ISDHLCHMQ-dtdkI6zXlzX898Zwa1AYafieVYkgF4-uehkkbdkbzKyPYXKVFp8qV8YRTPP0vWCLPt_7Y_yjC3eZNCOqCJ0Cpgvn"/>
+</div>
+<div>
+<h4 class="font-headline font-semibold text-on-surface">Mixed Berries</h4>
+<div class="mt-1 flex items-center gap-1.5 bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded-full w-fit">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+<span class="font-label text-[10px] font-bold uppercase">36 Hours</span>
+</div>
+</div>
+</a>
+</div>
+</section>
+<!-- Recent Activity Section -->
+<section class="mb-12">
+<h3 class="font-headline text-xl font-bold text-on-surface mb-6 pr-2">Recent Activity</h3>
+<div class="flex flex-col gap-3">
+<a class="flex items-center gap-4 bg-surface-container-low p-4 rounded-lg active:bg-surface-container transition-colors" href="{{DATA:SCREEN:SCREEN_30}}">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+</div>
+<div class="flex-1">
+<p class="font-headline font-semibold text-on-surface text-sm">Added Organic Eggs</p>
+<p class="text-on-surface-variant text-xs">2 hours ago • Fridge Main</p>
+</div>
+<span class="font-label text-xs font-bold text-primary">+$6.50</span>
+</a>
+<a class="flex items-center gap-4 bg-surface-container-low p-4 rounded-lg active:bg-surface-container transition-colors" href="{{DATA:SCREEN:SCREEN_30}}">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+</div>
+<div class="flex-1">
+<p class="font-headline font-semibold text-on-surface text-sm">Used Greek Yogurt</p>
+<p class="text-on-surface-variant text-xs">Yesterday • Breakfast</p>
+</div>
+<span class="font-label text-xs font-bold text-on-surface-variant">Used</span>
+</a>
+<a class="flex items-center gap-4 bg-surface-container-low p-4 rounded-lg active:bg-surface-container transition-colors" href="{{DATA:SCREEN:SCREEN_30}}">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</div>
+<div class="flex-1">
+<p class="font-headline font-semibold text-on-surface text-sm">Expired Avocado</p>
+<p class="text-on-surface-variant text-xs">2 days ago • Waste recorded</p>
+</div>
+<span class="font-label text-xs font-bold text-tertiary">-$2.00</span>
+</a>
+</div>
+</section>
+</main>
+<!-- FAB for Scanning -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 z-[60]">
+<a class="editorial-gradient text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center active:scale-90 transition-transform duration-200" href="{{DATA:SCREEN:SCREEN_27}}">
+<span class="material-symbols-outlined text-3xl" data-icon="center_focus_strong">center_focus_strong</span>
+</a>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-xl shadow-[0_-8px_32px_rgba(29,28,17,0.05)] rounded-t-[24dp]">
+<div class="flex justify-around items-end pb-6 pt-2 px-4 w-full">
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#49672f] to-[#81a263] text-white rounded-full p-3 mb-2 scale-110 shadow-lg active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="hidden">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] p-2 hover:text-[#49672f] transition-colors active:scale-90 duration-200" href="{{DATA:SCREEN:SCREEN_30}}">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold mt-1">Inventory</span>
+</a>
+<div class="w-12 h-12 invisible"></div> <!-- Spacer for FAB -->
+<a class="flex flex-col items-center justify-center text-[#44483d] p-2 hover:text-[#49672f] transition-colors active:scale-90 duration-200" href="{{DATA:SCREEN:SCREEN_20}}">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold mt-1">Recipes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] p-2 hover:text-[#49672f] transition-colors active:scale-90 duration-200" href="{{DATA:SCREEN:SCREEN_31}}">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold mt-1">Analytics</span>
+</a>
+</div>
+</nav>
+</body></html>

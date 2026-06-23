@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Be+Vietnam+Pro:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#374953",
+                    "primary-container": "#81a263",
+                    "inverse-surface": "#323124",
+                    "inverse-on-surface": "#f5f1de",
+                    "surface-bright": "#fefae7",
+                    "surface-container-low": "#f8f4e1",
+                    "secondary-fixed": "#d2e5f1",
+                    "primary": "#49672f",
+                    "on-primary-fixed": "#0d2000",
+                    "on-surface": "#1d1c11",
+                    "surface-container-highest": "#e7e3d0",
+                    "on-secondary-fixed": "#0b1e26",
+                    "tertiary-container": "#e27a77",
+                    "surface": "#fefae7",
+                    "secondary": "#4f616b",
+                    "tertiary-fixed": "#ffdad7",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb3af",
+                    "surface-container": "#f2eedb",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#caeea7",
+                    "on-primary-container": "#1c3704",
+                    "secondary-fixed-dim": "#b6c9d5",
+                    "tertiary": "#9a4341",
+                    "surface-dim": "#dedac8",
+                    "background": "#fefae7",
+                    "secondary-container": "#cfe3ee",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#aed18d",
+                    "on-surface-variant": "#44483d",
+                    "inverse-primary": "#aed18d",
+                    "on-tertiary-container": "#5e1518",
+                    "outline": "#74796c",
+                    "on-primary-fixed-variant": "#324e19",
+                    "on-tertiary-fixed-variant": "#7c2c2c",
+                    "surface-container-high": "#ece8d6",
+                    "on-tertiary-fixed": "#400006",
+                    "surface-tint": "#49672f",
+                    "surface-variant": "#e7e3d0",
+                    "on-background": "#1d1c11",
+                    "on-secondary-container": "#53656f",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c4c8ba",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(254, 250, 231, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen pb-24">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fefae7]/70 dark:bg-[#1d1c11]/70 backdrop-blur-xl shadow-[0_8px_32px_rgba(29,28,17,0.05)] flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#49672f] text-2xl" data-icon="account_balance_wallet">account_balance_wallet</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-semibold text-[1.75rem] tracking-tight text-[#49672f]">Earnings</h1>
+</div>
+<a class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container/20 block hover:opacity-80 transition-opacity" href="{{DATA:SCREEN:SCREEN_23}}">
+<img alt="User profile" data-alt="close-up portrait of a smiling young man with friendly features in a minimalist digital avatar style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnwfi2gFBu5X4Ua-kGUOZ07iKGe20Vy06brbZ9LC6YTtqbQc-kKkLcRaxRDr9L8pOPUW1hY-YCEyCARFZMcrG9hmeg9-aKeozdTRRjxX-ViawcClXLOce1tqXq2567vZXldCpw0v5vECtvK9ZE2p5NcYTRUVeYyVXRzqlGbVOJbTIKQKDCGhAH0ZDF7AUXdOdqtberCW4-J1s7AMfHW7KbXmJxEoEQFUvTM8y9Iwbh6jzsVZx-u94VEUGmUZwoeY-AFgx26x9U6lv3"/>
+</a>
+</nav>
+<main class="pt-24 px-6 max-w-5xl mx-auto space-y-8">
+<!-- Hero Section: Total Balance (Asymmetrical Bento) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-gradient-to-br from-primary to-primary-container p-8 rounded-lg text-on-primary shadow-xl flex flex-col justify-between min-h-[240px]">
+<div>
+<span class="font-label text-sm font-semibold opacity-90 tracking-widest uppercase">Available Balance</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-headline text-[3.5rem] font-bold leading-none">2,840</span>
+<span class="font-headline text-xl opacity-80">Eco-Credits</span>
+</div>
+</div>
+<div class="flex items-center gap-4 mt-6">
+<a class="bg-surface-container-lowest text-primary px-6 py-3 rounded-full font-label font-bold text-sm hover:opacity-90 active:scale-95 transition-all text-center" href="{{DATA:SCREEN:SCREEN_17}}">Redeem Now</a>
+<span class="text-xs opacity-75 font-medium max-w-[140px]">Equivalent to 14.2kg of CO2 offset this month.</span>
+</div>
+</div>
+<div class="bg-surface-container p-8 rounded-lg flex flex-col justify-center items-center text-center space-y-4">
+<div class="w-20 h-20 relative">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-outline-variant/20" cx="40" cy="40" fill="transparent" r="36" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="40" cy="40" fill="transparent" r="36" stroke="currentColor" stroke-dasharray="226" stroke-dashoffset="45" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-headline font-bold text-xl text-primary">80%</div>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-on-surface">Monthly Goal</h3>
+<p class="text-sm text-on-surface-variant">640 / 800 credits</p>
+</div>
+</div>
+</section>
+<!-- Earnings Over Time (Visual Representation) -->
+<section class="bg-surface-container-low rounded-lg p-8">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-headline text-2xl font-bold text-on-surface">Earnings Growth</h2>
+<p class="text-on-surface-variant text-sm">Your sustainability impact over the last 6 months</p>
+</div>
+<div class="flex gap-2 bg-surface-container-highest p-1 rounded-full text-xs font-semibold">
+<span class="px-3 py-1 rounded-full text-on-surface-variant">1M</span>
+<span class="px-3 py-1 bg-primary text-on-primary rounded-full shadow-sm">6M</span>
+<span class="px-3 py-1 rounded-full text-on-surface-variant">1Y</span>
+</div>
+</div>
+<!-- Mock Line Chart using CSS Gradients and Shapes -->
+<div class="relative h-48 w-full flex items-end justify-between px-2">
+<div class="absolute bottom-0 left-0 w-full h-[1px] bg-outline-variant/30"></div>
+<!-- Chart Columns (Asymmetrical editorial feel) -->
+<div class="group relative flex flex-col items-center flex-1">
+<div class="w-full bg-primary-container/20 rounded-t-lg transition-all group-hover:bg-primary/30" style="height: 40%"></div>
+<span class="mt-4 text-[10px] font-label font-bold text-on-surface-variant">JAN</span>
+</div>
+<div class="group relative flex flex-col items-center flex-1 mx-2">
+<div class="w-full bg-primary-container/20 rounded-t-lg transition-all group-hover:bg-primary/30" style="height: 55%"></div>
+<span class="mt-4 text-[10px] font-label font-bold text-on-surface-variant">FEB</span>
+</div>
+<div class="group relative flex flex-col items-center flex-1 mx-2">
+<div class="w-full bg-primary-container/20 rounded-t-lg transition-all group-hover:bg-primary/30" style="height: 45%"></div>
+<span class="mt-4 text-[10px] font-label font-bold text-on-surface-variant">MAR</span>
+</div>
+<div class="group relative flex flex-col items-center flex-1 mx-2">
+<div class="w-full bg-primary-container/40 rounded-t-lg transition-all group-hover:bg-primary/30" style="height: 75%"></div>
+<span class="mt-4 text-[10px] font-label font-bold text-on-surface-variant">APR</span>
+</div>
+<div class="group relative flex flex-col items-center flex-1 mx-2">
+<div class="w-full bg-primary-container/60 rounded-t-lg transition-all group-hover:bg-primary/30" style="height: 65%"></div>
+<span class="mt-4 text-[10px] font-label font-bold text-on-surface-variant">MAY</span>
+</div>
+<div class="group relative flex flex-col items-center flex-1">
+<div class="w-full bg-primary rounded-t-lg shadow-lg shadow-primary/20" style="height: 90%">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">740 Cr</div>
+</div>
+<span class="mt-4 text-[10px] font-label font-bold text-primary">JUN</span>
+</div>
+</div>
+</section>
+<!-- Sustainability Rewards List -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="font-headline text-2xl font-bold text-on-surface">Sustainability Rewards</h2>
+<a class="text-primary font-label text-sm font-bold flex items-center gap-1 hover:underline" href="{{DATA:SCREEN:SCREEN_2}}">
+                View All Activity <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="space-y-3">
+<!-- Reward Card 1 -->
+<a class="bg-surface-container rounded-lg p-5 flex items-center justify-between hover:scale-[1.01] transition-transform cursor-pointer block" href="{{DATA:SCREEN:SCREEN_2}}">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div>
+<h4 class="font-headline font-semibold text-on-surface">Zero Waste Week</h4>
+<p class="text-xs text-on-surface-variant">Completed all meals without spoilage</p>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-headline font-bold text-primary text-lg">+50</span>
+<span class="text-[10px] font-label text-on-surface-variant uppercase tracking-tighter">Credits</span>
+</div>
+</a>
+<!-- Reward Card 2 -->
+<a class="bg-surface-container rounded-lg p-5 flex items-center justify-between hover:scale-[1.01] transition-transform cursor-pointer block" href="{{DATA:SCREEN:SCREEN_2}}">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<div>
+<h4 class="font-headline font-semibold text-on-surface">Smart Shopping</h4>
+<p class="text-xs text-on-surface-variant">Used 90% of items from previous haul</p>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-headline font-bold text-primary text-lg">+35</span>
+<span class="text-[10px] font-label text-on-surface-variant uppercase tracking-tighter">Credits</span>
+</div>
+</a>
+<!-- Reward Card 3 -->
+<a class="bg-surface-container rounded-lg p-5 flex items-center justify-between hover:scale-[1.01] transition-transform cursor-pointer block" href="{{DATA:SCREEN:SCREEN_2}}">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">volunteer_activism</span>
+</div>
+<div>
+<h4 class="font-headline font-semibold text-on-surface">Community Donation</h4>
+<p class="text-xs text-on-surface-variant">Excess produce shared via Fridge Friend</p>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-headline font-bold text-primary text-lg">+120</span>
+<span class="text-[10px] font-label text-on-surface-variant uppercase tracking-tighter">Credits</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Recipe Suggestion Banner (Glassmorphism overlay style) -->
+<section class="relative rounded-lg overflow-hidden h-40 group">
+<img alt="Fresh vegetable salad" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="vibrant top-down view of a colorful mediterranean vegetable salad with feta cheese and fresh herbs in a ceramic bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrWcZyFHGMx6C5OFlrupDRsZKYdpYiU_6XjuUxDlk1RnBFGfQlv2hiDjvY8GcB4zqD8nPDMHqyVqUP51iGZuPF5l9RXEPBN4Ai4g_iahJ5G1JaxrNHbaN7bNaCO7O28vXgASICDGeEjpba2vFDslvCeBvPrGX7D2P_v8Xa_6Q4XwuSjrQAykO35_hsOo6L1nK_W0_0WDSN-auzj8xoe0DCLKzU2pVLr1ZqHWYmH278-u_p4awuDdTHHPSE6rxK7wIvqRdsTwKNFNo1"/>
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px]"></div>
+<div class="absolute inset-0 p-8 flex items-center justify-between glass-panel mx-4 my-4 rounded-lg">
+<div>
+<h3 class="font-headline font-bold text-primary text-xl">Earn 200+ Credits Today</h3>
+<p class="text-on-surface-variant text-sm max-w-xs">Cook our "Zero-Waste Buddha Bowl" using items expiring soon.</p>
+</div>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-full text-sm font-bold shadow-lg text-center" href="{{DATA:SCREEN:SCREEN_20}}">Start Cooking</a>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#fefae7]/70 dark:bg-[#1d1c11]/70 backdrop-blur-xl shadow-[0_-8px_32px_rgba(29,28,17,0.05)] z-50">
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200" href="{{DATA:SCREEN:SCREEN_30}}">
+<span class="material-symbols-outlined mb-1" data-icon="kitchen">kitchen</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[0.75rem] font-semibold">Inventory</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#49672f] to-[#81a263] text-[#fefae7] rounded-full px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="payments">payments</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[0.75rem] font-semibold">Earnings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200" href="{{DATA:SCREEN:SCREEN_17}}">
+<span class="material-symbols-outlined mb-1" data-icon="redeem">redeem</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[0.75rem] font-semibold">Rewards</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200" href="{{DATA:SCREEN:SCREEN_23}}">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[0.75rem] font-semibold">Account</span>
+</a>
+</nav>
+</body></html>

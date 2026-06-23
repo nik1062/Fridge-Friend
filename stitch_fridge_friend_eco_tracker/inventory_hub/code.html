@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#5e1518",
+                    "outline": "#74796c",
+                    "tertiary-container": "#e27a77",
+                    "on-secondary-container": "#53656f",
+                    "surface-container-highest": "#e7e3d0",
+                    "outline-variant": "#c4c8ba",
+                    "on-primary-container": "#1c3704",
+                    "secondary-container": "#cfe3ee",
+                    "on-surface": "#1d1c11",
+                    "surface-bright": "#fefae7",
+                    "inverse-on-surface": "#f5f1de",
+                    "primary-fixed-dim": "#aed18d",
+                    "surface-container-high": "#ece8d6",
+                    "surface-tint": "#49672f",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fefae7",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#dedac8",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#d2e5f1",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "surface": "#fefae7",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#374953",
+                    "primary-container": "#81a263",
+                    "primary": "#49672f",
+                    "surface-container": "#f2eedb",
+                    "surface-container-low": "#f8f4e1",
+                    "tertiary": "#9a4341",
+                    "secondary-fixed-dim": "#b6c9d5",
+                    "surface-variant": "#e7e3d0",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#323124",
+                    "secondary": "#4f616b",
+                    "primary-fixed": "#caeea7",
+                    "on-surface-variant": "#44483d",
+                    "on-primary-fixed": "#0d2000",
+                    "on-tertiary-fixed-variant": "#7c2c2c",
+                    "on-primary-fixed-variant": "#324e19",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-tertiary-fixed": "#400006",
+                    "on-background": "#1d1c11",
+                    "on-secondary-fixed": "#0b1e26",
+                    "inverse-primary": "#aed18d",
+                    "tertiary-fixed-dim": "#ffb3af"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .tab-active { @apply bg-primary text-on-primary shadow-sm; }
+        .tab-inactive { @apply text-on-surface-variant hover:bg-surface-container; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<button class="focus:outline-none transition-transform active:scale-95" onclick="window.location.href='{{DATA:SCREEN:SCREEN_23}}'">
+<img alt="User profile photo" class="w-10 h-10 rounded-full object-cover" data-alt="Professional headshot of a smiling man with a warm expression in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqA537nBVUbltVSpfpk1F2KBWoVoniO3wWjwSJW_SHlCO5k2-iUyEYLc8-7B_5XstSSyRusTPDBw5xzmGAc8UsQWM4t59ZEBd95HNNW_FLBgvgE-_lydQ4vW6d2XAjWNSbVD2RgHpHppdM3Lwpnl0nekQvFuzLVMHdJta0AfaC0twN7Pq5Rf6ZQj40Hb_6b2iEWLBkmzg1HuuY2lpHM2HsQ08ZOaGF7OOLp_US7SH9AGdd38ky1opmrkxqB7L1AM8OYT4BSh6HG9mu"/>
+</button>
+<span class="font-headline font-bold tracking-tight text-xl text-[#49672f] dark:text-[#81a263]">Fridge Friend</span>
+</div>
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#49672f] dark:text-[#81a263]">notifications</span>
+</button>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto min-h-screen">
+<!-- Inventory Hub Header & Tabs -->
+<section class="mb-8">
+<h1 class="font-headline text-4xl font-bold tracking-tight mb-6">Inventory Hub</h1>
+<div class="flex gap-2 p-1 bg-surface-container-low rounded-full overflow-x-auto hide-scrollbar" id="inventory-tabs">
+<button class="inventory-tab flex-1 py-3 px-6 rounded-full bg-primary text-on-primary font-headline font-semibold text-sm shadow-sm transition-all" onclick="filterInventory('fridge', this)">
+                    Fridge
+                </button>
+<button class="inventory-tab flex-1 py-3 px-6 rounded-full text-on-surface-variant font-headline font-semibold text-sm hover:bg-surface-container transition-all" onclick="filterInventory('pantry', this)">
+                    Pantry
+                </button>
+<button class="inventory-tab flex-1 py-3 px-6 rounded-full text-on-surface-variant font-headline font-semibold text-sm hover:bg-surface-container transition-all" onclick="filterInventory('freezer', this)">
+                    Freezer
+                </button>
+</div>
+</section>
+<!-- Search & Filter (Asymmetric UI) -->
+<div class="flex gap-4 mb-10">
+<div class="flex-1 bg-surface-container border-b-2 border-primary/20 rounded-t-lg px-4 py-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-sm font-body" placeholder="Search ingredients..." type="text"/>
+</div>
+<button class="w-12 h-12 flex items-center justify-center bg-surface-container-highest rounded-full active:scale-90 transition-transform">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+<!-- Inventory List -->
+<div class="space-y-6" id="inventory-list">
+<!-- Item Card: Urgent -->
+<div class="bg-surface-container rounded-lg p-4 flex gap-5 items-center transition-all hover:bg-surface-container-high group cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_21}}'">
+<div class="relative w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Strawberries" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close-up of fresh strawberries in a rustic ceramic bowl with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW3MD2zMAjUFMZDw0bl4JeCVbWPzTLxlFJfNx8G5JGPdAFlLAgqUjImGCsviTH34k8eLoRXFS61-8MNX_EE77foED7tXZdeRHDMz-rpRHpXmYY2gH7KfIiVFcAOyFGXsq2Vn8pLp9cRKFR2jzh06NUsv6rGU8OuZZCaIs1YRyK_UrRKelY7eqVcya0FqL2Rr1m9vfa8c2c0HLSV9WCAtVWmGXVnbSBxRoTaOKpCnXJgIY6XgGwBy8kc5wM2A_HBT6icO3GI784bOCd"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-semibold text-lg truncate">Strawberries</h3>
+<span class="bg-error text-on-error font-label text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Urgent</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-3">Expiring tomorrow</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center bg-surface-container-lowest rounded-full p-1 shadow-sm" onclick="event.stopPropagation()">
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-75 transition-transform"><span class="material-symbols-outlined text-lg">remove</span></button>
+<span class="px-3 font-headline font-bold text-sm">2</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-75 transition-transform"><span class="material-symbols-outlined text-lg">add</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item Card: Soon -->
+<div class="bg-surface-container rounded-lg p-4 flex gap-5 items-center transition-all hover:bg-surface-container-high group cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_21}}'">
+<div class="relative w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Cheddar Cheese" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Artisanal block of cheddar cheese on a wooden board with crumbs around it" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwR5H8umJjxzYDjK2tWH0ibUtPTTRRQ14XqZ9_jdUIUTmE5jZClpfs4kJGHJlqXonpUwOctMlAcSkJnFHfki4XO3V-A-kTO6LWRbK7J5P2d_uGnOijyrgMYr1HKTkdFtOj-vHhBjXLJVMKtXyrJx8VNx4bdNPbrQdtlVC-xpUItU7fOVC1er-jiaK9GZ_3Sc9ZzCindTD4sVFdWpkWiT9NHMczupI7K589BIOo_CYd4DEnsEYOic-L91a7OcnW7Ed4NUrdv_hYiDdI"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-semibold text-lg truncate">Cheddar Cheese</h3>
+<span class="bg-tertiary-container text-on-tertiary-container font-label text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Soon</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-3">Expiring in 3 days</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center bg-surface-container-lowest rounded-full p-1 shadow-sm" onclick="event.stopPropagation()">
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-75 transition-transform"><span class="material-symbols-outlined text-lg">remove</span></button>
+<span class="px-3 font-headline font-bold text-sm">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-75 transition-transform"><span class="material-symbols-outlined text-lg">add</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item Card: Fresh -->
+<div class="bg-surface-container rounded-lg p-4 flex gap-5 items-center transition-all hover:bg-surface-container-high group cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_21}}'">
+<div class="relative w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Green Apples" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Crisp green apples with water droplets, focused macro shot in bright cool light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbo1Bfo-muYof1c12_AZ15m98O4O79uTlnhQTudcGzzAeGQImwytk-DXt6MZoJ1vkoDHxPulaL1DbdRddqYcLVfLw3N_6R-d_LeXNdTJ58hb-4xRybL_zXuEmGkyGXCvnv7kREoyAMlFHQDBc2Ul9PBi6aEN69J-fH4uIbeIwcEIIDWAleisLUA5aPugmUJc2JuIDoYDgZQ5jV4TG6J3x0UFZWAME1SAnnZa0ZMBM2lPxtMJ96JWficBpvqFav8NBNl9QJXb930clX"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-semibold text-lg truncate">Green Apples</h3>
+<span class="bg-primary-container text-on-primary-container font-label text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Fresh</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-3">Expiring in 10 days</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center bg-surface-container-lowest rounded-full p-1 shadow-sm" onclick="event.stopPropagation()">
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-75 transition-transform"><span class="material-symbols-outlined text-lg">remove</span></button>
+<span class="px-3 font-headline font-bold text-sm">6</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-75 transition-transform"><span class="material-symbols-outlined text-lg">add</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item Card: Fresh 2 -->
+<div class="bg-surface-container rounded-lg p-4 flex gap-5 items-center transition-all hover:bg-surface-container-high group cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_21}}'">
+<div class="relative w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Whole Milk" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Glass bottle of fresh whole milk on a white surface with soft minimalist lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaWHjXx2NSGONPDBsqhY95d4nthlETQzfG_HbNKIIXb4i-cjT0OTTEn22BUf3VCTUMXxTZiDB19rmSimAN4AItJo4NgUIm1jgWHoEf6c1nhq1zuISCyyEZ5usVP_ERD5u0wUf1se1eYggbth2z3g-ae7K6Eh3l395Fifufe0sNetzNtA4M5yFNN0O-3jCZTo0HQgrFA9E7fV9tHmZU1lDOQBWBKtR4n6eAwToSM59_1qJo8J_WmVUCU6f5LHBYUdbA0PUqv8kSk8rP"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-semibold text-lg truncate">Whole Milk</h3>
+<span class="bg-primary-container text-on-primary-container font-label text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Fresh</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-3">Expiring in 5 days</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center bg-surface-container-lowest rounded-full p-1 shadow-sm" onclick="event.stopPropagation()">
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-75 transition-transform"><span class="material-symbols-outlined text-lg">remove</span></button>
+<span class="px-3 font-headline font-bold text-sm">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-75 transition-transform"><span class="material-symbols-outlined text-lg">add</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB -->
+<button class="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 w-16 h-16 rounded-full bg-gradient-to-br from-[#49672f] to-[#81a263] text-white flex items-center justify-center shadow-xl active:scale-90 transition-all border-4 border-background" onclick="window.location.href='{{DATA:SCREEN:SCREEN_27}}'">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-[24dp] bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-xl shadow-[0_-8px_32px_rgba(29,28,17,0.05)] flex justify-around items-end pb-6 pt-2 px-4 w-full">
+<button class="flex flex-col items-center justify-center text-[#44483d] p-2 hover:text-[#49672f] transition-colors active:scale-90 duration-200" onclick="window.location.href='{{DATA:SCREEN:SCREEN_18}}'">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Dashboard</span>
+</button>
+<div class="flex flex-col items-center justify-center bg-gradient-to-br from-[#49672f] to-[#81a263] text-white rounded-full p-3 mb-2 scale-110 shadow-lg cursor-default">
+<span class="material-symbols-outlined" data-icon="inventory_2" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Inventory</span>
+</div>
+<button class="flex flex-col items-center justify-center text-[#44483d] p-2 hover:text-[#49672f] transition-colors active:scale-90 duration-200" onclick="window.location.href='{{DATA:SCREEN:SCREEN_25}}'">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Leaderboard</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#44483d] p-2 hover:text-[#49672f] transition-colors active:scale-90 duration-200" onclick="window.location.href='{{DATA:SCREEN:SCREEN_24}}'">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Settings</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#44483d] p-2 hover:text-[#49672f] transition-colors active:scale-90 duration-200" onclick="window.location.href='{{DATA:SCREEN:SCREEN_23}}'">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Profile</span>
+</button>
+</nav>
+<script>
+        function filterInventory(type, element) {
+            // UI Only Filter Simulation
+            const tabs = document.querySelectorAll('.inventory-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+                tab.classList.add('text-on-surface-variant');
+            });
+            
+            element.classList.remove('text-on-surface-variant');
+            element.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+
+            // Simple visual feedback: flash the list
+            const list = document.getElementById('inventory-list');
+            list.style.opacity = '0.5';
+            setTimeout(() => {
+                list.style.opacity = '1';
+                // In a real app, logic to filter the actual items would go here
+                console.log('Filtering list for:', type);
+            }, 150);
+        }
+    </script>
+</body></html>

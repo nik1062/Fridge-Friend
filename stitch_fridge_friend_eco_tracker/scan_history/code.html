@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Larder - Scan History</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#9a4341",
+                    "surface-container-high": "#ece8d6",
+                    "primary-container": "#81a263",
+                    "outline": "#74796c",
+                    "on-primary-container": "#1c3704",
+                    "on-surface": "#1d1c11",
+                    "secondary-fixed": "#d2e5f1",
+                    "on-tertiary-fixed-variant": "#7c2c2c",
+                    "surface-dim": "#dedac8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#374953",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#f2eedb",
+                    "surface": "#fefae7",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f5f1de",
+                    "on-primary-fixed": "#0d2000",
+                    "secondary": "#4f616b",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#400006",
+                    "surface-container-low": "#f8f4e1",
+                    "surface-variant": "#e7e3d0",
+                    "surface-container-highest": "#e7e3d0",
+                    "primary-fixed": "#caeea7",
+                    "on-background": "#1d1c11",
+                    "secondary-fixed-dim": "#b6c9d5",
+                    "inverse-primary": "#aed18d",
+                    "on-secondary-container": "#53656f",
+                    "surface-tint": "#49672f",
+                    "tertiary-fixed-dim": "#ffb3af",
+                    "secondary-container": "#cfe3ee",
+                    "outline-variant": "#c4c8ba",
+                    "primary-fixed-dim": "#aed18d",
+                    "primary": "#49672f",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-surface-variant": "#44483d",
+                    "on-secondary-fixed": "#0b1e26",
+                    "tertiary-container": "#e27a77",
+                    "on-tertiary-container": "#5e1518",
+                    "surface-bright": "#fefae7",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#323124",
+                    "on-primary-fixed-variant": "#324e19",
+                    "background": "#fefae7",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-bg { background-color: rgba(248, 244, 225, 0.7); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fefae7]/70 dark:bg-[#1d1c11]/70 backdrop-blur-xl shadow-[0_8px_32px_rgba(29,28,17,0.05)]">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform text-[#49672f] dark:text-[#81a263]">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-xl font-bold text-[#49672f] dark:text-[#81a263] tracking-tighter font-headline">Digital Larder</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="User profile photo showing a friendly man in professional attire with a warm smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ_6rW0dN8zoSz1NDl5tokzQ5jOXoiINkrAO-vvyYRAlVZrQq3s0qZpxywY2lJ2tlBwgpUF7eVsboz6rHU9bwnz4-pxyQLj3PiaUQ0aqhZGVVvfxkMLVbaAC0gCIu_NlQeNM5I_EjEZA3cRjAiOuAfBdGp6toqbwupnyzrL2VakvnLjlXfJL-vvJcRoC1RGZubyGz_ope-OO3bTaF1dnid6WBVFQfEWYDErjxkVhB9pHHPWIcHXsSdUHmMlU5wIrFtW5tlFCMTjnXL"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-screen-xl mx-auto">
+<!-- Hero Section / Editorial Header -->
+<section class="mb-12 mt-4">
+<span class="text-primary font-headline font-bold text-xs uppercase tracking-[0.2em] mb-2 block">Insights</span>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<h2 class="text-5xl md:text-6xl font-bold font-headline text-on-surface tracking-tight leading-none">Scan <br/>History</h2>
+<div class="bg-surface-container-low p-6 rounded-lg max-w-xs">
+<p class="text-on-surface-variant body-md leading-relaxed">
+                        Track your pantry updates through receipt and product captures. We've cataloged <span class="font-bold text-primary">124 items</span> this month.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Stats Overview (Asymmetric Bento) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="md:col-span-2 bg-surface-container rounded-lg p-8 flex flex-col justify-between min-h-[200px]">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="auto_awesome">auto_awesome</span>
+<span class="bg-primary-container/20 text-on-primary-container px-3 py-1 rounded-full text-xs font-bold font-headline">MONTHLY TOTAL</span>
+</div>
+<div>
+<div class="text-6xl font-bold font-headline tracking-tighter text-primary">$412.50</div>
+<p class="text-on-surface-variant font-medium mt-2">Saved across 14 grocery runs</p>
+</div>
+</div>
+<div class="bg-tertiary-container/30 rounded-lg p-8 flex flex-col justify-center items-center text-center">
+<div class="text-4xl font-bold font-headline text-tertiary mb-1">82%</div>
+<p class="text-on-tertiary-container font-headline font-semibold text-xs uppercase tracking-widest leading-tight">Freshness <br/>Accuracy</p>
+</div>
+</div>
+<!-- History List -->
+<div class="space-y-4">
+<h3 class="font-headline font-semibold text-on-surface-variant px-2">Recent Captures</h3>
+<!-- Entry 1 -->
+<div class="group relative bg-surface-container-lowest hover:bg-surface-container transition-colors duration-300 rounded-lg p-4 flex items-center gap-6 cursor-pointer">
+<div class="w-20 h-24 rounded-md overflow-hidden bg-surface-container flex-shrink-0">
+<img alt="Receipt Thumbnail" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="Blurred close up of a paper grocery receipt with visible itemized lines on a light wooden background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBeFTf0YXbpRiwVCV0uSF3lrXKjq7IRl5vUIIpEi51FXerJjgU94OPRhszWm3U4gmEs5Ntmp664bk0Y4ebIffFhH9SXdrEUBs3QRr5fxS7K4BRlEWb8YEjwMGXhsKqkYSrUuEoBwJiGuFekxGOwW2dFt0ah6IjocFoMenoC5vsyFDqhgK_men-QKI7yYAMcXdSqgQjbWRJ7CUx7fTdLubImbh8IhYD6d2_7HlShvpFM4yJKdyOU_8uIQDY85SpkBAFbTvd_y_YjcKC"/>
+</div>
+<div class="flex-grow grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
+<div>
+<p class="text-xs font-headline font-bold text-on-surface-variant uppercase tracking-widest mb-1">Date</p>
+<p class="font-medium text-on-surface">Oct 24, 2023</p>
+</div>
+<div>
+<p class="text-xs font-headline font-bold text-on-surface-variant uppercase tracking-widest mb-1">Items</p>
+<p class="font-medium text-on-surface">18 Found</p>
+</div>
+<div class="hidden md:block">
+<p class="text-xs font-headline font-bold text-on-surface-variant uppercase tracking-widest mb-1">Value</p>
+<p class="font-medium text-on-surface">$84.20</p>
+</div>
+<div class="text-right flex justify-end">
+<div class="bg-primary-container text-on-primary-container p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Entry 2 -->
+<div class="group relative bg-surface-container-lowest hover:bg-surface-container transition-colors duration-300 rounded-lg p-4 flex items-center gap-6 cursor-pointer">
+<div class="w-20 h-24 rounded-md overflow-hidden bg-surface-container flex-shrink-0">
+<img alt="Product Thumbnail" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="A small stack of fresh vegetables including carrots and kale on a white countertop, styled like a scan preview" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpJ5_rhY6A97MgwXEMjvIEGClLGzBnn384sJbjl9mJ06nqOfxiuLU4IpaLyUI_3OU83PM26Uhyc-n4uQIdEng-h1O1YCQowkyAgysyR08qUlN4cD1R13xb45A4BNKicyh0w_ZVzlB7uu3qLhFAGU4qv-bW9G9diQLiATH9K90F6_JOHnGKcVKw5D7LopkcDVERV8zz5yT7eLs_c19bz1o-HJGup_z2VsZ1ZZKm2MOAx2daR3IYkkmJi9VBn2AN_mdZW8PM_kx_SBR7"/>
+</div>
+<div class="flex-grow grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
+<div>
+<p class="text-xs font-headline font-bold text-on-surface-variant uppercase tracking-widest mb-1">Date</p>
+<p class="font-medium text-on-surface">Oct 22, 2023</p>
+</div>
+<div>
+<p class="text-xs font-headline font-bold text-on-surface-variant uppercase tracking-widest mb-1">Items</p>
+<p class="font-medium text-on-surface">3 Found</p>
+</div>
+<div class="hidden md:block">
+<p class="text-xs font-headline font-bold text-on-surface-variant uppercase tracking-widest mb-1">Value</p>
+<p class="font-medium text-on-surface">$12.50</p>
+</div>
+<div class="text-right flex justify-end">
+<div class="bg-primary-container text-on-primary-container p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Entry 3 -->
+<div class="group relative bg-surface-container-lowest hover:bg-surface-container transition-colors duration-300 rounded-lg p-4 flex items-center gap-6 cursor-pointer">
+<div class="w-20 h-24 rounded-md overflow-hidden bg-surface-container flex-shrink-0">
+<img alt="Receipt Thumbnail" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="Paper receipt with colorful produce stickers in the background, warm natural kitchen lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsD2egoll_N8ZXI4tccl8l1jrYCJHLRJS0bB6PgBKvLkiG6gsumdpuW9fh9x8geqSSUndQ0djq05GKwql4UpsNXD5aA0bzBsXH79YrlFhvE2CyGp3TNkXkr4LlizBZN4_Mnjj53WDoXSJ9iY0VzwbEgTADjY8ujueabDseQ-SRxI1gbcGrtNNIRcsq3uJp6PQsXzkf0JzKzY16PRVejc8kmqo_tB-X5elbNytXd-1Jif2pgFEwmOzmVncfZ8vt-N99ajrKpII4Qety"/>
+</div>
+<div class="flex-grow grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
+<div>
+<p class="text-xs font-headline font-bold text-on-surface-variant uppercase tracking-widest mb-1">Date</p>
+<p class="font-medium text-on-surface">Oct 19, 2023</p>
+</div>
+<div>
+<p class="text-xs font-headline font-bold text-on-surface-variant uppercase tracking-widest mb-1">Items</p>
+<p class="font-medium text-on-surface">24 Found</p>
+</div>
+<div class="hidden md:block">
+<p class="text-xs font-headline font-bold text-on-surface-variant uppercase tracking-widest mb-1">Value</p>
+<p class="font-medium text-on-surface">$142.10</p>
+</div>
+<div class="text-right flex justify-end">
+<div class="bg-primary-container text-on-primary-container p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB (Floating Action Button) - Scan New -->
+<div class="fixed bottom-32 right-6 z-40">
+<button class="bg-gradient-to-br from-primary to-primary-container text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl" data-icon="add_a_photo" data-weight="fill" style="font-variation-settings: 'FILL' 1;">add_a_photo</span>
+</button>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#fefae7]/70 dark:bg-[#1d1c11]/70 backdrop-blur-xl z-50 rounded-t-[24px] shadow-[0_-8px_32px_rgba(29,28,17,0.05)]">
+<!-- Inventory -->
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] opacity-60 hover:scale-110 transition-transform active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Inventory</span>
+</a>
+<!-- Budget -->
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] opacity-60 hover:scale-110 transition-transform active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Budget</span>
+</a>
+<!-- Earn (Active mapping to "Scan History" as part of activity) -->
+<a class="flex flex-col items-center justify-center bg-[#f2eedb] dark:bg-[#44483d] text-[#49672f] dark:text-[#f8f4e1] rounded-full px-4 py-2 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="savings" style="font-variation-settings: 'FILL' 1;">savings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Earn</span>
+</a>
+<!-- Goals -->
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] opacity-60 hover:scale-110 transition-transform active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Goals</span>
+</a>
+<!-- House -->
+<a class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] opacity-60 hover:scale-110 transition-transform active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="cottage">cottage</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">House</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#74796c",
+                    "primary": "#49672f",
+                    "primary-fixed": "#caeea7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#1c3704",
+                    "on-secondary-container": "#53656f",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#aed18d",
+                    "on-surface-variant": "#44483d",
+                    "primary-container": "#81a263",
+                    "on-primary-fixed-variant": "#324e19",
+                    "inverse-surface": "#323124",
+                    "surface-container": "#f2eedb",
+                    "on-primary-fixed": "#0d2000",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fefae7",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#c4c8ba",
+                    "on-tertiary-container": "#5e1518",
+                    "primary-fixed-dim": "#aed18d",
+                    "surface-bright": "#fefae7",
+                    "surface-variant": "#e7e3d0",
+                    "on-surface": "#1d1c11",
+                    "on-secondary-fixed": "#0b1e26",
+                    "surface": "#fefae7",
+                    "on-secondary-fixed-variant": "#374953",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#49672f",
+                    "secondary": "#4f616b",
+                    "secondary-container": "#cfe3ee",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f8f4e1",
+                    "secondary-fixed-dim": "#b6c9d5",
+                    "tertiary-fixed-dim": "#ffb3af",
+                    "surface-container-highest": "#e7e3d0",
+                    "on-background": "#1d1c11",
+                    "secondary-fixed": "#d2e5f1",
+                    "tertiary-container": "#e27a77",
+                    "surface-container-high": "#ece8d6",
+                    "on-tertiary-fixed-variant": "#7c2c2c",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dedac8",
+                    "tertiary": "#9a4341",
+                    "on-tertiary-fixed": "#400006",
+                    "inverse-on-surface": "#f5f1de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Suppressed Shell: Onboarding is transactional, thus TopAppBar and BottomNavBar are hidden as per "The Destination Rule" -->
+<main class="min-h-screen flex flex-col items-center justify-center p-6 md:p-12">
+<!-- Branding Header (Contextual Anchor) -->
+<header class="w-full max-w-md flex flex-col items-center mb-12">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" data-icon="restaurant" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<h1 class="font-headline text-3xl font-extrabold tracking-tighter text-primary">Fridge Friend</h1>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant mt-2 opacity-60">Your Kitchen, Curated</p>
+</header>
+<!-- Main Onboarding Canvas -->
+<section class="w-full max-w-xl bg-surface-container-low rounded-lg shadow-sm shadow-on-surface/5 overflow-hidden flex flex-col">
+<!-- Horizontal Carousel Section -->
+<div class="relative overflow-x-auto snap-x snap-mandatory flex hide-scrollbar">
+<!-- Slide 1: Track Expirations -->
+<article class="min-w-full snap-start flex flex-col p-8 md:p-12">
+<div class="aspect-[4/3] rounded-lg overflow-hidden bg-surface-container mb-8">
+<img alt="Track Expirations" class="w-full h-full object-cover" data-alt="Close up of organized glass jars with fresh vegetables in a clean, minimalist refrigerator, soft natural lighting, editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2SpvdVrX07YT_8QKhw6FydEZykyVo_ZdvRok7D4A9lZR9sa2GYSgypAW2eCnZ01HRV6aABbbfYrtT5-zHdoOjjmTaKoa5wI1yjwAJspJdDttzm3upREwdMvYmGdwKjqTCZT1t23aPmcX1U8zliSy6ka2jKT-D8gt6UVuJr80pGq97oOmxJWmQVarhJbyWkLybkzOl9TOSxMfnMLnbBVUw6rjfMSiKuD8tpSf2UJzhAmC0uGHg-HYJWpaEoPHwHdRQ-ixeCs99x3Eb"/>
+</div>
+<div class="flex flex-col gap-4">
+<h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface leading-tight">Never lose a head of lettuce again.</h2>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed">Smart notifications alert you before your groceries go to waste. Freshness at your fingertips.</p>
+</div>
+</article>
+<!-- Slide 2: Scan Receipts -->
+<article class="min-w-full snap-start flex flex-col p-8 md:p-12">
+<div class="aspect-[4/3] rounded-lg overflow-hidden bg-surface-container mb-8">
+<img alt="Scan Receipts" class="w-full h-full object-cover" data-alt="Top down shot of a mobile phone scanning a grocery receipt on a wooden kitchen table next to organic apples, soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyo7Fdmjh3-TcFvjOUS21avXl1IVKEG9ZpXjAciBx_GXQXsmrpAXt5jw6IR-ka2m-n-c-YAA-UpCGqtS3BU0vy65Hjep6Ysdgqb5Roh-hAzZS4IkZ-1IEJfvdjN8_TBE36hlxBenlJSaywnlUqbwUqnt1uSVcOKnsbNWxVjEThH2VG5WGiBtS2gskqEsS4N4avu8gVd25KRl76g90lusibjUq1YN1bFhujrasCJBjN17-WSYm7p6WATkuwvWpSu8FNdTq6sn4h1x3y"/>
+</div>
+<div class="flex flex-col gap-4">
+<h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface leading-tight">Scan. Track. Relax.</h2>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed">Our AI instantly identifies items from your receipts and adds them to your digital pantry.</p>
+</div>
+</article>
+<!-- Slide 3: Reduce Waste -->
+<article class="min-w-full snap-start flex flex-col p-8 md:p-12">
+<div class="aspect-[4/3] rounded-lg overflow-hidden bg-surface-container mb-8">
+<img alt="Reduce Waste" class="w-full h-full object-cover" data-alt="Beautifully prepared salad in a ceramic bowl on a linen tablecloth, warm golden hour light, lifestyle editorial photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyUZVhym5mTVG4xA18LE6Ynt3POVdM4_dD9T1tV6gN0ddUDWaMG-pyMewzWMVdBiAtP4pkmT1OBwRN7NS2xs9XG6UCdi0q8yHBDk8Tp5nPHmR2iGRjLR-bFyzI0wDiR6wVmm-Ex4_fdKP8hanEXD7-zgZPSHe5i-iWED3nUg2hzotSL-bfCCBSt4akHJbNzNCxw1lmdTgEstnXpIi9XNKdz9r3srj03WWHcBDSs-auyBm6JimPmkNgVcCbvd2amhJyCah0Zsy5sGz3"/>
+</div>
+<div class="flex flex-col gap-4">
+<h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface leading-tight">Cook what you have.</h2>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed">Personalized recipe suggestions based solely on your current inventory. Sustainable living made simple.</p>
+</div>
+</article>
+</div>
+<!-- Carousel Indicators & Actions -->
+<footer class="p-8 md:p-12 pt-0 flex flex-col items-center">
+<!-- Visual Stepper -->
+<div class="flex gap-2 mb-10">
+<div class="h-1.5 w-8 rounded-full bg-primary"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-outline-variant"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-outline-variant"></div>
+</div>
+<!-- Primary CTA Cluster -->
+<div class="w-full flex flex-col gap-3">
+<button class="w-full py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-semibold text-lg rounded-full shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform" onclick="window.location.href='{{DATA:SCREEN:SCREEN_4}}'">
+                        Get Started
+                    </button>
+<button class="w-full py-4 text-on-surface-variant font-headline font-semibold text-sm hover:text-primary transition-colors" onclick="window.location.href='{{DATA:SCREEN:SCREEN_4}}'">
+                        Already have an account? Sign In
+                    </button>
+</div>
+</footer>
+</section>
+<!-- Editorial Quote (High-End Detail) -->
+<aside class="mt-12 text-center max-w-sm flex flex-col items-center">
+<button class="mb-4 text-primary font-semibold text-sm hover:underline" onclick="window.location.href='{{DATA:SCREEN:SCREEN_18}}'">Skip to Dashboard</button>
+<p class="italic text-sm font-body text-on-surface-variant opacity-40">"The average household wastes $1,500 of food every year. Let's change that together."</p>
+</aside>
+<!-- Decorative Elements (Asymmetrical Bento-ish bits) -->
+<div class="hidden lg:block fixed -bottom-20 -left-20 w-80 h-80 bg-primary-container/10 rounded-full blur-3xl"></div>
+<div class="hidden lg:block fixed top-20 -right-20 w-64 h-64 bg-tertiary-container/10 rounded-full blur-3xl"></div>
+</main>
+<!-- Content-specific Badge (Organic Primitive) -->
+<div class="fixed top-6 right-6 hidden md:flex items-center gap-2 px-4 py-2 bg-surface-container-highest/50 backdrop-blur-md rounded-full border border-outline-variant/15">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label text-[10px] uppercase font-bold tracking-widest text-primary">Eco-Friendly Living</span>
+</div>
+<!-- Bottom Navigation for accessibility/testing although hidden in transactional onboarding by rule -->
+<nav class="fixed bottom-0 left-0 right-0 bg-surface border-t border-outline-variant flex justify-around items-center py-2 px-4 md:hidden">
+<button class="flex flex-col items-center gap-1 text-on-surface-variant" onclick="window.location.href='{{DATA:SCREEN:SCREEN_18}}'">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant" onclick="window.location.href='{{DATA:SCREEN:SCREEN_30}}'">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="text-[10px] font-medium">Inventory</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant" onclick="window.location.href='{{DATA:SCREEN:SCREEN_20}}'">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="text-[10px] font-medium">Recipes</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary" onclick="window.location.href='{{DATA:SCREEN:SCREEN_23}}'">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+</body></html>

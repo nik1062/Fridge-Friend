@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#9a4341",
+                    "surface-container-high": "#ece8d6",
+                    "primary-container": "#81a263",
+                    "outline": "#74796c",
+                    "on-primary-container": "#1c3704",
+                    "on-surface": "#1d1c11",
+                    "secondary-fixed": "#d2e5f1",
+                    "on-tertiary-fixed-variant": "#7c2c2c",
+                    "surface-dim": "#dedac8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#374953",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#f2eedb",
+                    "surface": "#fefae7",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f5f1de",
+                    "on-primary-fixed": "#0d2000",
+                    "secondary": "#4f616b",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#400006",
+                    "surface-container-low": "#f8f4e1",
+                    "surface-variant": "#e7e3d0",
+                    "surface-container-highest": "#e7e3d0",
+                    "primary-fixed": "#caeea7",
+                    "on-background": "#1d1c11",
+                    "secondary-fixed-dim": "#b6c9d5",
+                    "inverse-primary": "#aed18d",
+                    "on-secondary-container": "#53656f",
+                    "surface-tint": "#49672f",
+                    "tertiary-fixed-dim": "#ffb3af",
+                    "secondary-container": "#cfe3ee",
+                    "outline-variant": "#c4c8ba",
+                    "primary-fixed-dim": "#aed18d",
+                    "primary": "#49672f",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-surface-variant": "#44483d",
+                    "on-secondary-fixed": "#0b1e26",
+                    "tertiary-container": "#e27a77",
+                    "on-tertiary-container": "#5e1518",
+                    "surface-bright": "#fefae7",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#323124",
+                    "on-primary-fixed-variant": "#324e19",
+                    "background": "#fefae7",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .organic-blob-1 { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+        .organic-blob-2 { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        .organic-blob-3 { border-radius: 50% 50% 30% 70% / 50% 60% 40% 60%; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fefae7]/70 dark:bg-[#1d1c11]/70 backdrop-blur-xl shadow-[0_8px_32px_rgba(29,28,17,0.05)]">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#49672f] dark:text-[#81a263] active:scale-95 transition-transform">menu</button>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-xl font-bold text-[#49672f] dark:text-[#81a263] tracking-tighter">Digital Larder</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label text-sm font-bold uppercase tracking-widest text-[#44483d] dark:text-[#c4c8ba] hover:opacity-80 transition-opacity" href="#">Inventory</a>
+<a class="font-label text-sm font-bold uppercase tracking-widest text-[#44483d] dark:text-[#c4c8ba] hover:opacity-80 transition-opacity" href="#">Budget</a>
+<a class="font-label text-sm font-bold uppercase tracking-widest text-[#49672f] font-bold" href="#">Earn</a>
+<a class="font-label text-sm font-bold uppercase tracking-widest text-[#44483d] dark:text-[#c4c8ba] hover:opacity-80 transition-opacity" href="#">Goals</a>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden active:scale-95 transition-transform cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a professional woman with a warm expression in soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd2Axd1qUFPjCzrpGcQWrsWt0gTBG9tyv1YhoZjskLcPH6pwq3uaz0MZrwhiS-ECSAdB-OaywpbEqC9y4mOIVHsP0QeNlEHmdjwExY14WNm-nxvlVuX39sd1iemGxKkE6Bd70hGZ8WR4LZUC-h5qIFcHLmh-yA1dQAOt95Seo3qPKg8L3ysdIrTFhlt7Kck4uNAX-hwrxDpAV0yR0KR0cXLAfHyXyAvC4Sh038esNgsMcifJwQqPBjJ4cYpDDpJDBkNUl2VtRlfRGj"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-28 pb-32 px-6 max-w-screen-xl mx-auto">
+<!-- Hero Section -->
+<header class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="font-label text-primary font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Sustainability Milestones</span>
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tight text-on-surface leading-[0.95] mb-6">
+                    Your Eco <br/><span class="text-primary-container">Legacy.</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-md leading-relaxed">
+                    Celebrating your journey towards a circular home. Every badge earned is a step closer to a greener planet.
+                </p>
+</div>
+<div class="flex items-center gap-4 bg-surface-container rounded-lg p-6 self-start md:self-auto">
+<div class="text-right">
+<span class="font-label text-xs font-bold text-on-surface-variant uppercase tracking-widest">Global Rank</span>
+<p class="font-headline text-3xl font-bold text-primary">Top 4%</p>
+</div>
+<div class="h-12 w-[1px] bg-outline-variant/30"></div>
+<div class="text-right">
+<span class="font-label text-xs font-bold text-on-surface-variant uppercase tracking-widest">Badges</span>
+<p class="font-headline text-3xl font-bold text-on-surface">12/30</p>
+</div>
+</div>
+</header>
+<!-- Achievements Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Featured Badge: Larder Legend -->
+<div class="md:col-span-8 bg-surface-container-low rounded-lg p-8 relative overflow-hidden flex flex-col justify-between min-h-[400px]">
+<div class="relative z-10">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-4 py-1 bg-primary-container text-on-primary-container rounded-full text-xs font-bold font-label uppercase tracking-widest">UNLOCKED</span>
+<h2 class="font-headline text-4xl font-bold mt-4 mb-2">Larder Legend</h2>
+<p class="text-on-surface-variant max-w-sm">Achieved by maintaining a zero-waste inventory for 30 consecutive days.</p>
+</div>
+<div class="w-32 h-32 md:w-48 md:h-48 bg-gradient-to-tr from-primary to-primary-container organic-blob-1 flex items-center justify-center text-white shadow-xl shadow-primary/20">
+<span class="material-symbols-outlined text-6xl md:text-8xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+</div>
+<div class="relative z-10 flex flex-wrap gap-4 mt-8">
+<div class="bg-surface-container-highest/50 backdrop-blur-md px-6 py-4 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">eco</span>
+<div>
+<p class="font-label text-[10px] uppercase font-bold text-on-surface-variant">CO2 Saved</p>
+<p class="font-headline font-bold">12.4 kg</p>
+</div>
+</div>
+<div class="bg-surface-container-highest/50 backdrop-blur-md px-6 py-4 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">water_drop</span>
+<div>
+<p class="font-label text-[10px] uppercase font-bold text-on-surface-variant">Water Saved</p>
+<p class="font-headline font-bold">450 L</p>
+</div>
+</div>
+</div>
+<!-- Abstract Decorative Background -->
+<div class="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/5 organic-blob-2"></div>
+</div>
+<!-- Zero Waste Hero (Progress State) -->
+<div class="md:col-span-4 bg-surface-container rounded-lg p-8 flex flex-col justify-between">
+<div>
+<div class="w-20 h-20 bg-secondary-container organic-blob-3 flex items-center justify-center text-on-secondary-container mb-6">
+<span class="material-symbols-outlined text-4xl">recycling</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-2">Zero Waste Hero</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Complete 50 recipes using only ingredients already in your larder.</p>
+</div>
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="font-label text-xs font-bold text-on-surface-variant uppercase tracking-widest">Progress</span>
+<span class="font-headline text-lg font-bold text-primary">32/50</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 64%"></div>
+</div>
+</div>
+</div>
+<!-- Compost King (Locked State) -->
+<div class="md:col-span-4 bg-surface-container-low rounded-lg p-8 group transition-all duration-300">
+<div class="flex flex-col items-center text-center">
+<div class="w-24 h-24 bg-surface-container-highest organic-blob-2 flex items-center justify-center text-outline-variant mb-6 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-5xl">compost</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-2">Compost King</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Log 10kg of organic waste diversion to home composting.</p>
+<div class="flex items-center gap-2 text-outline font-label text-xs font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">lock</span>
+                        Locked
+                    </div>
+</div>
+</div>
+<!-- New Badge: Seasonal Savant -->
+<div class="md:col-span-4 bg-surface-container rounded-lg p-8 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<div class="w-16 h-16 bg-tertiary-container organic-blob-1 flex items-center justify-center text-on-tertiary-container mb-6">
+<span class="material-symbols-outlined text-3xl">local_florist</span>
+</div>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] font-bold font-label uppercase text-on-surface-variant">Lvl 2</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-2">Seasonal Savant</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Shop exclusively seasonal produce for an entire quarter.</p>
+</div>
+<button class="mt-8 w-full py-4 bg-surface-container-highest hover:bg-surface-dim transition-colors rounded-full font-label text-xs font-bold uppercase tracking-widest text-on-surface">View Details</button>
+</div>
+<!-- Mini Badges Cluster -->
+<div class="md:col-span-4 bg-primary text-on-primary rounded-lg p-8 flex flex-col justify-between relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-headline text-2xl font-bold mb-6">Quick Wins</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4 bg-on-primary/10 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary-fixed">done_all</span>
+<span class="font-label text-sm font-semibold">Bulk Buyer</span>
+</div>
+<div class="flex items-center gap-4 bg-on-primary/10 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary-fixed">done_all</span>
+<span class="font-label text-sm font-semibold">Plastic Free</span>
+</div>
+<div class="flex items-center gap-4 opacity-40">
+<span class="material-symbols-outlined">circle</span>
+<span class="font-label text-sm font-semibold">Meal Prepper</span>
+</div>
+</div>
+</div>
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-on-primary/5 rounded-full blur-2xl"></div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#fefae7]/70 dark:bg-[#1d1c11]/70 backdrop-blur-xl shadow-[0_-8px_32px_rgba(29,28,17,0.05)] rounded-t-[24px] z-50 md:hidden">
+<button class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] opacity-60 hover:scale-110 transition-transform active:scale-90">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">Inventory</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] opacity-60 hover:scale-110 transition-transform active:scale-90">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">Budget</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-[#f2eedb] dark:bg-[#44483d] text-[#49672f] dark:text-[#f8f4e1] rounded-full px-4 py-2 hover:scale-110 transition-transform active:scale-90">
+<span class="material-symbols-outlined">savings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">Earn</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] opacity-60 hover:scale-110 transition-transform active:scale-90">
+<span class="material-symbols-outlined">emoji_events</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">Goals</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#44483d] dark:text-[#c4c8ba] opacity-60 hover:scale-110 transition-transform active:scale-90">
+<span class="material-symbols-outlined">cottage</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">House</span>
+</button>
+</nav>
+</body></html>

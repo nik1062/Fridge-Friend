@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sustainability Analytics - Fridge Friend</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#5e1518",
+                        "outline": "#74796c",
+                        "tertiary-container": "#e27a77",
+                        "on-secondary-container": "#53656f",
+                        "surface-container-highest": "#e7e3d0",
+                        "outline-variant": "#c4c8ba",
+                        "on-primary-container": "#1c3704",
+                        "secondary-container": "#cfe3ee",
+                        "on-surface": "#1d1c11",
+                        "surface-bright": "#fefae7",
+                        "inverse-on-surface": "#f5f1de",
+                        "primary-fixed-dim": "#aed18d",
+                        "surface-container-high": "#ece8d6",
+                        "surface-tint": "#49672f",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fefae7",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dedac8",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#d2e5f1",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface": "#fefae7",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#374953",
+                        "primary-container": "#81a263",
+                        "primary": "#49672f",
+                        "surface-container": "#f2eedb",
+                        "surface-container-low": "#f8f4e1",
+                        "tertiary": "#9a4341",
+                        "secondary-fixed-dim": "#b6c9d5",
+                        "surface-variant": "#e7e3d0",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#323124",
+                        "secondary": "#4f616b",
+                        "primary-fixed": "#caeea7",
+                        "on-surface-variant": "#44483d",
+                        "on-primary-fixed": "#0d2000",
+                        "on-tertiary-fixed-variant": "#7c2c2c",
+                        "on-primary-fixed-variant": "#324e19",
+                        "tertiary-fixed": "#ffdad7",
+                        "on-tertiary-fixed": "#400006",
+                        "on-background": "#1d1c11",
+                        "on-secondary-fixed": "#0b1e26",
+                        "inverse-primary": "#aed18d",
+                        "tertiary-fixed-dim": "#ffb3af"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 1.5rem;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-xl flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<a class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container active:scale-95 transition-transform" href="{{DATA:SCREEN:SCREEN_23}}">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="close-up portrait of a woman with a warm smile, soft natural lighting, earthy tones background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkYsY1mk5kuwigrZJ5ewautyC1pMgb0dKqiTkGAUQg-HQ4YLKSfb-Aek8YXvXyUMVFLLQotDrMMGw30LBI1TGRHUIQ3agd1KXhMEPKvQGrTFlyYQSBtnwsVSFQYYrJhx68m9svWUXeZUJ-4eOHSnO7hoeyxlzqnTLq47WmbZulDI2YvOKin_SrSSQrYHrtz_DsJR9Z6MVTCLIS9lks4kzLz7qVdjfOAqu6OlXtIrtzmE-gycNkT4z91RzaFgrvxU8KuxEx-i4fm-g_"/>
+</a>
+<span class="text-xl font-bold text-[#49672f] dark:text-[#81a263] font-['Plus_Jakarta_Sans'] tracking-tight">Fridge Friend</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#49672f] dark:text-[#81a263]">notifications</span>
+</button>
+<a class="hover:opacity-80 transition-opacity active:scale-95 duration-200" href="{{DATA:SCREEN:SCREEN_18}}">
+<span class="material-symbols-outlined text-[#49672f] dark:text-[#81a263]">close</span>
+</a>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto space-y-8">
+<!-- Hero Header -->
+<section class="space-y-2">
+<h1 class="text-[3.5rem] font-headline font-bold leading-[1] tracking-tighter text-primary">Analytics</h1>
+<p class="text-on-surface-variant font-body text-lg">Your impact on the planet, measured in the kitchen.</p>
+</section>
+<!-- Carbon Footprint Bento -->
+<section class="editorial-grid">
+<div class="col-span-2 md:col-span-1 bg-surface-container rounded-lg p-8 flex flex-col justify-between relative overflow-hidden h-80">
+<div class="relative z-10">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label text-xs font-bold mb-4">CARBON FOOTPRINT</span>
+<h2 class="text-4xl font-headline font-bold text-on-surface leading-tight">12.4<span class="text-xl ml-1 text-on-surface-variant">kg CO₂e</span></h2>
+<p class="text-on-surface-variant font-body mt-2 max-w-[200px]">Reduced by 14% compared to last month.</p>
+</div>
+<div class="absolute -right-8 -bottom-8 w-48 h-48 opacity-20">
+<span class="material-symbols-outlined text-[160px] text-primary" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div class="relative z-10 flex gap-2">
+<button class="px-4 py-2 rounded-full bg-primary text-white font-label text-sm font-semibold hover:opacity-90 transition-all">View Details</button>
+</div>
+</div>
+<div class="col-span-2 md:col-span-1 bg-surface-container-highest rounded-lg overflow-hidden h-80 relative group">
+<img alt="Fresh vegetables" class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="vibrant flat lay of various green vegetables and herbs on a soft cream background, natural soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp7dsfcAv1aosvZ13IsUKXAREqhymC75AV5CaBpg-eBk6zQ-Mn4OMZGNNfVK8zRdZ7AxDSg9srZK1S2UKbhzGaFfqKMwEUMhH0nEFgc__Ud0YrAX-IyY1Xv7xGZeJPXrm2qRLnyIJyqFfCqXX7se4PGndo5jfhwcA_vVcmm0IDtxxvg7C9Z0BH8mFRK2KLuz2NjGzMI7IM2V2-rz2jLfmSL6WnX9UJWiahnNJpdt-g2BE5C4V6jLVHQ76ysttqBzBZ676gCMIBNcNl"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent flex flex-col justify-end p-8">
+<p class="text-white font-headline font-semibold text-xl">Top Saver: Leafy Greens</p>
+<p class="text-white/80 font-body text-sm">You've saved 4kg of waste by proper storage.</p>
+</div>
+</div>
+</section>
+<!-- Food Waste Trends -->
+<section class="bg-surface-container-low rounded-lg p-8 space-y-6">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="text-2xl font-headline font-bold text-on-surface">Food Waste Trends</h3>
+<p class="text-on-surface-variant font-body">Weekly grams of unavoidable waste</p>
+</div>
+<div class="flex gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="w-3 h-3 rounded-full bg-surface-container-highest"></span>
+</div>
+</div>
+<div class="flex items-end justify-between h-48 pt-4">
+<div class="flex flex-col items-center gap-3 w-full">
+<div class="w-8 md:w-12 bg-surface-container-highest rounded-t-full h-[60%] transition-all hover:bg-primary-container"></div>
+<span class="font-label text-[10px] font-bold text-on-surface-variant">MON</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full">
+<div class="w-8 md:w-12 bg-surface-container-highest rounded-t-full h-[40%] transition-all hover:bg-primary-container"></div>
+<span class="font-label text-[10px] font-bold text-on-surface-variant">TUE</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full">
+<div class="w-8 md:w-12 bg-primary rounded-t-full h-[85%] shadow-lg shadow-primary/20"></div>
+<span class="font-label text-[10px] font-bold text-on-surface-variant">WED</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full">
+<div class="w-8 md:w-12 bg-surface-container-highest rounded-t-full h-[30%] transition-all hover:bg-primary-container"></div>
+<span class="font-label text-[10px] font-bold text-on-surface-variant">THU</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full">
+<div class="w-8 md:w-12 bg-surface-container-highest rounded-t-full h-[55%] transition-all hover:bg-primary-container"></div>
+<span class="font-label text-[10px] font-bold text-on-surface-variant">FRI</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full">
+<div class="w-8 md:w-12 bg-primary-container rounded-t-full h-[70%] transition-all"></div>
+<span class="font-label text-[10px] font-bold text-on-surface-variant">SAT</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full">
+<div class="w-8 md:w-12 bg-surface-container-highest rounded-t-full h-[45%] transition-all hover:bg-primary-container"></div>
+<span class="font-label text-[10px] font-bold text-on-surface-variant">SUN</span>
+</div>
+</div>
+</section>
+<!-- Total Impact Summary -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container rounded-lg p-6 flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-on-secondary-container">savings</span>
+</div>
+<h4 class="text-sm font-label font-bold text-on-surface-variant uppercase tracking-widest mb-1">Money Saved</h4>
+<p class="text-2xl font-headline font-bold text-primary">$142.50</p>
+</div>
+<div class="bg-surface-container rounded-lg p-6 flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-primary-container/30 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">nest_eco_leaf</span>
+</div>
+<h4 class="text-sm font-label font-bold text-on-surface-variant uppercase tracking-widest mb-1">Meals Shared</h4>
+<p class="text-2xl font-headline font-bold text-primary">24</p>
+</div>
+<div class="bg-surface-container rounded-lg p-6 flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/30 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-tertiary">water_drop</span>
+</div>
+<h4 class="text-sm font-label font-bold text-on-surface-variant uppercase tracking-widest mb-1">Water Saved</h4>
+<p class="text-2xl font-headline font-bold text-primary">1.2k L</p>
+</div>
+</section>
+<!-- Featured Tip Card -->
+<a class="block relative rounded-lg overflow-hidden bg-primary p-12 text-white flex flex-col items-center text-center hover:opacity-95 transition-opacity" href="{{DATA:SCREEN:SCREEN_11}}">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+<span class="material-symbols-outlined text-5xl mb-4">lightbulb</span>
+<h3 class="text-2xl font-headline font-bold mb-2">Sustainable Kitchen Tip</h3>
+<p class="font-body opacity-90 max-w-lg">Regrow your scallion ends in a glass of water on your windowsill. You can harvest them up to three times!</p>
+</a>
+</main>
+<!-- FAB -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 z-[60]">
+<a class="flex items-center justify-center bg-gradient-to-br from-[#49672f] to-[#81a263] text-white rounded-full w-14 h-14 shadow-lg active:scale-90 transition-transform duration-200" href="{{DATA:SCREEN:SCREEN_27}}">
+<span class="material-symbols-outlined text-3xl">add_a_photo</span>
+</a>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-[24dp] bg-[#fefae7]/70 dark:bg-stone-900/70 backdrop-blur-xl flex justify-around items-end pb-6 pt-2 px-4 shadow-[0_-8px_32px_rgba(29,28,17,0.05)]">
+<a class="flex flex-col items-center justify-center text-[#44483d] p-2 hover:text-[#49672f] transition-colors" href="{{DATA:SCREEN:SCREEN_18}}">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44483d] p-2 hover:text-[#49672f] transition-colors" href="{{DATA:SCREEN:SCREEN_30}}">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold mt-1">Inventory</span>
+</a>
+<div class="w-16"></div> <!-- Spacer for FAB -->
+<a class="flex flex-col items-center justify-center text-[#44483d] p-2 hover:text-[#49672f] transition-colors" href="{{DATA:SCREEN:SCREEN_20}}">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold mt-1">Recipes</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#49672f] to-[#81a263] text-white rounded-full p-3 mb-2 scale-110 shadow-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold mt-1">Analytics</span>
+</a>
+</nav>
+</body></html>
